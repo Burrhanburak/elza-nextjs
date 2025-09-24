@@ -7,6 +7,8 @@ import { BlogCommandMenu } from '@/components/blog-command-menu'
 import BlogFilterDrawer from '@/components/BlogFilterDrawer'
 import Link from 'next/link'
 import Head from 'next/head'
+import { Home } from 'lucide-react'
+
 
 const BlogPage = () => {
   const params = useParams()
@@ -300,7 +302,7 @@ const BlogPage = () => {
                 href={`?page=${pagination.current_page - 1}${currentLanguage ? `&language=${currentLanguage}` : ''}${currentSearch ? `&search=${currentSearch}` : ''}`}
                 className="px-4 py-2 border border-gray-300 rounded hover:bg-gray-50"
               >
-                Önceki
+                 {t('previous')}
               </a>
             )}
             
@@ -323,7 +325,7 @@ const BlogPage = () => {
                 href={`?page=${pagination.current_page + 1}${currentLanguage ? `&language=${currentLanguage}` : ''}${currentSearch ? `&search=${currentSearch}` : ''}`}
                 className="px-4 py-2 border border-gray-300 rounded hover:bg-gray-50"
               >
-                Sonraki
+                {t('next')}
               </a>
             )}
           </div>

@@ -1,50 +1,63 @@
-import React from 'react'
+'use client'
+
+import React,{ useEffect, useState } from 'react'
 import { blogApi, Blog } from '../../../../lravel-api'
-import { notFound } from 'next/navigation'
+import { useParams } from 'next/navigation'
 import Link from 'next/link'
+import Head from 'next/head'
 import type { Metadata, ResolvingMetadata } from 'next'
 
-type Props = {
-  params: Promise<{ slug: string; locale: string }>
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+
+interface BlogPageProps {
+  params: {
+    locale: string;
+    slug: string;
+  };
 }
 
-export async function generateMetadata(
-  { params, searchParams }: Props,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
-  const { slug, locale } = await params
-  
-  try {
-    const response = await blogApi.getBlog(slug)
-    const blog = response.data
-    
-    return {
-      title: blog.title || `Blog - ${slug}`,
-      description: blog.excerpt || blog.content?.slice(0, 160),
-      openGraph: {
-        title: blog.title || `Blog - ${slug}`,
-        description: blog.excerpt || blog.content?.slice(0, 160),
-        type: 'article',
-        images: blog.featured_image ? [blog.featured_image] : ['/ogm.png']
-      }
-    }
-  } catch (error) {
-    return {
-      title: 'Blog Post',
-      description: 'Blog post by Elza Darya'
-    }
-  }
-}
+
+
 
 export default function BlogDetailPage() {
   const params = useParams()
   const slug = params.slug as string
   const locale = params.locale as string
+
   
   const [blog, setBlog] = useState<Blog | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+
+  // Generate metadata for blog detail page
+  const metaTitles = {
+    en: blog?.title || "Elza Darya Blog Post",
+    tr: blog?.title || "Elza Darya Blog Yazısı", 
+    ru: blog?.title || "Запись в блоге Эльзы Дарьи",
+    az: blog?.title || "Elza Darya Blog Məqaləsi"
+  };
+
+  const metaDescriptions = {
+    en: blog?.content?.replace(/<[^>]*>/g, '').substring(0, 160) || "Read Elza Darya's latest insights on wellness and personal development.",
+    tr: blog?.content?.replace(/<[^>]*>/g, '').substring(0, 160) || "Elza Darya'nın sağlık ve kişisel gelişim üzerine en son görüşlerini okuyun.",
+    ru: blog?.content?.replace(/<[^>]*>/g, '').substring(0, 160) || "Читайте последние идеи Эльзы Дарьи о здоровье и личном развитии.",
+    az: blog?.content?.replace(/<[^>]*>/g, '').substring(0, 160) || "Elza Daryanın sağlamlıq və şəxsi inkişaf haqqında ən son fikirlərini oxuyun."
+  };
+
+  // JSON-LD Schema for Blog Post
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": blog?.title || "Blog Post",
+    "image": blog?.cover_image ? (blog.cover_image.startsWith('http') ? blog.cover_image : `https://bioenerjist-books.s3.amazonaws.com/${blog.cover_image}`) : '/ogm.png',
+    "datePublished": blog?.published_at,
+    "dateModified": blog?.updated_at,
+    "author": { "@type": "Person", "name": "Elza Darya" },
+    "publisher": { "@type": "Organization", "name": "Elza Darya", "logo": "https://elazadarya.com/elza-logo.svg" },
+    "inLanguage": locale,
+    "mainEntityOfPage": `https://elazadarya.com/${locale}/blog/${slug}`,
+    "description": blog?.content?.replace(/<[^>]*>/g, '').substring(0, 160) || "Blog post by Elza Darya",
+    "url": `https://elazadarya.com/${locale}/blog/${slug}`
+  };
 
   useEffect(() => {
     if (!slug) return
@@ -102,6 +115,36 @@ export default function BlogDetailPage() {
   }
 
   return (
+ <>
+ 
+      <Head>
+        <title>{metaTitles[locale as keyof typeof metaTitles]}</title>
+        <meta name="description" content={metaDescriptions[locale as keyof typeof metaDescriptions]} />
+        <link rel="canonical" href={`https://elazadarya.com/${locale}/blog/${slug}`} />
+
+        {/* Open Graph */}
+        <meta property="og:title" content={metaTitles[locale as keyof typeof metaTitles]} />
+        <meta property="og:description" content={metaDescriptions[locale as keyof typeof metaDescriptions]} />
+        <meta property="og:url" content={`https://elazadarya.com/${locale}/blog/${slug}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content={blog?.cover_image ? (blog.cover_image.startsWith('http') ? blog.cover_image : `https://bioenerjist-books.s3.amazonaws.com/${blog.cover_image}`) : '/ogm.png'} />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={metaTitles[locale as keyof typeof metaTitles]} />
+        <meta name="twitter:description" content={metaDescriptions[locale as keyof typeof metaDescriptions]} />
+        <meta name="twitter:image" content={blog?.cover_image ? (blog.cover_image.startsWith('http') ? blog.cover_image : `https://bioenerjist-books.s3.amazonaws.com/${blog.cover_image}`) : '/ogm.png'} />
+
+        {/* JSON-LD Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(blogSchema)
+          }}
+        />
+      </Head>
+
+
     <section className="py-32 container mx-auto px-4">
       <div className="container mx-auto px-4">
         {/* Breadcrumb */}
@@ -244,5 +287,6 @@ export default function BlogDetailPage() {
         </div>
       </div>
     </section>
+    </>
   )
 }
