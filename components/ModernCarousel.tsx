@@ -30,31 +30,24 @@ interface ModernCarouselProps {
 const defaultItems: CarouselItem[] = [
   {
     id: 'default-1',
-    title: 'Biyoenerji Terapisi',
-    description: 'Enerji alanınızı dengeleyerek fiziksel ve ruhsal sağlığınızı restore edin.',
-    image: '/elza-darya-logo.jpeg',
-    alt: 'Biyoenerji Terapisi',
-    icon: '/elza-darya-logo.jpeg',
-    icon2: <ExternalLink />
-
+    title: '',
+    description: '',
+    image: '',
+    alt: '',
   },
   {
     id: 'default-2', 
-    title: 'Yaşam Koçluğu',
-    description: 'Hedeflerinizi netleştirin ve kişisel başarıya ulaşın.',
-    image: '/green-elza.svg',
-    alt: 'Yaşam Koçluğu',
-    icon: '/green-elza.svg',
-    icon2: <ExternalLink />
+    title: '',
+    description: '',
+    image: '',
+    alt: '',
   },
   {
     id: 'default-3',
-    title: 'Bioterapi',
-    description: 'Hücresel düzeyde iyileşme sağlayın ve bağışıklık sisteminizi güçlendirin.',
-    image: '/green-elza.svg', 
-    alt: 'Bioterapi',
-    icon: '/green-elza.svg',
-    icon2: <ExternalLink />
+    title: '',
+    description: '',
+    image: '', 
+    alt: '',
   }
 ];
 
@@ -103,7 +96,7 @@ export default function ModernCarousel({
                 : '',
               alt: book.title,
               slug: book.slug,
-              icon: '/elza-darya-logo.jpeg',
+              icon: '/elza-logo.svg',
               icon2: <ExternalLink />,
               type: 'book'
             }));
@@ -136,7 +129,7 @@ export default function ModernCarousel({
           }
         }
 
-        setCarouselItems(fetchedItems.length > 0 ? fetchedItems : (items.length > 0 ? items : defaultItems));
+        setCarouselItems(fetchedItems.length > 0 ? fetchedItems : defaultItems);
       } catch (error) {
         console.error('Veri yüklenirken hata:', error);
         setCarouselItems(items.length > 0 ? items : defaultItems);
@@ -295,44 +288,65 @@ export default function ModernCarousel({
                         <div className="relative aspect-2/3 max-h-[500px] sm:max-h-[500px] rounded-2xl cursor-pointer hover:scale-105 transition-all duration-300 animate-slideUp">
                           <div className="absolute inset-0 rounded-2xl bg-linear-to-b from-primary to-transparent to-40%"></div>
                           <div className="relative size-full">
-                            <img 
-                              src={item.image} 
-                              alt={item.alt} 
-                              className="size-full rounded-2xl bg-cover object-cover"
-                              onError={(e) => {
-                                const target = e.currentTarget;
-                                target.style.display = 'none';
-                                const loaderDiv = target.nextElementSibling as HTMLElement;
-                                if (loaderDiv) {
-                                  loaderDiv.style.display = 'flex';
-                                }
-                              }}
-                            />
-                            <div 
-                              className="absolute inset-0 rounded-2xl bg-muted/20 backdrop-blur-sm flex items-center justify-center" 
-                              style={{ display: 'none' }}
-                            >
-                              <Loader className="size-12 text-muted-foreground animate-spin" />
-                            </div>
-                          </div>
-                          <div className="absolute inset-0 p-8">
-                            <p className="text-sm font-semibold text-background/50">
-                              <span className="mr-1 text-background">{item.title}.</span>{item.description}
-                            </p>
-                          </div>
-                          <div className="absolute top-4 right-4 flex gap-2">
-                            {item.icon && (
-                              <img 
-                                src={item.icon} 
-                                alt={`${item.title} icon`}
-                                className="size-8 rounded-full object-cover border-2 border-white/20"
-                                onError={(e) => {
-                                  const target = e.currentTarget;
-                                  target.style.display = 'none';
-                                }}
-                              />
+                            {item.image ? (
+                              <>
+                                <img 
+                                  src={item.image} 
+                                  alt={item.alt} 
+                                  className="size-full rounded-2xl bg-cover object-cover"
+                                  onError={(e) => {
+                                    const target = e.currentTarget;
+                                    target.style.display = 'none';
+                                    const loaderDiv = target.nextElementSibling as HTMLElement;
+                                    if (loaderDiv) {
+                                      loaderDiv.style.display = 'flex';
+                                    }
+                                  }}
+                                />
+                                <div 
+                                  className="absolute inset-0 rounded-2xl bg-muted/20 backdrop-blur-sm flex items-center justify-center" 
+                                  style={{ display: 'none' }}
+                                >
+                                  <Loader className="size-12 text-muted-foreground animate-spin" />
+                                </div>
+                              </>
+                            ) : (
+                              <div className="size-full rounded-2xl bg-white/90 backdrop-blur-sm flex items-center justify-center">
+                                {item.icon && (
+                                  <img 
+                                    src={item.icon} 
+                                    alt={`${item.title} logo`}
+                                    className="size-24 rounded-full object-cover shadow-lg"
+                                    onError={(e) => {
+                                      const target = e.currentTarget;
+                                      target.style.display = 'none';
+                                    }}
+                                  />
+                                )}
+                              </div>
                             )}
-                            {item.icon2 && itemUrl !== '#' && (
+                          </div>
+                          {item.image && (
+                            <div className="absolute inset-0 p-8">
+                              <p className="text-sm font-semibold text-background/50">
+                                <span className="mr-1 text-background">{item.title}.</span>{item.description}
+                              </p>
+                            </div>
+                          )}
+                          {item.image && (
+                            <div className="absolute top-4 right-4 flex gap-2">
+                              {item.icon && (
+                                <img 
+                                  src={item.icon} 
+                                  alt={`${item.title} icon`}
+                                  className="size-8 rounded-full object-cover border-2 border-white/20"
+                                  onError={(e) => {
+                                    const target = e.currentTarget;
+                                    target.style.display = 'none';
+                                  }}
+                                />
+                              )}
+                              {item.icon2 && itemUrl !== '#' && (
                               <a 
                                 href={itemUrl}
                                 className="flex items-center justify-center size-8 rounded-full bg-white/20 backdrop-blur border border-white/30 hover:bg-white/30 transition-all"
@@ -344,8 +358,9 @@ export default function ModernCarousel({
                                   {item.icon2}
                                 </div>
                               </a>
-                            )}
-                          </div>
+                              )}
+                            </div>
+                          )}
                         </div>
                       </ItemWrapper>
                     </div>

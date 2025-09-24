@@ -11,7 +11,7 @@ import FeaturesSection from "@/components/FeaturesSection";
 import RecentBlogsSection from "@/components/RecentBlogsSection";
 import { getDictionary } from "./dictionaries";
 import type { Metadata } from "next";
-import { HeaderSectionTwo } from "@/components/Header-section-two";
+// import { HeaderSectionTwo } from "@/components/Header-section-two";
 
 interface Props {
   params: Promise<{ locale: string }>;
