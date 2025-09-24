@@ -1,53 +1,34 @@
+
 import React from 'react'
 import { ChevronRight, ArrowUp } from 'lucide-react'
 import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
-import type { Metadata } from 'next'
+import Head from 'next/head'
+import BackToTopButton from '@/components/BackToTopButton'
 
 interface Props {
   params: Promise<{ locale: string }>;
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale } = await params;
-  
-  const metaTitles = {
-    en: "Elza Darya Biography - Professional Life Coach & Bioenergy Therapist Journey",
-    tr: "Elza Darya Biyografisi - Profesyonel Yaşam Koçu ve Biyoenerji Terapisti Yolculuğu",
-    ru: "Биография Эльзы Дарьи - Путь Профессионального Лайф-коуча и Биоэнергетического Терапевта",
-    az: "Elza Darya Tərcümeyi-halı - Peşəkar Həyat Koçu və Bioenergetik Terapevt Səyahəti"
-  };
 
-  const metaDescriptions = {
-    en: "Discover Elza Darya's inspiring journey from personal transformation to becoming a certified life coach and bioenergy therapist. Learn about her background, training, and healing philosophy.",
-    tr: "Elza Darya'nın kişisel dönüşümden sertifikalı yaşam koçu ve biyoenerji terapisti olmaya uzanan ilham verici yolculuğunu keşfedin. Geçmişi, eğitimi ve iyileştirme felsefesi hakkında bilgi edinin.",
-    ru: "Откройте для себя вдохновляющий путь Эльзы Дарьи от личной трансформации до становления сертифицированным лайф-коучем и биоэнергетическим терапевтом.",
-    az: "Elza Daryanın şəxsi transformasiyadan sertifikatlı həyat koçu və bioenergetik terapevt olmaya qədərki ilhamlı səyahətini kəşf edin."
-  };
 
-  return {
-    title: metaTitles[locale as keyof typeof metaTitles] || metaTitles.en,
-    description: metaDescriptions[locale as keyof typeof metaDescriptions] || metaDescriptions.en,
-    keywords: `elza darya biography, life coach journey, bioenergy therapist background, professional transformation, healing philosophy, wellness expert story`,
-    openGraph: {
-      title: metaTitles[locale as keyof typeof metaTitles] || metaTitles.en,
-      description: metaDescriptions[locale as keyof typeof metaDescriptions] || metaDescriptions.en,
-      url: `https://elazadarya.com/${locale}/about/biography`,
-      type: 'article',
-      images: ['/ogm.png'],
-      authors: ['Elza Darya'],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: metaTitles[locale as keyof typeof metaTitles] || metaTitles.en,
-      description: metaDescriptions[locale as keyof typeof metaDescriptions] || metaDescriptions.en,
-      images: ['/ogm.png']
-    },
-    alternates: {
-      canonical: `https://elazadarya.com/${locale}/about/biography`
-    }
-  };
-}
+const metaTitles = {
+  en: "Elza Darya Biography - Professional Life Coach & Bioenergy Therapist Journey",
+  tr: "Elza Darya Biyografisi - Profesyonel Yaşam Koçu ve Biyoenerji Terapisti Yolculuğu",
+  ru: "Биография Эльзы Дарьи - Путь Профессионального Лайф-коуча и Биоэнергетического Терапевта",
+  az: "Elza Darya Tərcümeyi-halı - Peşəkar Həyat Koçu və Bioenergetik Terapevt Səyahəti"
+};
+
+const metaDescriptions = {
+  en: "Discover Elza Darya's inspiring journey from personal transformation to becoming a certified life coach and bioenergy therapist. Learn about her background, training, and healing philosophy.",
+  tr: "Elza Darya'nın kişisel dönüşümden sertifikalı yaşam koçu ve biyoenerji terapisti olmaya uzanan ilham verici yolculuğunu keşfedin. Geçmişi, eğitimi ve iyileştirme felsefesi hakkında bilgi edinin.",
+  ru: "Откройте для себя вдохновляющий путь Эльзы Дарьи от личной трансформации до становления сертифицированным лайф-коучем и биоэнергетическим терапевтом.",
+  az: "Elza Daryanın şəxsi transformasiyadan sertifikatlı həyat koçu və bioenergetik terapevt olmaya qədərki ilhamlı səyahətini kəşf edin."
+};
+
+
+
+
 
 const BiographyPage = async ({ params }: Props) => {
   const { locale } = await params;
@@ -103,10 +84,32 @@ const BiographyPage = async ({ params }: Props) => {
   
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(biographySchema) }}
-      />
+      <Head>
+        <title>{metaTitles[locale as keyof typeof metaTitles] || metaTitles.en}</title>
+        <meta name="description" content={metaDescriptions[locale as keyof typeof metaDescriptions] || metaDescriptions.en} />
+        <meta name="keywords" content="elza darya biography, life coach journey, bioenergy therapist background, professional transformation, healing philosophy, wellness expert story" />
+        <link rel="canonical" href={`https://elazadarya.com/${locale}/blog`} />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={metaTitles[locale as keyof typeof metaTitles] || metaTitles.en} />
+        <meta property="og:description" content={metaDescriptions[locale as keyof typeof metaDescriptions] || metaDescriptions.en} />
+        <meta property="og:url" content={`https://elazadarya.com/${locale}/blog`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/ogm.png" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={metaTitles[locale as keyof typeof metaTitles] || metaTitles.en} />
+        <meta name="twitter:description" content={metaDescriptions[locale as keyof typeof metaDescriptions] || metaDescriptions.en} />
+        <meta name="twitter:image" content="/ogm.png" />
+        
+        {/* JSON-LD Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(biographySchema) }}
+        />
+      </Head>
+    
       
       <section className="py-32 container mx-auto px-4">
         <div className="container">
@@ -134,7 +137,7 @@ const BiographyPage = async ({ params }: Props) => {
           </h1>
           <div className="flex items-center gap-3">
             <span data-slot="avatar" className="relative flex size-8 shrink-0 overflow-hidden rounded-full border-border border">
-              <img data-slot="avatar-image" className="aspect-square size-full" src="/elza-darya-logo.jpeg" alt="Elza Darya" />
+              <img data-slot="avatar-image" className="aspect-square size-full" src="/green-elza.svg" alt="Elza Darya" />
             </span>
             <p className="text-sm tracking-tight md:text-base">
               <span className="font-semibold">Elza Darya</span>
@@ -146,8 +149,8 @@ const BiographyPage = async ({ params }: Props) => {
         <div className="relative flex max-w-6xl flex-col-reverse gap-6 lg:mt-32 lg:grid lg:grid-cols-10">
           <div className="lg:col-span-6">
             <img 
-              src="/zovpersonal.webp" 
-              alt="Elza Darya Journey" 
+              src="/about-elza.jpg" 
+              alt="Elza Darya about" 
               className="border-border max-h-96 w-full rounded-xl border object-cover"
             />
             
@@ -273,14 +276,15 @@ const BiographyPage = async ({ params }: Props) => {
 
             <div className="hidden opacity-0 transition-opacity duration-200 lg:block">
               <div data-orientation="horizontal" role="none" data-slot="separator-root" className="bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px my-3"></div>
-              <button 
+              {/* <button 
                 data-slot="button" 
                 className="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-8 rounded-md px-3 has-[>svg]:px-2.5 text-muted-foreground gap-1 text-xs"
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               >
                 <ArrowUp className="lucide lucide-arrow-up size-3.5" aria-hidden="true" />
                 {t('tableOfContents.backToTop')}
-              </button>
+              </button> */}
+              <BackToTopButton />
             </div>
           </div>
         </div>

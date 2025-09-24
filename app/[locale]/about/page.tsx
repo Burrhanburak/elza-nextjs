@@ -1,3 +1,6 @@
+
+
+
 import React from 'react'
 import { Files, CircleArrowRight, Settings, ArrowUpRight, Trophy, BookOpen, Users } from 'lucide-react'
 import Link from 'next/link'
@@ -141,7 +144,7 @@ const AboutPage = async ({ params }: Props) => {
               <p className="text-muted-foreground mb-2">
                 {t('sections.biography.description')}
               </p>
-              <Link className='text-[#006241]/80 p-2 w-fit bg-[#006241]/10 rounded-lg flex items-center gap-2' href="/services/biography"> Read More Biography 
+              <Link className='text-[#006241]/80 p-2 w-fit bg-[#006241]/10 rounded-lg flex items-center gap-2' href="/about/biography"> Read More Biography 
               <ArrowUpRight className="w-4 h-4" />
             </Link>
             </div>
@@ -219,7 +222,7 @@ const AboutPage = async ({ params }: Props) => {
               {t('biography.pageTitle')}
             </h2>
            
-            <Link href="/services/biography" className="text-[#006241]/80 p-2 w-fit bg-[#006241]/10 rounded-lg flex items-center gap-2">Read More 
+            <Link href="/about/biography" className="text-[#006241]/80 p-2 w-fit bg-[#006241]/10 rounded-lg flex items-center gap-2">Read More 
             <ArrowUpRight className="w-4 h-4" />
             </Link>
           </div>
