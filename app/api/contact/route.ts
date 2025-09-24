@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 // Çeviri objeleri
 const translations = {
@@ -145,6 +145,13 @@ const translations = {
 
 export async function POST(request: NextRequest) {
   try {
+    // Check if Resend is available
+    if (!resend) {
+      return NextResponse.json(
+        { error: 'Email service not configured' },
+        { status: 503 }
+      );
+    }
     
     const body = await request.json();
     const { name, email, date, userType, languageSupport, message, locale = 'en' } = body;
