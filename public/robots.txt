@@ -1,0 +1,56 @@
+# Robots.txt - Optimized for AI Crawlers and Search Engines
+# Allow all AI bots and search engines to crawl for GEO optimization
+
+User-agent: *
+Allow: /
+
+# Specific AI Bot Permissions for Generative Engine Optimization
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: BingBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/private/
+Disallow: /_next/
+Disallow: /temp/
+
+# Allow important files for SEO
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /.well-known/
+
+# Sitemap location
+Sitemap: https://elazadarya.com/sitemap.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1

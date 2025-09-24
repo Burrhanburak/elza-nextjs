@@ -1,0 +1,1376 @@
+{
+  "nav": {
+    "home": "Ana səhifə",
+    "services": "Xidmətlər",
+    "about": "Haqqımızda",
+    "contact": "Əlaqə",
+    "consultation": "Randevu Al",
+    "servicesDropdown": {
+      "description": "Bioenerji və Bioterapiya Həlləri.",
+      "bioenergy": {
+        "title": "Bioenerji",
+        "description": "Peşəkar Bioenerji Həlləri."
+      },
+      "biotherapy": {
+        "title": "Bioterapiya",
+        "description": "Xüsusi Bioterapiya Həlləri."
+      },
+      "life-coaching": {
+        "title": "Həyat Koçluğu",
+        "description": "Peşəkar Həyat Koçluğu Həlləri."
+      }
+    },
+    "aboutDropdown": {
+      "story": {
+        "title": "Bizim Hekayətimiz",
+        "description": "Səyahətimiz və missiyamız haqqında öyrənin."
+      },
+      "certificates": {
+        "title": "Sertifikatlar və Diplomlar",
+        "description": "Peşəkar sertifikatların siyahısı və diplomlar."
+      },
+      "biography": {
+        "title": "Bioqrafiya",
+        "description": "Bioqrafiyamıza qoşulun."
+      },
+
+      "awards": {
+        "title": "Mükafatlar və Nail oçmuqlar",
+        "description": "Tanınma və mükafatlar üçün istəyə bağlı bölmə."
+      },
+      "poems": {
+        "title": "Şeirlər",
+        "description": "İlham verən şeirlər və yazılar kolleksiyası."
+      },
+      "books": {
+        "title": "Kitablar",
+        "description": "Nəşr edilmiş kitablar və ədəbi əsərlər."
+      }
+    }
+  },
+  "footer": {
+    "ctaTitle": "Sağlamlıq səyahətiniz\nbir kliklə başlayır",
+    "ctaSubtitle": "Bu gün randevunuzu götürün və sizin üçün xüsusi hazırlanmış ekspert qayğısını təcrübə edin",
+    "ctaButton": "Bizimlə əlaqə saxlayın",
+    "ctaSecondary": "Xidmətlərimiz",
+    "quickLinks": "Sürətli keçidlər",
+    "ourServices": "Xidmətlərimiz",
+    "content": "Məzmun",
+    "links": {
+      "home": "Ana səhifə",
+      "services": "Xidmətlər", 
+      "about": "Haqqımızda",
+      "contact": "Əlaqə",
+      "blog": "Bloq",
+      "books": "Kitablar",
+      "poems": "Şeirlər",
+      "bioenergy": "Bioenerji",
+      "biotherapy": "Bioterapiya",
+      "awards": "Mükafatlar və Nailiyyətlər",
+      "biography": "Bioqrafiya",
+      "certificates": "Sertifikatlar və Diplomlar",
+      "diplomas": "Diplomlar"
+    },
+    "contact": {
+      "title": "Əlaqə",
+      "email": "E-poçt",
+      "phone": "Telefon"
+    },
+    "address": "Peşəkar sağlamlıq və bioenerji terapiya xidmətləri",
+    "email": "info@elzadarya.com",
+    "phone": "+90 555 123 4567",
+    "copyright": "© 2024 Elza Darya. Bütün hüquqlar qorunur.",
+    "privacy": "Gizlilik Siyasəti",
+    "terms": "Xidmət Şərtləri",
+    "legal": "Sertifikatlaşmış mütəxəssislər tərəfindən təqdim edilən peşəkar sağlamlıq və bioenerji terapiya xidmətləri.",
+    "social": {
+      "instagram": {
+        "url": "https://www.instagram.com/elzadarya27"
+      },
+      "facebook": {
+        "url": "https://www.facebook.com/ElzaDarya27"
+      }
+    }
+  },
+  "cta": {
+    "title": "Sağlamlıq səyahətiniz bir kliklə başlayır",
+    "description": "Bu gün randevunuzu götürün və sizin üçün xüsusi hazırlanmış ekspert qayğısını təcrübə edin",
+    "contactButton": "Bizimlə əlaqə saxlayın",
+    "servicesButton": "Xidmətlərimiz"
+  },
+  "hero": {
+    "title": "Həyatınızı Dəyişin və Daxili Gücünüzü Kəşf Edin",
+    "subtitle": "Peşəkar Həyat Koçu və Bioenerji Terapisti - Yazar",
+    "wellness": "🌿 Sağlığınız, səyahətiniz.",
+    "wellnessDescription": "Sağlamlıq sağlıq və tarazlığa doğru ümr boyu davam edən səyahətdir. Fərdləri və ailələri ekspert, holistik qayğı vasıtəsilə öz rifəhlərinin məsüliiyyətini götürməyə gücləndiririk.",
+    "heroAlt": {
+      "mainText": "Bioenerji və bioterapi ilə həyat boyu süren bir dönüşüm səyahətinə çıkın. Fərdləri və ailələri uzman bioenerji terapiyası və həyat koçluğu vasitəsilə öz iç gücünü keşf etməyə və yaşamlarını dönüştürməyə güçlendiririk.",
+      "clientJourneys": {
+        "badge": "Hakkımda",
+        "title": "Hakkımda Kişisel Hikayəm",
+        "description": "İlham verən hikayələrim. Her kitab, derin içgörü və pratik biliklər sunur."
+      },
+      "discover": {
+        "explore": "Keşfet",
+        "now": "şimdi",
+        "pause": "Durdur",
+        "play": "Başlat"
+      },
+      "transformations": {
+        "title": "Fərqli Yaşam Dönemlərinizə Uyğun Fərqli Dönüşümlər",
+        "description": "həyat koçluğunuzu yaşam dönemlərinize göre seçin və yaşamınızı dönüştürün"
+      },
+      "therapist": {
+        "title": "Biyoenerji Terapisti",
+        "stats": {
+          "experience": "Təcrübə",
+          "people": "Kişi",
+          "success": "Başarı",
+          "partners": "Partnerlər"
+        },
+        "description1": "Biyoenerji Terapisti, fərdiləşdirilmiş həyat koçluğu ile sağlamlıq və uyğunluq konularında uzman bir uzmanıdır. Yaşamınızın hər sahəsində, doğal həyat koçluğu ile uyğunluq sağlayaraq sağlamlıq sağlıklı bir yaşam sürdürebilirsiniz.",
+        "description2": "Biyoenerji Terapisti, fərdiləşdirilmiş həyat koçluğu ile sağlamlıq və uyğunluq konularında uzman bir uzmanıdır. Yaşamınızın hər sahəsində, doğal həyat koçluğu ile uyğunluq sağlayaraq sağlamlıq sağlıklı bir yaşam sürdürebilirsiniz.",
+        "description3": "Biyoenerji Terapisti, fərdiləşdirilmiş həyat koçluğu ile sağlamlıq və uyğunluq konularında uzman bir uzmanıdır. Yaşamınızın hər sahəsində, doğal həyat koçluğu ile uyğunluq sağlayaraq sağlamlıq sağlıklı bir yaşam sürdürebilirsiniz."
+      }
+    },
+    
+    "tags": {
+      "clarity": "Açıqlıq əldə edin",
+      "stress": "Stresi idarə edin",
+      "awareness": "Şüurlüluk"
+    }
+  },
+  "services": [
+    {
+      "title": "Həyat Koçluğu",
+      "description": "Peşəkar karyera rəhbərliyi və iş axtarışı prosesində dəstək."
+    },
+    {
+      "title": "Bioenerji Terapiyası",
+      "description": "Təsirli və peşəkar bioenerji şifa xidmətləri."
+    },
+    {
+      "title": "şəxsi İnkişaf",
+      "description": "Uğurlu şəxsi inkişaf texnikarı və özügüvən gəlir ətdirilməsi."
+    }
+  ],
+  "servicesSection": {
+    "badge": "Xidmətlərimiz",
+    "title": "Bioenerji və Bioterapiya Xidmətləri",
+    "description": "Həyatınızın hər sahəsində sizə dəstək olan, şəxsi inkişafınızı dəstəkləyən peşəkar xidmətlər.",
+    "otherServices": {
+      "title": "Digər Xidmətlər",
+      "description": "Digər xidmətlərimiz haqqında məlumat almaq üçün bizimlə əlaqə saxlayın."
+    },
+    "services": {
+      "bioenergy": {
+        "title": "Bioenerji Terapiyası"
+      },
+      "biotherapy": {
+        "title": "Kəşf və Terapiya",
+        "description": "Kəşf və şəfa fiziki, emosional və ruhani sağlığınızı balanslaşdırarkən inteqrasiya edilmiş yanaşma təklif edir."
+      },
+      "continuousHealing": {
+        "title": "Şəfa Prosesi",
+        "description": "Şəfa prosesi fiziki, emosional və ruhani sağlığınızı balanslaşdırarkən inteqrasiya edilmiş yanaşma təklif edir. Təşxis və müalicə prosesi üçün peşəkar yanaşma nümayiş etdiririk."
+      }
+    },
+    "personalizedCare": {
+      "title": "Elza Darya ilə Şəxsi Bioenerji Terapiyası",
+      "description": "Bioenerji terapiyası ilə bədəninizin təbii enerji axınını balanslaşdıraraq fiziki, emosional və ruhani şəfanızı dəstəkləyirik. Şəxsi terapiya seanslarımızda fərd odaklı yanaşma ilə daxili balansınızı yenidən qazanmanıza kömək edirik."
+    },
+    "successRate": "Uğur Göstəricisi"
+  },
+  "testimonials": {
+    "title": "Müştəri Səyahətləri",
+    "subtitle": "Transformasiya Hekayələri",
+    "description": "Daxili güclərini kəşf edən və bioenerji və holistik sağlamlıq rəhbərliyimiz sayəsində həyatlarını dəyişdən fərdlər və ailələrin ilham verən hekayələri.",
+    "pageTitle": "Müştəri Təcrübələri",
+    "pageDescription": "Müştərilərimizin təcrübələri.",
+    "mainTestimonial": {
+      "quote": "Elza Darya ilə tanış olduğum zaman həyatımın ən böyük dəyişikliklərini yaşadım.",
+      "author": "Buket Çiçəkoğlu",
+      "role": "Müştəri"
+    },
+    "testimonialsList": [
+      {
+        "quote": "Elza Darya ilə bioenerji terapiyası aldıqdan sonra həyatımdakı neqativ enerjiləri təmizləndi.",
+        "author": "Ayşə K.",
+        "role": "Müəllim"
+      },
+      {
+        "quote": "Uzun illərdir davam edən stresim və enerji blokajlarım Elza xanımın terapiyaları sayəsində həll olundu.",
+        "author": "Mehmet D.",
+        "role": "Memar"
+      },
+      {
+        "quote": "Bioenerji terapiyası ilə bədənimi daha yaxşı hiss etməyə başladım. Elza xanıma çox təşəkkür edirəm.",
+        "author": "Zeynəp A.",
+        "role": "Tibb bacısı"
+      },
+      {
+        "quote": "Ruhani məsləhət seansları həyatımda yeni qapılar açdı. Özümü çox daha sülhlü hiss edirəm.",
+        "author": "Fatmə Y.",
+        "role": "Mühasib"
+      }
+    ]
+  },
+  "home": {
+    "carousel": {
+      "badge": "Xidmətlərimiz və Məzmunlarımız",
+      "title": "Yaşamınızı Dönüştüren Geniş Hizmet Yelpazemiz",
+      "description": "Biyoenerji terapiyasından yaşam koçluğuna, edebi eserlərdən sertifikalara kimi geniş hizmet yelpazemizi keşfedin.",
+      "modernCarousel": {
+        "title": "Kəşf edin və Satın alın",
+        "subtitle": "Kitablar və Şeirlər",
+        "description": "Kitab və şeir kolleksiyalarımı kəşf edin və satın alın.",
+        "previousSlide": "Əvvəlki slayd",
+        "nextSlide": "Növbəti slayd"
+      },
+      "cardStack": {
+        "cards": [
+          {
+            "name": "Bioenerji Terapiyası",
+            "designation": "Fərdi Seans",
+            "content": "Bədən və emosional blokajları {highlight}enerji balansı{/highlight} ilə həll edən və təbii şəfa prosesini dəstəkləyən holistik yanaşma.",
+            "highlight": "enerji balansı"
+          },
+          {
+            "name": "Bioterapiya",
+            "designation": "Seans və Proqram",
+            "content": "Şəxsi {highlight}bioloji enerji{/highlight} protokolları ilə müntəzəm seanslar və izləmə; stress, yuxu və diqqət problemlərində təsirli dəstək.",
+            "highlight": "bioloji enerji"
+          },
+          {
+            "name": "Reiki və Enerji Balansı",
+            "designation": "Uyğunlaşma və Seans",
+            "content": "Ağıl-bədən-ruh harmoniyasını artıran {highlight}şəfa axını{/highlight} ilə sakitlik, rahatlıq və yüksək həyat enerjisi.",
+            "highlight": "şəfa axını"
+          }
+        ]
+      },
+      "cards": {
+        "bioenergy": {
+          "title": "Bioenerji Terapiyası",
+          "category": "Terapiya Xidməti",
+          "highlight": "Bioenerji Terapiyası",
+          "description": "Bioenerji terapiyası enerji sahənizi tarazlaşdıraraq fiziki, emosional və ruhani sağlamlığınızı bərpa edir."
+        },
+        "biotherapy": {
+          "title": "Bioterapi",
+          "category": "Sağlamlık Xidməti",
+          "highlight": "Bioterapi",
+          "description": "Bioterapi hüceyrə səviyyəsində şəfa təmin edərək immun sisteminizi gücləndirir və təbii şəfa qabiliyyətinizi artırır."
+        },
+        "certificates": {
+          "title": "Sertifikalarım",
+          "category": "Sertifikalar",
+          "highlight": "Sertifikalarım",
+          "description": "sertifikalarım haqqında məlumat əldə edin."
+        },
+        "books": {
+          "title": "Kitablarım",
+          "category": "Kitablar",
+          "highlight": "Kitablarım",
+          "description": "kitablarım haqqında məlumat əldə edin."
+        },
+        "poems": {
+          "title": "Şeirlərim",
+          "category": "Şeirlər",
+          "highlight": "Şeirlərim",
+          "description": "şeirlərim haqqında məlumat əldə edin."
+        },
+        "lifecoaching": {
+          "title": "Yaşam Koçluğu",
+          "category": "Yaşam Koçluğu",
+          "highlight": "Yaşam Koçluğu",
+          "description": "Yaşam koçluğu səyahətinizi dəstəkləyir."
+        }
+      },
+      "content": {
+        "bioenergy": {
+          "highlight": "Bioenerji Terapiyası",
+          "description": "Bədən və emosional blokajları enerji balansı ilə həll edən və təbii şəfa prosesini dəstəkləyən holistik yanaşma.",
+          "features": [
+            {
+              "title": "Enerji Değerlendirmesi",
+              "description": "Kapsamlı enerji alanı analizi ile blokajları və dengesizlikleri tespit ederiz."
+            },
+            {
+              "title": "Çakra Dengelemesi",
+              "description": "Yedi ana enerji merkezinizin hizalanması və optimal enerji akışının sağlanması."
+            }
+          ]
+        },
+        "lifecoaching": {
+          "highlight": "Yaşam Koçluğu",
+          "description": "Hedeflerinizi netleştirin, engellerinizi aşın və kişisel və profesyonel başarıya ulaşın. Kanıtlanmış stratejilerle yaşamınızı dönüştürün.",
+          "features": [
+            {
+              "title": "Hedef Belirleme",
+              "description": "SMART hedefler çerçevesinde net, ölçülebilir və ulaşılabilir hedefler belirleyin."
+            },
+            {
+              "title": "Zihinsel Dönüşüm",
+              "description": "Sınırlayıcı inançları aşarak başarı odaklı zihinsel yanaşma geliştirin."
+            }
+          ]
+        },
+        "biotherapy": {
+          "highlight": "Bioterapi",
+          "description": "Hücresel düzeyde iyileşme sağlayarak bağışıklık sisteminizi güçlendirin və doğal iyileşme kapasitezinizi artırın.",
+          "features": [
+            {
+              "title": "Hücresel Yenilenme",
+              "description": "İleri tekniklerle hücre onarımı və yenilenme süreçlerini destekliyoruz."
+            },
+            {
+              "title": "Bağışıklık Desteği", 
+              "description": "Vücudunuzun doğal savunma mekanizmalarını güçlendirme və dengeleme."
+            }
+          ]
+        },
+        "certificates": {
+          "highlight": "Sertifikalarım",
+          "description": "Ulaslararası standartlarda eğitimler və profesyonel gelişim programları ile kazanılan yeterlilik belgelerini içermektedir.",
+          "features": [
+            {
+              "title": "Uluslararası Sertifikalar",
+              "description": "Dünya çapında tanınan kuruluşlardan alınan profesyonel sertifikatlar."
+            },
+            {
+              "title": "Sürekli Eğitim",
+              "description": "Alanımda güncel kalabilmek için aldığım düzenli eğitim və gelişim programları."
+            }
+          ]
+        },
+        "books": {
+          "highlight": "Kitaplarım",
+          "description": "Kişisel gelişim, biyoenerji və yaşam felsefesi üzerine yazılmış eserlerdir. Her kitap, derin içgörü və pratik bilgi sunar.",
+          "features": [
+            {
+              "title": "Kişisel Gelişim",
+              "description": "Öz farkındalık ve kişisel dönüşüm üzerine rehber niteliğinde eserler."
+            },
+            {
+              "title": "Biyoenerji Rehberi",
+              "description": "Enerji terapisi ve sağlık yaklaşımları hakkında derinlemesine bilgiler."
+            }
+          ]
+        },
+        "poems": {
+          "highlight": "Şiirlerim",
+          "description": "yaşamın derinliklerinden, sevgiden, dönüşümden ve iç yolculuktan ilham alan lirik eserlerdir.",
+          "features": [
+            {
+              "title": "Ruhsal Yolculuk",
+              "description": "İç keşif ve ruhsal büyüme temasında yazılmış derin şiirler."
+            },
+            {
+              "title": "Yaşam Felsefesi",
+              "description": "Hayatın anlamı, sevgi ve farkındalık üzerine düşündüren edebi metinler."
+            }
+          ]
+        }
+      }
+    }
+  },
+  "contact": {
+    "pageTitle": "Bizimlə əlaqə saxlayın",
+    "pageSubtitle": "Transformasiya səyahətinizə başlamağa hazırsınız? Fərdiləşdirilmiş sağalma və həyat koçluğu xidmətləri üçün bu gün bizimlə əlaqə saxlayın.",
+    "offices": {
+      "istanbul": "Yer"
+    },
+    "sections": {
+      "email": "E-poçt göndərin",
+      "follow": "Bizi izləyin",
+      "inquiries": "Ümumi sorğular"
+    },
+    "form": {
+      "fullName": "Ad Soyad",
+      "email": "E-poçt ünvanı",
+      "message": "Mesaj",
+      "submit": "Mesaj göndərin",
+      "placeholders": {
+        "fullName": "Tam adınızı daxil edin",
+        "email": "E-poçt ünvanınızı daxil edin",
+        "message": "Ehtiyaclarınız və sizə necə kömək edə biləcəyimiz barədə bizə danışın..."
+      }
+    },
+    "selectApplicantType": "Xidmət növünü seçin",
+    "bioenergy": "Bioenerji Terapiyası",
+    "biotherapy": "Bioterapiya",
+    "sending": "Göndərilir...",
+    "successMessage": "Mesaj uğurla göndərildi! Tezliklə sizinlə əlaqə saxlayacağıq.",
+    "errorMessage": "Mesaj göndərilərkən xəta baş verdi. Lütfən yenidən cəhd edin."
+  },
+  "sectionThree": {
+    "badge": "Bioenerji və Bioterapi mərhələləri",
+    "title": "Bioenerji və Bioterapi mərhələləri",
+    "description": "Bioenerji və bioterapi mərhələləri haqqında məlumat əldə edin.",
+    "learnMore": "Daha Çox Məlumat",
+    "services": {
+      "bioenergy": {
+        "title": "Bioenerji Terapiyası",
+        "description": "Bioenerji terapiyası enerji sahənizi tarazlaşdıraraq fiziki, emosional və ruhani sağlamlığınızı bərpa edir."
+      },
+      "biotherapy": {
+        "title": "Bioterapi",
+        "description": "Bioterapi hüceyrə səviyyəsində şəfa təmin edərək immun sisteminizi gücləndirir və təbii şəfa qabiliyyətinizi artırır."
+      },
+      "continuousHealing": {
+        "title": "Davamlı Şəfa və Məxfilik",
+        "description": "Davamlı şəfa fiziki, emosional və ruhani sağlamlığınızı tarazlaşdırarkən inteqrasiya edilmiş yanaşma təklif edir."
+      }
+    }
+  },
+  "jobSeeker": {
+    "benefits": {
+      "tabs": {
+        "badge": "Həyat Koçluğu Faydaları",
+        "biotherapy": {
+          "label": "Məqsəd Uğuru",
+          "title": "Peşəkar Həyat Koçluğu",
+          "subtitle": "Şəxsi və Peşəkar Transformasiya",
+          "description": "Görüşünüzü netleşdirməyinizə, məhdudlaşdırıcı inanclrı aşmığınıza və sınanmış koçluq metodologiyaları ilə həyatınızın bütün sahələrində çıxış nəticələri əldə etməyinizə kömək edən hərtərəfli həyat koçluğu.",
+          "stats": [
+            "92% Məqsəd Uğur Nəticəsi",
+            "Şəxsi Çıxış Nəticələri",
+            "Peşəkar İnkişaf Uğuru"
+          ],
+          "benefits": [
+            "SMART çərçivə metodologiyası ilə açıq məqsəd təyin etmə",
+            "Məhdudlaşdırıcı inanc və zəhni məniaları aşma",
+            "Uğur yönümlü zəhniyyət və vərdiler gelişdirmə",
+            "Stratejik hərəkət planlaşdırma və hesabatlılıq",
+            "Təkmilləşdirilmiş özşüur və etibar inşaları"
+          ],
+          "overlayStats": {
+            "stat1": {
+              "value": "950+",
+              "label": "Tamamlanmış Koçluq Seansı"
+            },
+            "stat2": {
+              "value": "88%",
+              "label": "Müştəri Uğur Nəticəsi"
+            }
+          }
+        },
+        "bioenergy": {
+          "label": "Zəhniyyət Koçluğu",
+          "title": "Zəhniyyət Transformasiyası və Zəhni Ustəlık",
+          "subtitle": "Bilişsel Yenidən Qurma və İnanc Sistemləri",
+          "description": "Məhdudlaşdırıcı inancı yenidən proqramlaşdıran, böyümə zəhniyyəti gelişdriən və dəvamlı uğur və dayanıqlılıq üçün güclü zəhni çərçivələr yaradan qabałıqlı zəhniyyət koçluğu.",
+          "stats": [
+            "İnanc Sistemi Transformasiyası",
+            "Böyümə Zəhniyyəti Gelişdirmə",
+            "Zəhni Dayanıqlılıq Qurma"
+          ],
+          "benefits": [
+            "Məhdudlaşdırıcı inanc nümunələrini təyin etmə və dəyişdirmə",
+            "Sarsılmaz etibar və öz dəyər gelişdirmə",
+            "Güçləndirici zəhni çərçivələr yaratma",
+            "Dayanıqlılıq və stress idarəsi bacarıqları qurma",
+            "Emosional zəka və öz tənzimləmə ustəlığı"
+          ],
+          "overlayStats": {
+            "stat1": {
+              "value": "800+",
+              "label": "Zəhniyyət Koçluğu Seansı"
+            },
+            "stat2": {
+              "value": "85%",
+              "label": "Zəhniyyət Çıxış Nəticəsi"
+            }
+          }
+        },
+        "opportunities": {
+          "label": "Karyera Koçluğu",
+          "title": "Stratejik Karyera İnkişafı",
+          "subtitle": "Peşəkar Mükəmməllik və Liderlik",
+          "description": "Peşəkar böyüməni sürətləndriən, liderlik imkanlarını gelişdriən və karyera irkəliş və mamnunluq üçün stratejik yollar yaradan hərtərəfli karyera koçluğu.",
+          "stats": [
+            "Karyera İrkəlişi",
+            "Liderlik Gelişdirmə",
+            "Peşəkar Mükəmməllik"
+          ],
+          "benefits": [
+            "Stratejik karyera planlaşdırma və məqsəd uyumu",
+            "Liderlik bacarıqları gelişdirmə və icra varlığı",
+            "Peşəkar şəbəkə qurma və əlaqə inşa etmə",
+            "Performans optimallığı və bacarıq gelişdirmə",
+            "İş-həyat inteqrasiyası və karyera mamnuniyyəti"
+          ],
+          "overlayStats": {
+            "stat1": {
+              "value": "600+",
+              "label": "Karyera Koçluğu Seansı"
+            },
+            "stat2": {
+              "value": "90%",
+              "label": "Karyera İrkəliş Uğuru"
+            }
+          }
+        }
+      }
+    }
+  },
+  "privacyPolicy": {
+    "title": "Gizlilik Siyasəti",
+    "lastUpdated": "Son yenilənmə:",
+    "sections": {
+      "informationWeCollect": {
+        "title": "Topladığımız Məlumatlar",
+        "intro": "Aşağıdakı hallarda bizə birbaşa təqdim etdiyiniz məlumatları toplayırıq:",
+        "items": [
+          "Kitablarımızı, şeirlərimizi və ya rəqəmi məzmunumuzu aldığınız zaman",
+          "Bioterapiya və ya bioenerji seansları sifariş etdiyiniz zaman",
+          "Xəbər bülletenimizə abunə olduğunuz zaman",
+          "Məsləhət üçün bizimlə əlaqə saxladığınız zaman",
+          "Veb saytımızda hesab yaratdığınız zaman"
+        ],
+        "healthInfo": "Bu məlumatlar adınızı, e-poçt ünvanınızı, telefon nömrənizi, ödəniş məlumatlarınızı və bioterapiya xidmətlərimiz üçün paylaşdığınız sağlamlıqla bağlı məlumatları əhatə edə bilər."
+      },
+      "howWeUse": {
+        "title": "Məlumatlarınızı Necə İstifadə Edirik",
+        "intro": "Topladığımız məlumatları aşağıdakı məqsədlər üçün istifadə edirik:",
+        "items": [
+          "Bioterapiya və bioenerji şəfa xidmətləri təqdim etmək",
+          "Kitab və şeir satışlarını emal etmək",
+          "Rəqəmi məzmun və sertifikatlar göndərmək",
+          "Görüşlər və seanslar barədə əlaqə saxlamaq",
+          "Xidmətlərimizi və veb saytımızı təkmilləşdirmək",
+          "Xəbər bülleteni və yeniliklər göndərmək (razılığınızla)"
+        ]
+      },
+      "healthPrivacy": {
+        "title": "Sağlamlıq Məlumatlarının Gizliliyi",
+        "content": "Bioterapiya və ya bioenerji seansları üçün paylaşdığınız sağlamlıqla bağlı məlumatlar ən yüksək gizlilik ilə qorunur. Sıx gizlilik standartları tətbiq edir və bu məlumatları yalnız sizə fərdiləşdirilmiş şəfa xidmətləri təqdim etmək üçün istifadə edirik. Bu məlumatlar heç vaxt açıq razılığınız olmadan üçüncü tərəflərlə paylaşılmır."
+      },
+      "disclaimer": {
+        "title": "Məsuliyyətdən İmtina:",
+        "content": "Bioterapiya və bioenerji xidmətlərimiz tamamlayıcı sağlamlıq təcrübələridir və ənənəvi tibbi müalicənin yerini tutmaq məqsədi daşımır. Tibbi narahatlıqlar üçün səhiyyə mütəxəssislərinə müraciət edin."
+      }
+    }
+  },
+  "about": {
+    "pageTitle": "Haqqımızda",
+    "pageSubtitle": "Şəfa gücünü hər kəsə çatdırmaq",
+    "description": "Elza Darya transformativ şəfa xidmətləri, həyat koçluğu və bioenerji terapiyasına çıxışı asanlaşdırır. Aylar yox, dəqiqələr ərzində dərin dəyişiklik yaşayın.",
+    "mission": {
+      "badge": "MİSSİYAMIZ",
+      "title": "Şəfa və şəxsi transformasiyanın hər kəs üçün əlçatan olması lazım olduğuna inanırıq",
+      "description": "Hər kəsin layiq olduğu həyatı yaratmaq azadlığına sahib olması lazımdır, məhdudiyyətlər və ya maneələr olmadan. Missiyamız həqiqi şəfanın daxildən gəldiyi anlayışına əsaslanır və biz fərdlərin öz doğuştan gələn şəfa qabiliyyətlərini istifadə etmələrinə kömək etmək üçün lazım olan vasitələri, rəhbərliyi və dəstəyi təmin edirik."
+    },
+    "vision": {
+      "title": "Şəfa və transformasiyanı əlçatan edirik",
+      "description": "1.000.000 insana şəfa xidmətlərimizlə həyatlarını dəyişdirmələrində gücləndirilməsinə kömək etməyi hədəfləyirik. Hərtərəfli yanaşmamız ənənəvi şəfa metodlarını müasir terapevtik texnikalarla birləşdirərək hər fərdin unikal ehtiyaclarına uyğun fərdiləşdirilmiş baxım almasını təmin edir."
+    },
+    "sections": {
+      "biography": {
+        "title": "Bioqrafiya",
+        "description": "Elza Darya'nın şəxsi mübarizələrdən tanınmış şəfaçı və həyat koçu olmaya qədər olan olağanüstü səyahətini kəşf edin. Bioqrafiyası onun unikal şəfa yanaşmasını formalaşdıran transformativ təcrübələri ortaya qoyur."
+      },
+      "lifeCoaching": {
+        "title": "Həyat Koçluğu",
+        "description": "Məhdudlaşdırıcı inancları aşmanıza, maneələri aradan qaldırmanıza və həqiqətən istədiyiniz həyatı yaratmanıza kömək etmək üçün nəzərdə tutulmuş transformativ həyat koçluğu seanslarını təcrübə edin."
+      },
+      "certificates": {
+        "title": "Sertifikatlar və Diplomlar",
+        "description": "Elza Darya'nın müxtəlif şəfa modalitələrində təcrübəsini təsdiq edən geniş peşəkar sertifikat və diploma kolleksiyasını araşdırın."
+      },
+      "awards": {
+        "title": "Mükafatlar və Nailiyyətlər",
+        "description": "Elza Darya'nın şəfa və şəxsi transformasiya sahəsinə verdiyi müstəsna töhfələri tanıyan çoxsaylı mükafat və nailiyyətlərini kəşf edin."
+      },
+      "bioenergy": {
+        "title": "Bioenerji",
+        "description": "Bədənin təbii enerji sistemləri ilə işləyərək fiziki, emosional və ruhani rifahı təşviq edən holistik şəfa yanaşması olan bioenerji terapiyasının transformativ gücünü təcrübə edin."
+      },
+      "books": {
+        "title": "Kitablar",
+        "description": "Elza Darya'nın hikmətini, şəfa texnikalarını və həyatı dəyişdirən görüşlərini paylaşan transformativ kitablar kolleksiyasını kəşf edin."
+      }
+    },
+    "whyChoose": {
+      "title": "Şəfa səyahətiniz üçün niyə Elza Darya'nı seçin?",
+      "provenTrack": {
+        "title": "Sınanmış müvəffəqiyyət tarixi",
+        "description": "Minlərlə müştəriyə çətinliklərini aşmalarında kömək etdiyi illər təcrübəsi ilə Elza Darya həqiqi, davamlı nəticələr təqdim etməkdə reputasiya qazanmışdır."
+      },
+      "holisticApproach": {
+        "title": "Holistik yanaşma",
+        "description": "Simptomlara fokuslanmış ənənəvi terapiyadan fərqli olaraq, Elza Darya'nın yanaşması bütün insanla - ağıl, bədən və ruhla işləyərək problemlərin kök səbəblərinə müraciət edir."
+      },
+      "personalizedCare": {
+        "title": "Fərdiləşdirilmiş baxım",
+        "description": "Hər fərd unikaldır və şəfa səyahəti də belədir. Elza Darya hər müştərinin xüsusi ehtiyaclarını, çətinliklərini və məqsədlərini anlamaq üçün vaxt ayırır."
+      },
+      "safeEnvironment": {
+        "title": "Təhlükəsiz və dəstəkləyici mühit",
+        "description": "Şəfa həssas və həqiqi ola biləcəyiniz təhlükəsiz məkan tələb edir. Elza Darya müştərilərin rahat hiss etdikləri qidalandırıcı, mühakimə etməyən mühit yaradır."
+      }
+    },
+    "cta": {
+      "title": "Transformasiyanıza başlamağa hazırsınız?",
+      "description": "Şəfa, inkişaf və transformasiya istiqamətində ilk addımı atmağa hazırsınızsa, Elza Darya səyahətinizdə sizə rəhbərlik etmək üçün buradadır. Emosional travma ilə mübarizə aparırsınız, ruhani rəhbərlik axtarırsınız və ya həyatınızda müsbət dəyişikliklər yaratmaq istəyirsiniz, xidmətlərimiz məqsədlərinizə nail olmaq üçün ehtiyacınız olan vasitələri, dəstəyi və hikməti təmin etmək üçün nəzərdə tutulmuşdur.",
+      "startJourney": "Şəfa səyahətinizi başladın",
+      "exploreServices": "Xidmətlərimizi araşdırın"
+    },
+    "biography": {
+      "pageTitle": "Elza Darya: Şəfa, Transformasiya və Güclənmə Səyahəti",
+      "breadcrumb": {
+        "about": "Haqqında",
+        "biography": "Bioqrafiya"
+      },
+      "professional": "Peşəkar Həyat Koçu və Bioenerji Terapisti",
+      "tableOfContents": {
+        "title": "BU SƏHIFƏDƏ",
+        "biotherapy": "Bioterapi",
+        "bioenergy": "Bioenerji",
+        "certificates": "Sertifikatlar və Diplomlar",
+        "books": "Elza Darya'nın Kitabları",
+        "awards": "Mükafatlar və Nailiyyətlər",
+        "backToTop": "Yuxarı qayıt"
+      },
+      "content": {
+        "intro": "Elza Darya'nın şəfa və şəxsi transformasiya dünyasına səyahəti güc mövqeyindən deyil, öz ən dərin mübarizələrindən başlamışdır. Nəhayət şəfaçı olanların əksəriyyəti kimi, onun yolu dözümlülüyünü sınaq etmiş və nəhayət həqiqi çağırışını kəşf etməsinə səbəb olmuş şəxsi çətinliklər vasitəsilə dövlədilmişdir.",
+        "earlyLife": {
+          "title": "Erkən həyat və oyatma",
+          "content1": "Enerjiyə qarşı təbii həssaslıqla və insan duyğularına sezgisel anlayışla doğulmuş Elza əvvəlcə bu hədiyyələri bərəkət deyil, yük kimi görürdü. Böyüyərkən, əzici empatiya və başqalarının emosional vəziyyətlərini hiss etmə qabiliyyəti ilə mübarizə aparırdı ki, bu da onu tez-tez yorğun və yanlış anlaşılmış hiss edirdi.",
+          "content2": "Erkən illəri dərin məna və məqsəd axtarışı ilə səciyyələnmişdir. Akademik uğur və xarici nailiyyətlərə baxmayaraq, ənənəvi yolların təmin edə bilmədiyi davamlı daxili çağırış hiss edirdi. Bu ruhani narahatlıq onu müxtəlif şəfa modalitələrini və şəxsi inkişaf yanaşmalarını araşdırmağa yönləndirdi."
+        },
+        "turningPoint": {
+          "content1": "Döngə nöqtəsi ənənəvi həllərin dərin köklü emosional və ruhani ehtiyaclarını həll edə bilmədiyi həyatında xüsusilə çətin dövrdə gəlmişdir. Bu zaman bioenerji terapiyasını kəşf etdi və onun transformativ gücünü birbaşa təcrübə etdi.",
+          "spiritualAwakening": "Ruhani oyatma: Enerji şəfası ilə ilk qarşılaşması öz energetik həssaslığını anlamaq və onu müsbət şəkildə yönləndirmək qapılarını açmışdır.",
+          "personalTransformation": "Şəxsi transformasiya: Adanmış daxili işlər və şəfa təcrübələri vasitəsilə onu geri tutan məhdudlaşdırıcı inancları və emosional nümunələri aşmışdır."
+        },
+        "professionalDevelopment": {
+          "title": "Peşəkar inkişaf və təlim",
+          "intro": "Başqalarına öz şəfa səyahətlərində kömək etmə çağırışını tanıyan Elza geniş peşəkar təlimə başlamışdır. Mükəmməllik və etik təcrübəyə bağlılıqla həmişə çoxsaylı şəfa modalitələrində sertifikasiyalar əldə etmişdir.",
+          "bioenergyTraining": "Bioenerji terapi sertifikatı: Çakralar, enerji sahələri və hüceyrə şəfası ilə işləməyi öyrənərək bioenerji şəfa texnikalarında inkişaf etmiş təlimi tamamlamışdır.",
+          "lifeCoachingCredentials": "Həyat koçluğu kimlik məlumatları: Transformasiya koçluğu və zehniyet işi üzrə ixtisaslaşaraq peşəkar həyat koçluğu sertifikatları almışdır.",
+          "continuingEducation": "Davamlı təhsil: Meditasiya, ruhani məsləhətçilik və holistik sağlamlıq yanaşmaları da daxil olmaqla müxtəlif şəfa sənətlərində davam edən təhsili davam etdirir."
+        },
+        "healingPhilosophy": {
+          "title": "Şəfa fəlsəfəsi və yanaşması",
+          "content1": "Elza'nın şəfa yanaşması hər fərdin şəfa və transformasiya üçün doğuştan gələn qabiliyyətə sahib olduğu inancına dərindən kök salmışdır. Metodologiyası qədim hikmətini müasir terapevtik texnikalarla birləşdirərək unikal və yüksək təsirli şəfa təcrübəsi yaradır.",
+          "content2": "O inanır ki, həqiqi şəfa yalnız simptomları deyil, disbalansın kök səbəblərini - emosional, energetik və ya ruhani olsun - həll etdiyimiz zaman baş verir. İşi müştəriləri öz şəfa səyahətlərində aktiv iştirakçılar olmağa gücləndirməkdə fokuslanır."
+        },
+        "impactAndMission": {
+          "title": "Təsir və missiya",
+          "content1": "İllər ərzində Elza minlərlə insana şəxsi transformasiya səyahətlərində rəhbərlik etmişdir. Müştəriləri emosional travmadan xilas axtaranlardan tam potensiallarını açmaq və həyatlarında mənalı dəyişiklik yaratmaq istəyən fərdlərə qədər uzanır.",
+          "content2": "Missiyası fərdi şəfanı aşaraq dünyada müsbət dəyişikliyin dalğa effekti yaratmağa uzanır. Kitabları, emalatxanaları və onlayn mövcudluğu vasitəsilə bilgi və görüşlərini qlobal auditoriya ilə paylaşır və şəfanı başqa cür bu resurslara girişi olmayabiləcək insanlar üçün əlçatan edir."
+        }
+      }
+    }
+  },
+  "termsOfService": {
+    "title": "Xidmət Şərtləri",
+    "lastUpdated": "Son yenilənmə:",
+    "sections": {
+      "acceptance": {
+        "title": "Şərtlərin Qəbul Edilməsi",
+        "content": "Veb saytımıza və xidmətlərimizə daxil olaraq və onlardan istifadə edərək, bu müqavilənin şərt və müddəalarına riayət etməyi qəbul edirsiniz. Yuxarıdakılara əməl etməyi qəbul etmirsinizsə, lütfən bu xidmətdən istifadə etməyin."
+      },
+      "services": {
+        "title": "Təklif Olunan Xidmətlər",
+        "intro": "Aşağıdakı xidmətləri təklif edirik:",
+        "items": [
+          {
+            "title": "Bioterapiya Xidmətləri:",
+            "description": "Enerji şəfası və terapevtik seanslar"
+          },
+          {
+            "title": "Bioenerji Şəfası:",
+            "description": "Holistik enerji işi və çakra balanslaşdırması"
+          },
+          {
+            "title": "Rəqəmi Kitablar:",
+            "description": "Sağlamlıq, mənəviyyat və şəxsi inkişaf üzrə e-kitablar"
+          },
+          {
+            "title": "Şeir Kolleksiyaları:",
+            "description": "Rəqəmi və fiziki şeir kitabları"
+          },
+          {
+            "title": "Sertifikatlar:",
+            "description": "Kurslar və seanslar üçün tamamlanma sertifikatları"
+          },
+          {
+            "title": "Məsləhətlər:",
+            "description": "Şəxsi rəhbərlik və koçluq seansları"
+          }
+        ]
+      },
+      "medicalDisclaimer": {
+        "title": "Tibbi Məsuliyyətdən İmtina",
+        "noticeTitle": "Vacib Sağlamlıq Bildirişi:",
+        "content": "Bioterapiya və bioenerji xidmətlərimiz ümumi rifahınızı dəstəkləmək məqsədi ilə təqdim edilən tamamlayıcı sağlamlıq təcrübələridir. Bu xidmətlər tibbi müalicə DEYİL və ənənəvi tibbi qayğının yerini tutmamalıdır. Heç bir xəstəliyi diaqnoz etmir, müalicə etmir, sağaltmır və ya qarşısını almırıq. Tibbi narahatlıqlar, diaqnozlar və ya müalicələr üçün həmişə kvalifikasiyalı səhiyyə mütəxəssislərinə müraciət edin."
+      },
+      "credentials": {
+        "title": "Peşəkar Kimlik Məlumatları:",
+        "content": "Xidmətlərimiz bioterapiya və bioenerji şəfası sahəsində müvafiq təhsil və kimlik məlumatlarına malik sertifikatlaşmış mütəxəssislər tərəfindən təqdim edilir. Sertifikatlar və kvalifikasiyalar tələb üzrə təqdim edilir."
+      }
+    }
+  },
+  "servicesPage": {
+    "faq": {
+      "whichService": {
+        "question": "Hansı sağlamlıq xidməti mənim üçün ən yaxşısıdır?",
+        "answer": "Ən yaxşı xidmət sizin konkret məqsədlərinizə və ehtiyaclarınıza bağlıdır. Həyat koçluğu şəxsi inkişaf və məqsəd uğuru üçün, bioenerji terapiyası enerji dengesizlikləri və stress azaltma üçün, bioterapiya isə sağlamlıq optimallaşdırması üçün idealdir. Ən uyğun yanaşmanı müəyyən etməyə kömək etmək üçün pulsuz məsləhətlər təklif edirik."
+      },
+      "willItWork": {
+        "question": "Sağlamlıq xidmətlərinin mənim üçün işə yarayacağını necə bilə bilərəm?",
+        "answer": "Xidmətlərimiz minlərlə müştərinin sağlamlıq məqsədlərinə çatmasına kömək etmişdir. İlk məsləhətiniz zamanı sizin konkret vəziyyətinizi qiymətləndiririk və irəliləyişinizi izləmək üçün aydın mərhələlər olan fərdiləşdirilmiş plan yaradırıq."
+      },
+      "combineServices": {
+        "question": "Müxtəlif sağlamlıq xidmətlərini birləşdirə bilərəmmi?",
+        "answer": "Bəli, bir çox müştəri xidmətləri birləşdirməkdən faydalanır. Məsələn, bioenerji terapiyası ilə həyat koçluğu həm şəxsi inkişaf, həm də enerji balansını eyni vaxtda həll edə bilər. Optimal nəticələr üçün inteqrasiya edilmiş müalicə planları yaradırıq."
+      },
+      "qualifications": {
+        "question": "Praktisyenlərinizin hansı kvalifikasiyaları var?",
+        "answer": "Bütün praktisyenlərimiz öz sahələrində geniş təlim almış sertifikatlaşdırılmış peşəkarlardır. Ən yüksək keyfiyyətli qayğı təmin etmək üçün müntəzəm davamlı təhsil alırlar və peşəkar sertifikatlarını saxlayırlar."
+      }
+    }
+  },
+  "services": {
+    "snippets": {
+      "title": "Sürətli Cavab: Sağlamlıq Xidməti Nədir?",
+      "quickAnswer": "Bioenerji terapiyası, bioterapiya və həyat koçluğunu birləşdirən peşəkar sağlamlıq xidmətləri, sizin unikal ehtiyaclarınıza uyğunlaşdırılmış fərdiləşdirilmiş holistik yanaşmalar vasitəsilə tam sağlamlıq səyahətinizi dəstəkləyir.",
+      "keyBenefits": {
+        "title": "Sağlamlıq Xidmətinin Əsas Faydaları:",
+        "items": [
+          "Stresin azaldılması və emosional balans",
+          "Yaxşılaşdırılmış enerji səviyyələri və canlılıq",
+          "Artırılmış özünüdərk və aydınlıq",
+          "Şəxsi böyümə və həyat transformasiyası",
+          "Sağlamlığa bütöv yanaşma",
+          "Peşəkar, sertifikatlaşdırılmış qayğı"
+        ]
+      }
+    },
+    "pageTitle": "Peşəkar Sağlamlıq Xidmətləri",
+    "pageSubtitle": "Ağıl, bədən və ruh üçün hərtərəfli sağlamlıq həlləri",
+    "description": "Optimal sağlamlıq və şəxsi transformasiya səyahətinizdə sizi dəstəkləmək üçün nəzərdə tutulmuş peşəkar sağlamlıq xidmətlərimizi kəşf edin.",
+    "mainServices": {
+      "lifeCoaching": {
+        "title": "Həyat Koçluğu",
+        "description": "Fərdiləşdirilmiş rəhbərlik və sınanmış strategiyalar vasitəsilə şəxsi inkişaf, məqsəd müvəffəqiyyəti və həyat transformasiyası üçün peşəkar həyat koçluğu.",
+        "benefits": ["Məqsəd Uğuru", "Şəxsi İnkişaf", "Həyat Balansı", "Etibar Qurma"],
+        "duration": "60-90 dəqiqə",
+        "features": {
+          "goalSetting": {
+            "title": "Məqsəd Təyin Etmə və Uğur",
+            "description": "Arzularınızı həyata keçirmək üçün aydın məqsəd təyin etmə çərçivələri və tətbiq edilə bilən strategiyalar"
+          },
+          "personalDevelopment": {
+            "title": "Şəxsi İnkişaf",
+            "description": "Unikal ehtiyaclarınıza görə fərdiləşdirilmiş hərtərəfli şəxsi böyümə proqramları"
+          },
+          "mindsetTransformation": {
+            "title": "Düşüncə Transformasiyası",
+            "description": "Məhdudlaşdırıcı inancları aşın və uğur yönümlü düşüncə tərzi inkişaf etdirin"
+          },
+          "lifeBalance": {
+            "title": "Həyat Balansı",
+            "description": "İş, münasibətlər, sağlamlıq və şəxsi məmnunluq arasında harmoniya yaradın"
+          }
+        },
+        "process": "Həyat koçluğu məqsəd aydınlaşdırması və baxış təyin etməsi ilə başlayır, sonra maneələrin müəyyən edilməsi, fəaliyyət planlarının yaradılması, strategiyaların həyata keçirilməsi və uğuru təmin etmək üçün davamlı hesabatlılıq izləyir.",
+        "results": "Həyat koçluğu seansları adətən 60-90 dəqiqə çəkir, müştərilərin əksəriyyəti 3-6 ay ərzində 6-12 seans daxilində əhəmiyyətli irəliləyişlər yaşayır."
+      },
+      "bioenergy": {
+        "title": "Bioenerji Terapiyası",
+        "description": "Bədəninizin enerji sahəsi ilə işləyərək balansı bərpa edən, canlılığı artıran və holistik sağlamlığı dəstəkləyən inkişaf etmiş bioenerji şəfa terapiyası.",
+        "benefits": ["Enerji Balansı", "Stress Azaltma", "Canlılıq Artırma", "Emosional Şəfa"],
+        "duration": "60-90 dəqiqə",
+        "features": {
+          "energyAssessment": {
+            "title": "Enerji Qiymətləndirməsi",
+            "description": "Blokajları və balansızlıqları müəyyən etmək üçün enerji sahənizin hərtərəfli qiymətləndirməsi"
+          },
+          "chakraBalancing": {
+            "title": "Çakra Balanslaşdırması",
+            "description": "Optimal axın üçün yeddi əsas enerji mərkəzinizin uyğunlaşdırılması və balanslaşdırılması"
+          },
+          "auraCleansing": {
+            "title": "Aura Təmizləməsi",
+            "description": "Neqativ enerjinin uzaqlaşdırılması və qoruyucu enerji sahənizin gücləndirilməsi"
+          },
+          "energyHealing": {
+            "title": "Enerji Şəfası",
+            "description": "Fiziki və emosional rifahı bərpa etmək üçün birbaşa şəfa enerjisi ötürülməsi"
+          }
+        },
+        "process": "Bioenerji terapiyası blokajları müəyyən etmək üçün enerji qiymətləndirməsi ilə başlayır, sonra optimal enerji axını bərpa etmək üçün çakra balanslaşdırması, aura təmizləməsi və birbaşa enerji ötürülməsi daxil olmaqla hədəflənmiş şəfa texnikaları izləyir.",
+        "results": "Bioenerji terapiya seansları adətən 60-90 dəqiqə çəkir, müştərilərin əksəriyyəti 2-3 seans daxilində nəzərəçarpan yaxşılaşmalar yaşayır, lakin fərdi nəticələr dəyişə bilər."
+      },
+      "biotherapy": {
+        "title": "Bioterapiya Müalicəsi",
+        "description": "Hüceyrə funksiyasını optimallaşdıran, immun sistemini gücləndiricən və təbii şəfa qabiliyyətini artıran son texnologiya bioterapiya müalicəsi.",
+        "benefits": ["Hüceyrə Sağlamlığı", "İmmun Dəstək", "Bərpa", "Sağlamlıq Optimallaşdırması"],
+        "duration": "75-120 dəqiqə",
+        "features": {
+          "cellularRegeneration": {
+            "title": "Hüceyrə Yenilənməsi",
+            "description": "Hüceyrə təmiri və yenilənmə proseslərini stimullaşdırmaq üçün inkişaf etmiş texnikalar"
+          },
+          "immuneSupport": {
+            "title": "İmmun Sistem Dəstəyi",
+            "description": "Bədəninizin təbii müdafiə mexanizmlərinin gücləndirilməsi və balanslaşdırılması"
+          },
+          "detoxification": {
+            "title": "Detoksifikasiya",
+            "description": "Toksinləri aradan qaldırmaq və canlılığı bərpa etmək üçün hərtərəfli detoks protokolları"
+          },
+          "metabolicOptimization": {
+            "title": "Metabolik Optimallaşdırma",
+            "description": "Yaxşılaşdırılmış enerji və sağlamlıq üçün metabolik funksiyanın artırılması"
+          }
+        },
+        "process": "Bioterapiya müalicəsi hərtərəfli sağlamlıq qiymətləndirməsi ilə başlayır, sonra hüceyrə yenilənməsi texnikaları, immun sistem dəstəyi, detoksifikasiya və metabolik optimallaşdırma daxil olmaqla fərdiləşdirilmiş protokollar izləyir.",
+        "results": "Bioterapiya seansları adətən 75-120 dəqiqə çəkir, müştərilərin əksəriyyəti 4-6 seans daxilində əhəmiyyətli yaxşılaşmalar yaşayır, lakin müalicə müddəti fərdi ehtiyaclara görə dəyişir."
+      }
+    },
+    "comparison": {
+      "title": "Hansı Xidmət Sizə Uyğundur?",
+      "headers": {
+        "service": "Xidmət",
+        "bestFor": "Ən Yaxşı Kimlərdə",
+        "focusArea": "Diqqət Sahəsi",
+        "timeline": "Vaxt Cədvəli"
+      },
+      "lifeCoaching": {
+        "bestFor": "Məqsəd uğuru, həyat keçidləri",
+        "focusArea": "Şəxsi inkişaf, düşüncə tərzi",
+        "timeline": "4-8 həftə"
+      },
+      "bioenergy": {
+        "bestFor": "Enerji balansızlıqları, stress azaltma",
+        "focusArea": "Enerji şəfası, emosional balans",
+        "timeline": "2-4 həftə"
+      },
+      "biotherapy": {
+        "bestFor": "Sağlamlıq optimallaşdırması, bərpa",
+        "focusArea": "Hüceyrə sağlamlığı, immun dəstək",
+        "timeline": "4-6 həftə"
+      }
+    },
+    "whyChoose": {
+      "title": "Niyə Bizim Peşəkar Sağlamlıq Xidmətlərimizi Seçin?",
+      "description": "Sertifikatlaşdırılmış ekspertlik və fərdiləşdirilmiş qayğının sağlamlıq səyahətinizdə yarada biləcəyi fərqi təcrübə edin.",
+      "reasons": {
+        "certified": {
+          "title": "Sertifikatlaşdırılmış Peşəkarlar",
+          "description": "Bütün təcrübəçilər geniş təlim və davamlı təhsillə sertifikatlaşdırılmışdır."
+        },
+        "personalized": {
+          "title": "Fərdiləşdirilmiş Yanaşma",
+          "description": "Hər müalicə planı sizin unikal ehtiyaclarınıza və məqsədlərinizə görə fərdiləşdirilir."
+        },
+        "proven": {
+          "title": "Sınanmış Nəticələr",
+          "description": "Müştəri rifahında ölçülə bilən yaxşılaşmalarla müvəffəqiyyət tarixi."
+        },
+        "support": {
+          "title": "Davamlı Dəstək",
+          "description": "Sağlamlıq səyahətiniz boyu davamlı rəhbərlik və dəstək."
+        }
+      }
+    },
+    "cta": {
+      "title": "Həyatınızı Transformasiya Etməyə Hazırsınız?",
+      "description": "Bu gün sağlamlıq səyahətinizə doğru ilk addımı atın. Fərdiləşdirilmiş məsləhət üçün bizimlə əlaqə saxlayın.",
+      "primaryButton": "Əlaqə Saxlayın",
+      "secondaryButton": "Daha Çox Öyrənin"
+    }
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Tez-tez verilən suallar",
+    "items": {
+      "1": {
+        "q": "Hansı terapiya növlərini təklif edirsiniz?",
+        "a": "Fərdi terapiya, cütlük məsləhətləndirilməsi, ailə terapiyası, kognitiv davranış terapiyası (KDT), dialektik davranış terapiyası (DDT) və narahatlıq, depressiya, travma və digər psixi sağlamlıq vəziyyətləri üçün ixtisaslaşmış müalicələr daxil olmaqla geniş terapevtik xidmətlər təklif edirik."
+      },
+      "2": {
+        "q": "Randevu üçün göndəriş (sevk) lazımdırmı?",
+        "a": "Bizdən randevu almaq üçün göndəriş tələb olunmur. Müraciətinizi planlaşdırmaq üçün birbaşa ofisimizlə əlaqə saxlaya bilərsiniz. Sığortadan istifadə etməyi planlaşdırırsınızsa, təminatçınızın tələblərini yoxlamağınızı tövsiyə edirik."
+      },
+      "3": {
+        "q": "Məlumatlarım məxfi saxlanılırmı?",
+        "a": "Tamamilə. HIPAA qaydalarına və peşə etik standartlarına uyğun olaraq ciddi məxfilik standartlarına riayət edirik. Şəxsi məlumatlarınız və terapiya seanslarınız tamamilə gizli və təhlükəsizdir."
+      },
+      "4": {
+        "q": "İlk ziyarətimdə nə gözləməliyəm?",
+        "a": "İlk seansınızda narahatlıqlarınız, məqsədləriniz və tibbi tarixiniz haqqında ətraflı qiymətləndirmə aparılacaq. Bu, ehtiyaclarınızı anlamağımıza və fərdiləşdirilmiş müalicə planı hazırlamağımıza kömək edir. Seans adətən 60-90 dəqiqə çəkir."
+      },
+      "5": {
+        "q": "Onlayn terapiya seansları təklif edirsinizmi?",
+        "a": "Bəli, rahatlığınız üçün təhlükəsiz teletibb seansları təklif edirik. Virtual terapiya platformamız HIPAA standartlarına uyğundur və üzbəüz seanslarla eyni xidmət keyfiyyətini təmin edir; evinizin rahatlığında dəstək ala bilərsiniz."
+      },
+      "6": {
+        "q": "İzləmə (follow-up) müddəti nə qədərdir?",
+        "a": "İzləmə görüşləri ehtiyaclarınıza və müalicə planınıza uyğun olaraq adətən həftəlik və ya iki həftədə bir planlaşdırılır. Terapiyanın müddəti şəxsdən şəxsə dəyişir; məqsədlərinizə və irəliləyişinizə əsasən bir neçə aydan daha uzunmüddətli dəstəyə qədər davam edə bilər."
+      }
+    }
+  },
+  "blog": {
+    "pageTitle": "Bloq",
+    "pageDescription": "Müasir proqram təminatı inkişafı üzrə fikirləri, dərslər və düşüncələr",
+    "search": {
+      "placeholder": "Bloq yazılarını axtarın...",
+      "button": "Axtarış",
+      "commandPlaceholder": "Bloq axtarışı...",
+      "noResults": "Nəticə tapılmadı.",
+      "loadingResults": "Nəticələr yüklənir..."
+    },
+    "filter": {
+      "title": "Bloqları Filtrləyin", 
+      "description": "Bloqları dilə görə filtrləyin və spesifik məzmunu axtarın.",
+      "language": "Dil",
+      "languageOptions": {
+        "all": "Bütün Dillər",
+        "tr": "Türkçe",
+        "en": "English", 
+        "ru": "Русский",
+        "az": "Azərbaycan"
+      },
+      "applyFilters": "Filtrləri Tətbiq Et",
+      "clearFilters": "Filtrləri Təmizlə",
+      "cancel": "Ləğv et"
+    },
+    "pagination": {
+      "previous": "Əvvəlki",
+      "next": "Növbəti",
+      "viewAll": "Bütün yazıları görüntülə"
+    },
+    "loading": "Bloq məlumatları yüklənir...",
+    "error": "Bloq məlumatları yüklənərkən xəta baş verdi.",
+    "noBlogs": "Hələ bloq yazısı tapılmadı.",
+    "author": "Elza Darya",
+    "noImage": "Şəkil Yoxdur"
+  },
+  "dynamicFAQ": {
+    "title": "Tez-tez Verilən Suallar",
+    "subtitle": "{serviceName}{locationText} haqqında ümumi suallar",
+    "stillHaveQuestions": "Hələ də suallarınız var?",
+    "cantFindAnswer": "Axtardığınız cavabı tapa bilmirsiniz? Sizə şəxsən kömək etməyi çox istərdik.",
+    "contactDirectly": "Birbaşa Əlaqə Saxlayın",
+    "noResults": "'{searchTerm}' ilə uyğun gələn sual tapılmadı",
+    "clearSearch": "Axtarışı təmizlə",
+    "searchPlaceholder": "FAQ axtarışı edin...",
+    "searchButton": "Axtarış"
+  },
+  "services": {
+    "mainServices": {
+      "lifeCoaching": {
+        "title": "Yaşam Koçluluğu",
+        "description": "Kişiselleştirilmiş rehberlik ve kanıtlanmış stratejiler aracılığıyla kişisel gelişim, hedef başarısı ve yaşam dönüşümü için profesyonel yaşam koçluluğu.",
+        "benefits": ["Hedef Başarısı", "Kişisel Büyüme", "Yaşam Dengesi", "Güven İnşası"],
+        "duration": "60-90 dakika",
+        "features": {
+          "goalSetting": {
+            "title": "Hedef Belirleme ve Başarısı",
+            "description": "Hayallerinizi gerçekleştirmek için net hedef belirleme çerçeveleri ve uygulanabilir stratejiler"
+          },
+          "personalDevelopment": {
+            "title": "Kişisel Gelişim",
+            "description": "Benzersiz ihtiyaçlarınıza göre özelleştirilmiş kapsamlı kişisel büyüme programları"
+          },
+          "mindsetTransformation": {
+            "title": "Zihinsel Dönüşümü",
+            "description": "Sınırlayıcı inançları aşın ve başarı odaklı bir zihniyet geliştirin"
+          },
+          "lifeBalance": {
+              "title": "Yaşam Dengeliği",
+            "description": "İş, ilişkiler, sağlık ve kişisel tatmin arasında uyum yaratın"
+          }
+        },
+        "process": "Yaşam koçluluğu hedef netleştirme ve vizyon belirleme ile başlar, ardından engellerin belirlenmesi, eylem planları oluşturulması, stratejilerin uygulanması ve başarıyı sağlamak için sürekli hesap verebilirlik izler.",
+        "results": "Yaşam koçluğu seansları genellikle 60-90 dakika sürer, çoğu müşteri 3-6 ay boyunca 6-12 seans içinde önemli atılımlar yaşar."
+      },
+      "bioenergy": {
+        "title": "Biyoenerji Terapi",
+        "description": "Vücudunuzun enerji alanı ile çalışarak dengeyi restore eden, canlılığı artıran ve holistik sağlığı destekleyen gelişmiş biyoenerji şifa terapisi.",
+        "benefits": ["Enerji Dengesi", "Stres Giderme", "Canlılık Artışı", "Duygusal Şifa"],
+        "duration": "60-90 dakika",
+        "features": {
+          "energyAssessment": {
+            "title": "Enerji Qiymətləndirməsi",
+            "description": "Blokajları ve dengesizlikleri tespit etmek için enerji alanınızın kapsamlı değerlendirmesi"
+          },
+          "chakraBalancing": {
+            "title": "Çakra Dengeleməsi",
+            "description": "Optimal akış için yedi ana enerji merkezinizin hizalanması ve dengelenmesi"
+          },
+          "auraCleansing": {
+            "title": "Aura Temizliyinin",
+            "description": "Negatif enerjinin uzaklaştırılması ve koruyucu enerji alanınızın güçlendirilmesi"
+          },
+          "energyHealing": {
+            "title": "Enerji Şifasının",
+            "description": "Fiziksel ve duygusal iyiliği restore etmek için doğrudan şifa enerjisi iletimi"
+          }
+        },
+        "process": "Biyoenerji terapi, blokajları tespit etmek için enerji değerlendirmesi ile başlar, ardından optimal enerji akışını restore etmek için çakra dengeleme, aura temizliği ve doğrudan enerji iletimi dahil hedefli şifa teknikleri izler.",
+        "results": "Biyoenerji terapi seansları genellikle 60-90 dakika sürer, çoğu müşteri 2-3 seans içinde belirgin iyileşmeler yaşar, ancak bireysel sonuçlar değişebilir."
+      },
+      "biotherapy": {
+        "title": "Bioterapi Müalicəsi",
+        "description": "Hücresel işlevi optimize eden, bağışıklık sistemini güçlendiren ve doğal şifa kapasitesini artıran son teknoloji bioterapi tedavisi.",
+        "benefits": ["Hücresel Sağlık", "Bağışıklık Desteği", "İyileşme", "Sağlık Optimizasyonu"],
+        "duration": "75-120 dakika",
+        "features": {
+          "cellularRegeneration": {
+            "title": "Hücresel Yenilenme",
+            "description": "Hücre onarımı ve yenilenme süreçlerini uyarmak için gelişmiş teknikler"
+          },
+          "immuneSupport": {
+            "title": "Bağışıklık Sistemi Desteği",
+            "description": "Vücudunuzun doğal savunma mekanizmalarının güçlendirilmesi ve dengelenmesi"
+          },
+          "detoxification": {
+            "title": "Detoksifikasyon",
+            "description": "Toksinleri elimine etmek ve canlılığı restore etmek için kapsamlı detoks protokolleri"
+          },
+          "metabolicOptimization": {
+            "title": "Metabolik Optimizasyon",
+            "description": "Gelişmiş enerji ve sağlık için metabolik fonksiyonun artırılması"
+          }
+        },
+        "process": "Bioterapi tedavisi kapsamlı sağlık değerlendirmesi ile başlar, ardından hücresel yenilenme teknikleri, bağışıklık sistemi desteği, detoksifikasyon ve metabolik optimizasyon dahil özelleştirilmiş protokoller izler.",
+        "results": "Bioterapi seansları genellikle 75-120 dakika sürer, çoğu müşteri 4-6 seans içinde önemli iyileşmeler yaşar, ancak tedavi süresi bireysel ihtiyaçlara göre değişir."
+      }
+    },
+    "geoServicePage": {
+      "content": {
+        "definition": {
+          "biotherapy": "Bioterapiya, fiziki, emosional və ruhsal rifahı təşviq etmək üçün ənənəvi şəfa texnikalarını müasir sağlamlıq təcrübələri ilə birləşdirən peşəkar holistik terapiyadır.",
+          "bioenergy": "Bioenerji terapisi, balansı bərpa etmək, canlılığı artırmaq və holistik sağlamlığı təşviq etmək üçün bədəninizin enerji sahəsi ilə işləyən təkmilləşmiş şəfa modalitetidir.",
+          "lifeCoaching": "Həyat məşqçiliyi, şəxsi inkişaf, məqsəd əldə etmə və həyat transformasiyası üçün fərdiləşdirilmiş rəhbərlik və sübut edilmiş strategiyalar təqdim edən peşəkar xidmətdir."
+        },
+        "benefits": {
+          "biotherapy": "Bioterapiya, fərdiləşdirilmiş terapevtik yanaşmalar vasitəsilə stress azaltma, təkmilləşmiş enerji səviyyələri, emosional balans, artırılmış öz-şüur və ümumi həyat transformasiyası daxil olmaqla çoxlu faydalar təqdim edir.",
+          "bioenergy": "Bioenerji terapisi, enerji balansı, stress azaltma, canlılıq artırma, emosional şəfa və ümumi sağlamlıq optimallaşdırması daxil olmaqla çoxlu faydalar təqdim edir.",
+          "lifeCoaching": "Həyat məşqçiliyi, məqsəd aydınlaşdırma, şəxsi inkişaf, özünə inam artırma, həyat balansı və davamlı transformasiya daxil olmaqla çoxlu faydalar təqdim edir."
+        },
+        "experience": {
+          "biotherapy": "Çoxillik peşəkar təcrübə və sertifikatlaşdırılmış təlimlə bizim praktiklər daha az təcrübəli təchizatçılara nisbətən üstün bioterapiya təqdim edir.",
+          "bioenergy": "Sertifikatlaşdırılmış mütəxəssislərimiz və sübut edilmiş texnikalarımızla bioenerji terapisində üstün nəticələr və təhlükəsiz təcrübələr təmin edirik.",
+          "lifeCoaching": "Ekspert məşqçilərimiz sübut edilmiş metodologiyalar və fərdiləşdirilmiş yanaşmalar vasitəsilə həyat məşqçiliyində üstün nəticələr əldə edir.",
+          "life-coaching": "Ekspert məşqçilərimiz sübut edilmiş metodologiyalar və fərdiləşdirilmiş yanaşmalar vasitəsilə həyat məşqçiliyində üstün nəticələr əldə edir."
+        },
+        "personalized": {
+          "biotherapy": "Bioterapiyaya fərdiləşdirilmiş yanaşmamız hər müştərinin konkret ehtiyacları və məqsədlərinə uyğunlaşdırılmış fərdi müalicə planları almasını təmin edir.",
+          "bioenergy": "Fərdiləşdirilmiş bioenerji yanaşmamız hər insanın unikal enerji profili və şəfa məqsədlərinə uyğunlaşdırılmış müalicə planları təqdim edir.",
+          "lifeCoaching": "Həyat məşqçiliyinə fərdiləşdirilmiş yanaşmamız hər müştərinin fərdi məqsədləri, çətinlikləri və potensialına yönəlmiş konkret strategiyalar hazırlayır.",
+          "life-coaching": "Həyat məşqçiliyinə fərdiləşdirilmiş yanaşmamız hər müştərinin fərdi məqsədləri, çətinlikləri və potensialına yönəlmiş konkret strategiyalar hazırlayır."
+        },
+        "process": {
+          "biotherapy": "Bioterapiya müalicəsi hərtərəfli sağlamlıq qiymətləndirməsi ilə başlayır, ardınca hüceyrə regenerasiyası texnikaları, immun sistemi dəstəyi, detoksifikasiya və metabolik optimallaşdırma daxil olmaqla fərdi protokollar gəlir.",
+          "bioenergy": "Bioenerji terapisi prosesi blokajları müəyyən etmək üçün enerji qiymətləndirməsi ilə başlayır, ardınca çakra balanslaşdırma, aura təmizləmə və optimal enerji axınının bərpası üçün enerjinin birbaşa ötürülməsi daxil olmaqla hədəflənmiş şəfa texnikaları gəlir.",
+          "lifeCoaching": "Həyat məşqçiliyi prosesi məqsədlərin aydınlaşdırılması və vizyonun qurulması ilə başlayır, ardınca maneələrin müəyyən edilməsi, hərəkət planlarının yaradılması, strategiyaların həyata keçirilməsi və uğurun təmin edilməsi üçün davamlı məsuliyyət gəlir.",
+          "life-coaching": "Həyat məşqçiliyi prosesi məqsədlərin aydınlaşdırılması və vizyonun qurulması ilə başlayır, ardınca maneələrin müəyyən edilməsi, hərəkət planlarının yaradılması, strategiyaların həyata keçirilməsi və uğurun təmin edilməsi üçün davamlı məsuliyyət gəlir."
+        }
+      },
+      "features": {
+        "cellularRegeneration": {
+          "title": "Hüceyrə Rejenerasiyası",
+          "description": "Hüceyrə bərpası və regenerasiya proseslərini stimullaşdırmaq üçün təkmilləşmiş texnikalar"
+        },
+        "immuneSupport": {
+          "title": "İmmun Sistemi Dəstəyinin",
+          "description": "Bədəninizin təbii müdafiə mexanizmlərinin gücləndirilməsi və balanslaşdırılması"
+        },
+        "detoxification": {
+          "title": "Detoksifikasiyanın",
+          "description": "Toksini aradan qaldırmaq və canlılığı bərpa etmək üçün hərtərəfli detoks protokolları"
+        },
+        "metabolicOptimization": {
+          "title": "Metabolik Optimallaşdırmanın",
+          "description": "Təkmilləşmiş enerji və sağlamlıq üçün metabolik funksiyanın artırılması"
+        }
+      },
+      "hero": {
+        "bestService": "Ən Yaxşı {serviceName} {locationText} 2025",
+        "professionalService": "Peşəkar {serviceName} Xidmətləri"
+      },
+      "trustSignals": {
+        "certified": "Sertifikatlı Mütəxəssis",
+        "stories": "500+ Uğur Hekayəsi",
+        "serving": "2020-ci ildən {city}-yə Xidmət"
+      },
+      "buttons": {
+        "getInTouch": "Əlaqə Saxlayın",
+        "viewStories": "Uğur Hekayələrinə Baxın"
+      },
+      "sections": {
+        "whatIs": "{serviceName} Nədir və Necə İşləyir?",
+        "whyChoose": "Niyə Peşəkar {serviceName} Xidmətlərini Seçməlisiniz?",
+        "whatToExpected": "{serviceName} Seansınızda Nə Gözləmək Olar?",
+        "whatToExpectedLocation": "{serviceName} Seansınızda Nə Gözləmək Olar {locationText}",
+        "whatToExpectedLocationLocation": "{serviceName} Seansınızda Nə Gözləmək Olar {locationText}",
+        "clientStories": "Müştəri Uğur Hekayələri",
+        "clientStoriesLocation": "{city}-dən Müştəri Uğur Hekayələri",
+        "relatedServices": "Əlaqəli Xidmətlər"
+      },
+      "benefits": {
+        "title": "{serviceName} Əsas Faydaları:",
+        "items": [
+          "Stresin azaldılması və emosional balans",
+          "Yaxşılaşdırılmış enerji səviyyələri və canlılıq",
+          "Artırılmış özünüdərk və aydınlıq",
+          "Şəxsi böyümə və həyat transformasiyası",
+          "Sağlamlığa bütöv yanaşma"
+        ]
+      },
+      "services": {
+        "bioenergy": "Bioenerji Terapiyası{locationText}",
+        "biotherapy": "Bioterapiya{locationText}",
+        "lifeCoaching": "Həyat Kouchluğu{locationText}"
+      }
+    },
+    "featuresSection": {
+      "badge": "Xidmətlərimiz",
+      "title": "Holistik Sağlamlıq Həlləri",
+      "description": "Bədən, zehin və ruh balansını təmin edən ekspert xidmətlər.",
+      "services": {
+        "biotherapy": {
+          "title": "Bioterapiya",
+          "description": "Modern bioterapiya texnikaları ilə bədəninizin təbii sağalma gücünü aktivləşdirin"
+        },
+        "bioenergy": {
+          "title": "Bioenerji",
+          "description": "Enerji axınınızı balanslaşdıraraq fiziki və ruhani sağlamlığınızı təkmilləşdirin"
+        },
+        "lifeCoaching": {
+          "title": "Həyat Koçluğu",
+          "description": "Şəxsi hədəflərinizə çatmaq üçün peşəkar rəhbərlik və dəstək alın"
+        },
+        "allServices": {
+          "title": "Bütün xidmətlərimiz",
+          "description": "Bütün xidmətlərimiz haqqında məlumat almaq üçün bizə müraciət edin."
+        }
+      },
+      "readMore": "Daha Çox Oxu"
+    },
+    "bioenergyPage": {
+    "faq": {
+      "sessions": {
+        "question": "Neçə bioenerji terapiyası seansına ehtiyacım var?",
+        "answer": "Seansların sayı sizin fərdi ehtiyaclarınıza və məqsədlərinizə görə dəyişir. Müştərilərin əksəriyyəti 2-3 seansdan sonra yaxşılaşma hiss edir, əhəmiyyətli nəticələr adətən 6-8 seans ərzində əldə edilir. Mütəxəssisiniz ilk konsultasiya zamanı fərdiləşdirilmiş müalicə planı yaradacaq."
+      },
+      "safety": {
+        "question": "Bioenerji terapiyası təhlükəsizdirmi?",
+        "answer": "Bəli, bioenerji terapiyası tamamilə təhlükəsiz və invaziv olmayan metoddur. Bədəninizin təbii enerji sistemləri ilə işləyir və zərərli yan təsirləri yoxdur. Ənənəvi tibbi müalicələrlə birlikdə tamamlayıcı terapiya kimi təhlükəsiz şəkildə istifadə edilə bilər."
+      },
+      "firstSession": {
+        "question": "İlk bioenerji seansımda nə gözləməliyəm?",
+        "answer": "İlk seansınız sağlamlıq tarixi və məqsədləriniz haqqında ətraflı konsultasiya ehtiva edir, sonra enerji qiymətləndirilməsi aparılır. Həqiqi terapiya tamamilə geyinmiş və rahat vəziyyətdə, yumşaq əl qoyma və ya bədənə yaxın texnikaları ehtiva edir. Müştərilərin əksəriyyəti dərhal rahatlıq və enerji dəyişiklikləri hiss edir."
+      }
+    },
+    "detailedSections": {
+      "whatIs": {
+        "title": "Bioenerji Terapiyası Nədir və Necə İşləyir?",
+        "description": "Bioenerji terapiyası optimal sağlamlıq və rifahı bərpa etmək üçün bədənin bioelektrik sahəsi ilə işləyən elmi əsasları olan şəfa modalitəsidir. Bu invaziv olmayan terapiya bütün canlıların stress, xəstəlik, travma və ya ətraf mühit faktorları səbəbiylə pozula bilən elektromaqnit enerji sahəsinə malik olduğunu qəbul edir.",
+        "sessionDescription": "Bioenerji terapiyası seansı zamanı sertifikatlaşdırılmış praktikantlar bioalanınızdakı enerji balansızlıqlarını və blokajları aşkar etmək üçün xüsusi texnikalardan istifadə edirlər. Yumşaq əl qoyma və ya bədənə yaxın metodlarla düzgün enerji axını bərpa etməyə kömək edirlər, beləliklə bədəninizin təbii şəfa mexanizmlərinin optimal işləməsinə imkan verirlər.",
+        "scientificFoundation": {
+          "title": "Elmi Əsas:",
+          "items": [
+            "Bioelektromaqnit sahə araşdırmalarına əsaslanır",
+            "Enerji tibbi tədqiqatları ilə dəstəklənir",
+            "İnteqrativ tibbin praktisyenləri tərəfindən tanınır",
+            "Ənənəvi tibbi müalicələri tamamlayır"
+          ]
+        }
+      },
+      "conditions": {
+        "title": "Bioenerji Terapiyası Hansı Şərtlərə Kömək Edə Bilər?",
+        "description": "Bioenerji terapiyası geniş fiziki, emosional və enerjetik balanssızlıqları həll etməkdə effektivlik göstərmişdir. Bir çox müştəri ümumi rifahında və spesifik sağlamlıq narahatlıqlarında əhəmiyyətli yaxşılaşmalar yaşayır.",
+        "physical": {
+          "title": "Fiziki Şərtlər:",
+          "items": [
+            "Xroniki ağrı və iltihab",
+            "Yorğunluq və aşağı enerji",
+            "Yuxu pozğunluqları",
+            "Həzm problemləri",
+            "Baş ağrısı və miqren",
+            "Xəstəlik və ya əməliyyatdan sonra bərpa"
+          ]
+        },
+        "emotional": {
+          "title": "Emosional və Zehni:",
+          "items": [
+            "Stress və narahatlıq",
+            "Depressiya və əhval pozğunluqları",
+            "Emosional travma",
+            "Zehni aydınlıq və fokus",
+            "Münasibət çətinlikləri",
+            "Həyat keçidləri"
+          ]
+        }
+      }
+    }
+  },
+  "biotherapyPage": {
+    "faq": {
+      "results": {
+        "question": "Bioterapiya müalicəsi nəticə göstərməsi nə qədər vaxt aparır?",
+        "answer": "Müştərilərin əksəriyyəti ilk bir neçə seans ərzində yaxşılaşma hiss edir, əhəmiyyətli nəticələr adətən 4-6 həftəlik ardıcıl müalicə ərzində görülür. Lakin vaxt cədvəli fərdi sağlamlıq vəziyyətləri və müalicə məqsədlərinə görə dəyişir."
+      },
+      "safety": {
+        "question": "Bioterapiya müalicəsi hər kəs üçün təhlükəsizdirmi?",
+        "answer": "Bioterapiya adətən insanların əksəriyyəti üçün təhlükəsizdir, lakin müalicə başlamazdan əvvəl hərtərəfli sağlamlıq qiymətləndirməsi aparılır. Mütəxəssisiniz bioterapiyanın sizin konkret vəziyyətiniz və sağlamlıq durumunuz üçün uyğun olub-olmadığını müəyyən edəcək."
+      },
+      "difference": {
+        "question": "Bioterapiyanı ənənəvi müalicələrdən fərqləndirən nədir?",
+        "answer": "Bioterapiya sadəcə simptomları müalicə etmək əvəzinə hüceyrə funksiyasını optimallaşdırmağa və bədənin təbii şəfa qabiliyyətini artırmağa diqqət yetirir. Sağlamlıq balanssızlıqlarının kök səbəblərini həll etmək üçün inkişaf etmiş, invaziv olmayan texnikalar istifadə edir."
+      },
+      "combination": {
+        "question": "Bioterapiya digər müalicələrlə birləşdirilə bilərmi?",
+        "answer": "Bəli, bioterapiya digər müalicə modalitələrini tamamlamaq və təkmilləşdirmək üçün nəzərdə tutulmuşdur. Ənənəvi tibbi müalicələr, qidalanma protokolları və digər holistik terapiyalarla təhlükəsiz şəkildə inteqrasiya edilə bilər."
+      }
+    }
+  },
+  "lifeCoachingPage": {
+    "faq": {
+      "sessions": {
+        "question": "Neçə həyat kouchluğu seansına ehtiyacım var?",
+        "answer": "Seansların sayı məqsədlərinizə və bağlılıq səviyyənizdən asılı olaraq dəyişir. Müştərilərin əksəriyyəti 3-6 ay ərzində 6-12 seans ərzində əhəmiyyətli irəliləyiş görür. İlk konsultasiyanızda fərdiləşdirilmiş plan yaradacağıq."
+      },
+      "goals": {
+        "question": "Məqsədlərimi həyata keçirməyim üçün necə kömək edirsiniz?",
+        "answer": "Məqsəd müəyyənləşdirmə çərçivələri, hesabatlılıq sistemləri, maneələrin müəyyənləşdirilməsi və fəaliyyət planlaşması da daxil olmaqla sübut edilmiş kouchluk metodologiyalarından istifadə edirik. Uğuru təmin etmək üçün fərdiləşdirilmiş strategiyalar və davamlı dəstək alacaqsınız."
+      },
+      "difference": {
+        "question": "Həyat kouchluğunu terapiyadan fərqləndirən nədir?",
+        "answer": "Həyat kouchluğu gələcəyə yönəlmiş və fəaliyyət yönümlüdür, konkret məqsədlərə çatmağınıza və müsbət dəyişikliklər yaratmağınıza kömək edir. Terapiya tez-tez keçmiş problemləri həll edərkən, kouchluk irəliləməyə və potensialınızı açmağa diqqət yetirir."
+      },
+      "results": {
+        "question": "Həyat kouchluğundan nə vaxt nəticə görəcəyəm?",
+        "answer": "Müştərilərin əksəriyyəti ilk seanstan sonra artan aydınlıq və motivasiya yaşayır. Əhəmiyyətli davranış dəyişiklikləri və məqsəd irəliləyişi adətən 4-8 həftəlik ardıcıl kouchluk və tətbiq ərzində baş verir."
+      }
+    }
+  }
+  },
+  
+  "recentBlogsSection": {
+    "title": "Son Blog Yazıları",
+    "subtitle": "Bioenerji və Sağlamlıq Haqqında Ən Son Məzmun",
+    "readMore": "Daha Çox Oxu",
+    "author": {
+      "bioenergyTherapist": "Bioenerji Terapisti",
+      "lifeCoach": "Həyat Məşqçisi",
+      "biotherapyExpert": "Bioterapiya Eksperti"
+    },
+    "blog": "Blog"
+  },
+  "certificatesAndDiplomasPage": {
+    "title": "Sertifikatlar və Diplomlar",
+    "loading": "Sertifikatlar və diplomlar məlumatları yüklənir...",
+    "error": "Sertifikatlar və diplomlar məlumatları yüklənilərkən xəta baş verdi.",
+    "noCertificates": "Hələ sertifikat və diploma mövcud deyil.",
+    "noImage": "Şəkil Yoxdur",
+    "viewDetails": "Ətraflı Bax",
+    "previous": "Əvvəlki",
+    "next": "Növbəti",
+    "searchCertificates": "Sertifikatlar və diplomlar...",
+    "filterCertificates": "Sertifikatlar və diplomlar...",
+    "filterCertificatesDescription": "Sertifikatlar və diplomlar...",
+    "filter": "Filtrele",
+    "applyFilters": "Filtreleri Uygula",
+    "clearFilters": "Filtreleri Temizle",
+    "cancel": "İptal",
+    "language": "Dil",
+    "selectLanguage": "Dil seçin",
+    "quickActions": "Hızlı Əməllər",
+    "recentCertificates": "Son Sertifikatlar",
+    "featuredCertificates": "Öne Çıkan Sertifikatlar",
+    "viewAllCertificates": "Tüm Sertifikatları Görüntüle",
+    "subtitle": "Təhsil, diploma və sertifikat səyahətimdə sənədləşən addımlar",
+    "description": "Təhsil, diploma və sertifikat səyahətimdə sənədləşən addımlar bu hissədə əlavə ediləcək.",
+    "content": {
+      "intro": "Şəfa və sağlamlıq sahəsindəki mütəxəssisliyimi təsdiqləyən peşəkar sertifikatlar və təhsil nailiyyətləri."
+    }
+  },
+  "awardsAndAchievementsPage": {
+    "title": "Mükafatlar və Nailiyyətlər",
+    "loading": "Mükafatlar və nailiyyətlər məlumatları yüklənir...",
+    "error": "Mükafatlar və nailiyyətlər məlumatları yüklənilərkən xəta baş verdi.",
+    "noAwards": "Hələ mükafat və nailiyyət mövcud deyil.",
+    "noImage": "Şəkil Yoxdur",
+    "viewDetails": "Ətraflı Bax",
+    "previous": "Əvvəlki",
+    "search": "Mükafatlar və nailiyyətlər...",
+    "noResults": "Nəticə tapılmadı.",
+    "awards": "Mükafatlar",
+    "quickActions": "Hızlı Əməllər",
+    "recentAwards": "Son Mükafatlar",
+    "searchAwards": "Mükafatlar və nailiyyətlər...",
+    "filterAwards": "Mükafatlar və nailiyyətlər...",
+    "filterAwardsDescription": "Mükafatlar və nailiyyətlər...",
+    "filter": "Filtrele",
+    "applyFilters": "Filtreleri Uygula",
+    "clearFilters": "Filtreleri Temizle",
+    "cancel": "İptal",
+    "language": "Dil",
+    "selectLanguage": "Dil seçin",
+    "featuredAwards": "Öne Çıkan Mükafatlar",
+    "viewAllAwards": "Bütün Mükafatları Görüntülə",
+    "next": "Növbəti",
+    "subtitle": "Karyera səyahətimdə əldə etdiyim mükafatlar və nailiyyətlər", 
+    "description": "Karyera səyahətimdə əldə etdiyim mükafatlar və nailiyyətlər burada nümayiş etdiriləcək.",
+    "content": {
+      "intro": "Holistik şəfa və sağlamlıq sahəsindəki peşəkar tanınma və nailiyyətlərim."
+    }
+  },
+  "poemsPage": {
+    "title": "Şeirlər",
+    "subtitle": "Ruhu qidalandıran şeirlər və ədəbi əsərlər",
+    "loading": "Şeirlər məlumatları yüklənir...",
+    "error": "Şeirlər məlumatları yüklənilərkən xəta baş verdi.",
+    "noPoems": "Hələ şeir mövcud deyil.",
+    "noImage": "Şəkil Yoxdur",
+    "viewDetails": "Ətraflı Bax",
+    "previous": "Əvvəlki",
+    "next": "Növbəti",
+    "description": "Şəfa və şəxsi böyümə səyahətini əks etdirən ilham verici şeirlər və ədəbi əsərlərin kolleksiyası.",
+    "content": {
+      "intro": "Şəfa, çevrilmə və ruhani böyümənin mahiyyətini əks etdirən şeir və ədəbi ifadələr."
+    }
+  },
+  "booksPage": {
+    "title": "Kitablar",
+    "subtitle": "Hikmət dolu səhifələr, ruhu qidalandıran hekayələr",
+    "description": "Hikmət dolu səhifələr, ruhu qidalandıran hekayələr burada yer alır.",
+    "loading": "Kitab məlumatları yüklənir...",
+    "error": "Kitab məlumatları yüklənilərkən xəta baş verdi.",
+    "noBooks": "Hələ kitab mövcud deyil.",
+    "noImage": "Şəkil Yoxdur",
+    "viewDetails": "Ətraflı Bax",
+    "searchBooks": "Kitablar...",
+    "filterBooks": "Kitablar...",
+    "filterBooksDescription": "Kitablar...",
+    "filter": "Filtrele",
+    "applyFilters": "Filtreleri Uygula",
+    "clearFilters": "Filtreleri Temizle",
+    "cancel": "İptal",
+    "quickActions": "Hızlı Əməllər",
+    "recentBooks": "Son Kitablar",
+    "featuredBooks": "Öne Çıkan Kitablar",
+    "freeBooks": "Pulsuz Kitablar",
+    "language": "Dil",
+    "selectLanguage": "Dil seçin",
+    "minPrice": "Min. Qiymət",
+    "maxPrice": "Max. Qiymət",
+    "viewAllBooks": "Bütün Kitabları Görüntülə",
+    "previous": "Əvvəlki",
+    "next": "Növbəti",
+    "content": {
+      "intro": "Holistik şəfa və şəxsi çevrilmə sahəsinə ədəbi töhfələrim."
+    }
+  }
+}
+

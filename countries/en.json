@@ -1,0 +1,1708 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "consultation": "Get Appointment",
+    "servicesDropdown": {
+      "description": "Bioenergy and Biotherapy Solutions.",
+      "bioenergy": {
+        "title": "Bioenergy",
+        "description": "Professional Bioenergy Solutions."
+      },
+      "biotherapy": {
+        "title": "Biotherapy", 
+        "description": "Custom Biotherapy Solutions."
+      },
+      "life-coaching": {
+        "title": "Life Coaching",
+        "description": "Professional Life Coaching Solutions."
+      }
+    },
+    "aboutDropdown": {
+      "story": {
+        "title": "Our Story",
+        "description": "Learn about our journey and mission."
+      },
+      "certificates": {
+        "title": "Certificates and Diplomas",
+        "description": "List of professional certifications and diplomas."
+      },
+      "biography": {
+        "title": "Biography",
+        "description": "Join our biography."
+      },
+  
+      "awards": {
+        "title": "Awards & Achievements",
+        "description": "Optional section for recognitions and awards."
+      },
+      "poems": {
+        "title": "Poems",
+        "description": "Collection of inspirational poems and writings."
+      },
+      "books": {
+        "title": "Books",
+        "description": "Published books and literary works."
+      }
+    }
+  },
+  "footer": {
+    "ctaTitle": "Your wellness journey\nbegins in one click",
+    "ctaSubtitle": "Book your appointment today and experience expert care designed around you to be better",
+    "ctaButton": "Contact us",
+    "ctaSecondary": "Our services",
+    "quickLinks": "Quick Links",
+    "ourServices": "Our Services",
+    "content": "Content",
+    "links": {
+      "home": "Home",
+      "services": "Services", 
+      "about": "About",
+      "contact": "Contact",
+      "blog": "Blog",
+      "books": "Books",
+      "poems": "Poems",
+      "bioenergy": "Bioenergy",
+      "biotherapy": "Biotherapy",
+      "awards": "Awards & Achievements",
+      "biography": "Biography",
+      "certificates": "Certificates and Diplomas",
+      "diplomas": "Diplomas"
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "Email",
+      "phone": "Phone"
+    },
+    "address": "Professional wellness and bioenergy therapy services",
+    "email": "info@elzadarya.com",
+    "phone": "+90 555 123 4567",
+    "copyright": "© 2024 Elza Darya. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "legal": "Professional wellness and bioenergy therapy services provided by certified practitioners.",
+    "social": {
+      "instagram": {
+        "url": "https://www.instagram.com/elzadarya27"
+      },
+      "facebook": {
+        "url": "https://www.facebook.com/ElzaDarya27"
+      }
+    }
+  },
+  "cta": {
+    "title": "Your wellness journey begins in one click",
+    "description": "Book your appointment today and experience expert care designed around you to be better",
+    "contactButton": "Contact us",
+    "servicesButton": "Our services"
+  },
+  "hero": {
+    "title": "Transform Your Life and Discover Your Inner Power",
+    "subtitle": "Professional Life Coach & Bioenergy Therapist - Author",
+    "wellness": "🌿 Your health, your journey.",
+    "wellnessDescription": "Wellness is a lifelong journey toward health and balance. We empower individuals and families to take charge of their well-being through expert, holistic care.",
+    "heroAlt": {
+      "mainText": "Embark on a lifelong transformation journey with bioenergy and biotherapy. We empower individuals and families to discover their inner power and transform their lives through expert bioenergy therapy and holistic life coaching.",
+      "clientJourneys": {
+        "badge": "About",
+        "title": "About My Personal Journey",
+        "description": "Inspiring tales of my personal journey."
+      },
+      "discover": {
+        "explore": "Explore",
+        "now": "now",
+        "pause": "Pause",
+        "play": "Play"
+      },
+      "transformations": {
+        "title": "Different Transformations for Different Life Periods",
+        "description": "choose your life coaching according to your life stages and transform your life"
+      },
+      "therapist": {
+        "title": "Bioenergy Therapist",
+        "stats": {
+          "experience": "Experience",
+          "people": "People",
+          "success": "Success",
+          "partners": "Partners"
+        },
+        "description1": "Bioenergy Therapist is a specialist in personal health and wellness. At every stage of your life, you can maintain a healthy lifestyle by harmonizing with natural life coaching.",
+        "description2": "Bioenergy Therapist is a specialist in personal health and wellness. At every stage of your life, you can maintain a healthy lifestyle by harmonizing with natural life coaching.",
+        "description3": "Bioenergy Therapist is a specialist in personal health and wellness. At every stage of your life, you can maintain a healthy lifestyle by harmonizing with natural life coaching."
+      }
+    },
+    "tags": {
+      "clarity": "Gain Clarity",
+      "stress": "Manage Stress",
+      "awareness": "Awareness"
+    }
+  },
+  "services": [
+    {
+      "title": "Life Coaching",
+      "description": "Professional career guidance and support in the job search process."
+    },
+    {
+      "title": "Bioenergy Therapy",
+      "description": "Effective and professional bioenergy healing services."
+    },
+    {
+      "title": "Personal Development",
+      "description": "Successful personal development techniques and confidence building."
+    }
+  ],
+  "servicesSection": {
+    "badge": "Our Services",
+    "title": "Bioenergy and Biotherapy Services",
+    "description": "Professional services that support you in every area of your life and support your personal development.",
+    "otherServices": {
+      "title": "Other Services",
+      "description": "Contact us to learn about our other services."
+    },
+    "services": {
+      "bioenergy": {
+        "title": "Bioenergy Therapy"
+      },
+      "biotherapy": {
+        "title": "Discovery and Therapy",
+        "description": "Discovery and healing offer an integrated approach while balancing your physical, emotional, and spiritual health."
+      },
+      "continuousHealing": {
+        "title": "Healing Process",
+        "description": "The healing process offers an integrated approach while balancing your physical, emotional, and spiritual health. We provide a professional approach for diagnosis and treatment process."
+      }
+    },
+    "personalizedCare": {
+      "title": "Personal Bioenergy Therapy with Elza Darya",
+      "description": "We support your physical, emotional and spiritual healing by balancing your body's natural energy flow with bioenergy therapy. In our personal therapy sessions, we help you regain your inner balance with an individual-focused approach."
+    },
+    "successRate": "Success Rate"
+  },
+  "testimonials": {
+    "title": "Client Journeys",
+    "subtitle": "Transformational Stories",
+    "description": "Inspiring tales of individuals and families who discovered their inner power and transformed their lives through our bioenergy and holistic wellness guidance.",
+    "pageTitle": "Client Experiences",
+    "pageDescription": "Our clients' experiences.",
+    "mainTestimonial": {
+      "quote": "When I met Elza Darya, I experienced the biggest changes in my life.",
+      "author": "Buket Cicekoglu",
+      "role": "Client"
+    },
+    "testimonialsList": [
+      {
+        "quote": "After taking bioenergy therapy with Elza Darya, the negative energies in my life were cleansed.",
+        "author": "Ayşe K.",
+        "role": "Teacher"
+      },
+      {
+        "quote": "My long-standing stress and energy blockages were resolved thanks to Elza's therapies.",
+        "author": "Mehmet D.",
+        "role": "Architect"
+      },
+      {
+        "quote": "With bioenergy therapy, I started to feel my body better. I thank Elza very much.",
+        "author": "Zeynep A.",
+        "role": "Nurse"
+      },
+      {
+        "quote": "Spiritual counseling sessions opened new doors in my life. I feel much more peaceful.",
+        "author": "Fatma Y.",
+        "role": "Accountant"
+      }
+    ]
+  },
+  "home": {
+    "carousel": {
+      "badge": "Our Services & Content",
+      "title": "Comprehensive Solutions for Life Transformation",
+      "description": "Discover our wide range of services from bioenergy therapy to life coaching, literary works to certifications.",
+      "modernCarousel": {
+        "title": "Explore and Purchase",
+        "subtitle": "Books & Poems",
+        "description": "Discover and purchase my book and poetry collections.",
+        "previousSlide": "Previous slide",
+        "nextSlide": "Next slide"
+      },
+      "cardStack": {
+        "cards": [
+          {
+            "name": "Bioenergy Therapy",
+            "designation": "Individual Session",
+            "content": "A holistic approach that resolves physical and emotional blockages through {highlight}energy balancing{/highlight} and supports the natural healing process.",
+            "highlight": "energy balancing"
+          },
+          {
+            "name": "Biotherapy",
+            "designation": "Session and Program",
+            "content": "Regular sessions and follow-up with personalized {highlight}biological energy{/highlight} protocols; effective support for stress, sleep and focus issues.",
+            "highlight": "biological energy"
+          },
+          {
+            "name": "Reiki and Energy Balancing",
+            "designation": "Attunement and Session",
+            "content": "Tranquility, relaxation and high life energy through {highlight}healing flow{/highlight} that enhances mind-body-soul harmony.",
+            "highlight": "healing flow"
+          }
+        ]
+      },
+      "cards": {
+        "bioenergy": {
+          "category": "Therapy Service",
+          "title": "Bioenergy Therapy"
+        },
+        "lifecoaching": {
+          "category": "Personal Development",
+          "title": "Life Coaching"
+        },
+        "biotherapy": {
+          "category": "Health Service", 
+          "title": "Biotherapy"
+        },
+        "certificates": {
+          "category": "Qualifications",
+          "title": "Certificates"
+        },
+        "books": {
+          "category": "Publications",
+          "title": "Books"
+        },
+        "poems": {
+          "category": "Literature",
+          "title": "Poems"
+        }
+      },
+      "content": {
+        "bioenergy": {
+          "highlight": "Bioenergy Therapy",
+          "description": "restores your physical, emotional, and spiritual health by balancing your energy field. Experience personalized healing with our professional practitioners.",
+          "features": [
+            {
+              "title": "Energy Assessment",
+              "description": "Comprehensive energy field analysis to identify blockages and imbalances."
+            },
+            {
+              "title": "Chakra Balancing",
+              "description": "Alignment of your seven main energy centers for optimal energy flow."
+            }
+          ]
+        },
+        "lifecoaching": {
+          "highlight": "Life Coaching",
+          "description": "helps you clarify your goals, overcome obstacles, and achieve personal and professional success. Transform your life with proven strategies.",
+          "features": [
+            {
+              "title": "Goal Setting",
+              "description": "Set clear, measurable, and achievable goals using SMART framework."
+            },
+            {
+              "title": "Mindset Transformation",
+              "description": "Overcome limiting beliefs and develop a success-oriented mindset."
+            }
+          ]
+        },
+        "biotherapy": {
+          "highlight": "Biotherapy",
+          "description": "provides cellular-level healing, strengthening your immune system and enhancing natural healing capacity.",
+          "features": [
+            {
+              "title": "Cellular Regeneration",
+              "description": "Advanced techniques to support cell repair and regeneration processes."
+            },
+            {
+              "title": "Immune Support", 
+              "description": "Strengthening and balancing your body's natural defense mechanisms."
+            }
+          ]
+        },
+        "certificates": {
+          "highlight": "My Certificates",
+          "description": "include qualification documents earned through international standard education and professional development programs.",
+          "features": [
+            {
+              "title": "International Certifications",
+              "description": "Professional certifications from globally recognized organizations."
+            },
+            {
+              "title": "Continuing Education",
+              "description": "Regular training and development programs I take to stay current in my field."
+            }
+          ]
+        },
+        "books": {
+          "highlight": "My Books",
+          "description": "are works written on personal development, bioenergy, and life philosophy. Each book offers deep insight and practical knowledge.",
+          "features": [
+            {
+              "title": "Personal Development",
+              "description": "Guide books on self-awareness and personal transformation."
+            },
+            {
+              "title": "Bioenergy Guide",
+              "description": "In-depth information about energy therapy and holistic health approaches."
+            }
+          ]
+        },
+        "poems": {
+          "highlight": "My Poems",
+          "description": "are lyrical works inspired by the depths of life, love, transformation, and inner journey.",
+          "features": [
+            {
+              "title": "Spiritual Journey",
+              "description": "Deep poems written on themes of inner exploration and spiritual growth."
+            },
+            {
+              "title": "Life Philosophy",
+              "description": "Literary texts that make you think about the meaning of life, love, and awareness."
+            }
+          ]
+        }
+      }
+    }
+  },
+  "contact": {
+    "pageTitle": "Get in Touch",
+    "pageSubtitle": "Ready to start your transformation journey? Contact us today for personalized healing and life coaching services.",
+    "offices": {
+      "istanbul": "Location"
+    },
+    "sections": {
+      "email": "Email Us",
+      "follow": "Follow Us",
+      "inquiries": "General Inquiries"
+    },
+    "form": {
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "message": "Message",
+      "submit": "Send Message",
+      "placeholders": {
+        "fullName": "Enter your full name",
+        "email": "Enter your email address",
+        "message": "Tell us about your needs and how we can help you..."
+      }
+    },
+    "selectApplicantType": "Select Service Type",
+    "bioenergy": "Bioenergy Therapy",
+    "biotherapy": "Biotherapy",
+    "sending": "Sending...",
+    "successMessage": "Message sent successfully! We will get back to you soon.",
+    "errorMessage": "An error occurred while sending the message. Please try again."
+  },
+  "sectionThree": {
+    "badge": "Bioenergy and Biotherapy Steps",
+    "title": "Bioenergy and Biotherapy Steps",
+    "description": "Learn about bioenergy and biotherapy steps.",
+    "learnMore": "Learn More",
+    "services": {
+      "bioenergy": {
+        "title": "Bioenergy Therapy",
+        "description": "Bioenergy therapy restores your physical, emotional, and spiritual health by balancing your energy field."
+      },
+      "biotherapy": {
+        "title": "Discovery and Therapy",
+        "description": "Discovery and healing offer an integrated approach while balancing your physical, emotional, and spiritual health."
+      },
+      "continuousHealing": {
+        "title": "Healing Process",
+        "description": "The healing process offers an integrated approach while balancing your physical, emotional, and spiritual health. We provide a professional approach for diagnosis and treatment process."
+      }
+    },
+    "personalizedCare": {
+      "title": "Personal Bioenergy Therapy with Elza Darya",
+      "description": "We support your physical, emotional and spiritual healing by balancing your body's natural energy flow with bioenergy therapy. In our personal therapy sessions, we help you regain your inner balance with an individual-focused approach."
+    },
+    "successRate": "Success Rate"
+  },
+  "jobSeeker": {
+    "benefits": {
+      "tabs": {
+        "badge": "Life Coaching Benefits",
+        "biotherapy": {
+          "label": "Goal Achievement",
+          "title": "Professional Life Coaching",
+          "subtitle": "Personal & Professional Transformation",
+          "description": "Comprehensive life coaching that helps you clarify your vision, overcome limiting beliefs, and achieve breakthrough results in all areas of your life through proven coaching methodologies.",
+          "stats": [
+            "92% Goal Achievement Rate",
+            "Personal Breakthrough Results",
+            "Professional Growth Success"
+          ],
+          "benefits": [
+            "Clear goal setting with SMART framework methodology",
+            "Breakthrough limiting beliefs and mental barriers", 
+            "Develop success-oriented mindset and habits",
+            "Strategic action planning and accountability",
+            "Enhanced self-awareness and confidence building"
+          ],
+          "overlayStats": {
+            "stat1": {
+              "value": "950+",
+              "label": "Coaching Sessions Completed"
+            },
+            "stat2": {
+              "value": "88%",
+              "label": "Client Success Rate"
+            }
+          }
+        },
+        "bioenergy": {
+          "label": "Mindset Coaching",
+          "title": "Mindset Transformation & Mental Mastery",
+          "subtitle": "Cognitive Restructuring & Belief Systems",
+          "description": "Advanced mindset coaching that reprograms limiting beliefs, develops growth mindset, and creates powerful mental frameworks for sustained success and resilience.",
+          "stats": [
+            "Belief System Transformation",
+            "Growth Mindset Development",
+            "Mental Resilience Building"
+          ],
+          "benefits": [
+            "Identify and transform limiting belief patterns",
+            "Develop unshakeable confidence and self-worth",
+            "Create empowering mental frameworks",
+            "Build resilience and stress management skills",
+            "Master emotional intelligence and self-regulation"
+          ],
+          "overlayStats": {
+            "stat1": {
+              "value": "800+",
+              "label": "Mindset Coaching Sessions"
+            },
+            "stat2": {
+              "value": "85%",
+              "label": "Mindset Breakthrough Rate"
+            }
+          }
+        },
+        "opportunities": {
+          "label": "Career Coaching",
+          "title": "Strategic Career Development",
+          "subtitle": "Professional Excellence & Leadership",
+          "description": "Comprehensive career coaching that accelerates professional growth, develops leadership capabilities, and creates strategic pathways to career advancement and fulfillment.",
+          "stats": [
+            "Career Advancement",
+            "Leadership Development",
+            "Professional Excellence"
+          ],
+          "benefits": [
+            "Strategic career planning and goal alignment",
+            "Leadership skills development and executive presence",
+            "Professional networking and relationship building",
+            "Performance optimization and skill enhancement",
+            "Work-life integration and career satisfaction"
+          ],
+          "overlayStats": {
+            "stat1": {
+              "value": "600+",
+              "label": "Career Coaching Sessions"
+            },
+            "stat2": {
+              "value": "90%",
+              "label": "Career Advancement Success"
+            }
+          }
+        }
+      }
+    }
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated:",
+    "sections": {
+      "informationWeCollect": {
+        "title": "Information We Collect",
+        "intro": "We collect information you provide directly to us when you:",
+        "items": [
+          "Purchase our books, poems, or digital content",
+          "Book biotherapy or bioenergy sessions",
+          "Subscribe to our newsletter",
+          "Contact us for consultations",
+          "Create an account on our website"
+        ],
+        "healthInfo": "This may include your name, email address, phone number, payment information, and any health-related information you choose to share for our biotherapy services."
+      },
+      "howWeUse": {
+        "title": "How We Use Your Information",
+        "intro": "We use the information we collect to:",
+        "items": [
+          "Provide biotherapy and bioenergy healing services",
+          "Process book and poem purchases",
+          "Send you digital content and certificates",
+          "Communicate about appointments and sessions",
+          "Improve our services and website",
+          "Send newsletters and updates (with your consent)"
+        ]
+      },
+      "healthPrivacy": {
+        "title": "Health Information Privacy",
+        "content": "Any health-related information you share for biotherapy or bioenergy sessions is treated with the utmost confidentiality. We maintain strict privacy standards and only use this information to provide you with personalized healing services. This information is never shared with third parties without your explicit consent."
+      },
+      "informationSharing": {
+        "title": "Information Sharing",
+        "intro": "We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:",
+        "items": [
+          "With payment processors to complete transactions",
+          "With email service providers for newsletters (if subscribed)",
+          "When required by law or to protect our rights",
+          "With your explicit consent"
+        ]
+      },
+      "dataSecurity": {
+        "title": "Data Security",
+        "content": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. This includes secure payment processing, encrypted data transmission, and restricted access to personal information."
+      },
+      "cookies": {
+        "title": "Cookies and Tracking",
+        "content": "Our website uses cookies to enhance your browsing experience, remember your preferences, and analyze website traffic. You can control cookie settings through your browser preferences."
+      },
+      "yourRights": {
+        "title": "Your Rights",
+        "intro": "You have the right to:",
+        "items": [
+          "Access your personal information",
+          "Correct inaccurate information",
+          "Request deletion of your information",
+          "Opt-out of marketing communications",
+          "Withdraw consent for data processing"
+        ]
+      },
+      "thirdParty": {
+        "title": "Third-Party Services",
+        "content": "Our website may contain links to third-party services or integrate with external platforms for payments or bookings. These third parties have their own privacy policies, and we are not responsible for their practices."
+      },
+      "changes": {
+        "title": "Changes to This Policy",
+        "content": "We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on this page and updating the \"Last updated\" date."
+      },
+      "contact": {
+        "title": "Contact Us",
+        "content": "If you have any questions about this Privacy Policy or our data practices, please contact us through our contact page or email us directly. We are committed to addressing your concerns and protecting your privacy."
+      },
+      "disclaimer": {
+        "title": "Disclaimer:",
+        "content": "Our biotherapy and bioenergy services are complementary wellness practices and are not intended to replace conventional medical treatment. Please consult with healthcare professionals for medical concerns."
+      }
+    }
+  },
+  "about": {
+    "pageTitle": "About Us",
+    "pageSubtitle": "Bringing the power of healing to everyone",
+    "description": "Elza Darya makes it easy to access transformative healing services, life coaching, and bioenergy therapy. Experience profound change in minutes, not months.",
+    "mission": {
+      "badge": "OUR MISSION",
+      "title": "We believe that healing and personal transformation should be accessible to everyone",
+      "description": "That everyone should have the freedom to create the life they deserve, without limitations or barriers. Our mission is rooted in the understanding that true healing comes from within, and we provide the tools, guidance, and support necessary to help individuals tap into their innate healing abilities."
+    },
+    "vision": {
+      "title": "We make healing and transformation accessible",
+      "description": "We aim to help empower 1,000,000 people to transform their lives through our healing services. Our comprehensive approach combines traditional healing methods with modern therapeutic techniques, ensuring that each individual receives personalized care tailored to their unique needs."
+    },
+    "sections": {
+      "biography": {
+        "title": "Biography",
+        "description": "Discover Elza Darya's remarkable journey from personal struggles to becoming a renowned healer and life coach. Her biography reveals the transformative experiences that shaped her unique approach to healing."
+      },
+      "lifeCoaching": {
+        "title": "Life Coaching",
+        "description": "Experience transformative life coaching sessions designed to help you break through limiting beliefs, overcome obstacles, and create the life you truly desire."
+      },
+      "certificates": {
+        "title": "Certificates and Diplomas",
+        "description": "Explore Elza Darya's extensive collection of professional certificates and diplomas that validate her expertise in various healing modalities."
+      },
+      "awards": {
+        "title": "Awards and Achievements",
+        "description": "Discover Elza Darya's numerous awards and achievements that recognize her exceptional contributions to the field of healing and personal transformation."
+      },
+      "bioenergy": {
+        "title": "Bioenergy",
+        "description": "Experience the transformative power of bioenergy therapy, a holistic healing approach that works with the body's natural energy systems to promote physical, emotional, and spiritual well-being."
+      },
+      "books": {
+        "title": "Books",
+        "description": "Discover Elza Darya's collection of transformative books that share her wisdom, healing techniques, and life-changing insights."
+      }
+    },
+    "whyChoose": {
+      "title": "Why Choose Elza Darya for Your Healing Journey?",
+      "provenTrack": {
+        "title": "Proven Track Record",
+        "description": "With years of experience helping thousands of clients overcome their challenges, Elza Darya has developed a reputation for delivering real, lasting results."
+      },
+      "holisticApproach": {
+        "title": "Holistic Approach",
+        "description": "Unlike traditional therapy that focuses on symptoms, Elza Darya's approach addresses the root causes of issues by working with the whole person - mind, body, and spirit."
+      },
+      "personalizedCare": {
+        "title": "Personalized Care",
+        "description": "Every individual is unique, and so is their healing journey. Elza Darya takes the time to understand each client's specific needs, challenges, and goals."
+      },
+      "safeEnvironment": {
+        "title": "Safe and Supportive Environment",
+        "description": "Healing requires a safe space where you can be vulnerable and authentic. Elza Darya creates a nurturing, non-judgmental environment."
+      }
+    },
+    "cta": {
+      "title": "Ready to Begin Your Transformation?",
+      "description": "If you're ready to take the first step towards healing, growth, and transformation, Elza Darya is here to guide you on your journey. Whether you're dealing with emotional trauma, seeking spiritual guidance, or looking to create positive change in your life, our services are designed to provide you with the tools, support, and wisdom you need to achieve your goals.",
+      "startJourney": "Start Your Healing Journey",
+      "exploreServices": "Explore Our Services"
+    },
+    "biography": {
+      "pageTitle": "Elza Darya: A Journey of Healing, Transformation, and Empowerment",
+      "breadcrumb": {
+        "about": "About",
+        "biography": "Biography"
+      },
+      "professional": "Professional Life Coach & Bioenergy Therapist",
+      "tableOfContents": {
+        "title": "ON THIS PAGE",
+        "biotherapy": "Biotherapy",
+        "bioenergy": "Bioenergy",
+        "certificates": "Certificates and Diplomas",
+        "books": "Books by Elza Darya",
+        "awards": "Awards and Achievements",
+        "backToTop": "Back to top"
+      },
+      "content": {
+        "intro": "Elza Darya's journey into the world of healing and personal transformation began not from a place of strength, but from her own deepest struggles. Like many who eventually become healers, her path was forged through personal challenges that tested her resilience and ultimately led her to discover her true calling.",
+        "earlyLife": {
+          "title": "Early Life and Awakening",
+          "content1": "Born with a natural sensitivity to energy and an intuitive understanding of human emotions, Elza initially viewed these gifts as burdens rather than blessings. Growing up, she struggled with overwhelming empathy and the ability to sense others' emotional states, which often left her feeling drained and misunderstood.",
+          "content2": "Her early years were marked by a deep search for meaning and purpose. Despite academic success and external achievements, she felt a persistent inner calling that conventional paths couldn't satisfy. This spiritual restlessness led her to explore various healing modalities and personal development approaches."
+        },
+        "turningPoint": {
+          "content1": "The turning point came during a particularly challenging period in her life when traditional solutions failed to address her deep-seated emotional and spiritual needs. It was then that she discovered bioenergy therapy and experienced firsthand its transformative power.",
+          "spiritualAwakening": "Spiritual Awakening: Her first encounter with energy healing opened doors to understanding her own energetic sensitivity and how to channel it positively.",
+          "personalTransformation": "Personal Transformation: Through dedicated inner work and healing practices, she overcame limiting beliefs and emotional patterns that had held her back."
+        },
+        "professionalDevelopment": {
+          "title": "Professional Development and Training",
+          "intro": "Recognizing her calling to help others through their own healing journeys, Elza embarked on extensive professional training. She pursued certifications in multiple healing modalities, always with the commitment to excellence and ethical practice.",
+          "bioenergyTraining": "Bioenergy Therapy Certification: Completed advanced training in bioenergy healing techniques, learning to work with chakras, energy fields, and cellular healing.",
+          "lifeCoachingCredentials": "Life Coaching Credentials: Obtained professional life coaching certifications, specializing in transformational coaching and mindset work.",
+          "continuingEducation": "Continuing Education: Maintains ongoing education in various healing arts, including meditation, spiritual counseling, and holistic wellness approaches."
+        },
+        "healingPhilosophy": {
+          "title": "Healing Philosophy and Approach",
+          "content1": "Elza's approach to healing is deeply rooted in the belief that every individual possesses an innate capacity for healing and transformation. Her methodology combines ancient wisdom with modern therapeutic techniques, creating a unique and highly effective healing experience.",
+          "content2": "She believes that true healing occurs when we address not just symptoms, but the root causes of imbalance – whether they be emotional, energetic, or spiritual. Her work focuses on empowering clients to become active participants in their own healing journey."
+        },
+        "impactAndMission": {
+          "title": "Impact and Mission",
+          "content1": "Over the years, Elza has guided thousands of individuals through their personal transformation journeys. Her clients range from those seeking relief from emotional trauma to individuals looking to unlock their full potential and create meaningful change in their lives.",
+          "content2": "Her mission extends beyond individual healing to creating a ripple effect of positive change in the world. Through her books, workshops, and online presence, she shares her knowledge and insights with a global audience, making healing accessible to those who might not otherwise have access to such resources."
+        }
+      }
+    }
+  },
+  "servicesPage": {
+    "faq": {
+      "whichService": {
+        "question": "Which wellness service is best for me?",
+        "answer": "The best service depends on your specific goals and needs. Life coaching is ideal for personal development and goal achievement, bioenergy therapy for energy imbalances and stress relief, and biotherapy for health optimization. We offer free consultations to help determine the most suitable approach."
+      },
+      "willItWork": {
+        "question": "How do I know if wellness services will work for me?",
+        "answer": "Our services have helped thousands of clients achieve their wellness goals. During your initial consultation, we assess your specific situation and create a personalized plan with clear milestones to track your progress."
+      },
+      "combineServices": {
+        "question": "Can I combine different wellness services?",
+        "answer": "Yes, many clients benefit from combining services. For example, life coaching with bioenergy therapy can address both personal development and energy balance simultaneously. We create integrated treatment plans for optimal results."
+      },
+      "qualifications": {
+        "question": "What qualifications do your practitioners have?",
+        "answer": "All our practitioners are certified professionals with extensive training in their respective fields. They undergo regular continuing education and maintain professional certifications to ensure the highest quality of care."
+      }
+    }
+  },
+  "services": {
+    "geoServicePage": {
+      "content": {
+        "definition": {
+          "biotherapy": "Biotherapy is a comprehensive healing approach that combines traditional therapeutic techniques with modern biotechnology to optimize cellular function, strengthen the immune system, and enhance the body's natural healing capacity."
+        },
+        "benefits": {
+          "biotherapy": "Biotherapy offers numerous benefits including cellular regeneration, immune system support, detoxification, metabolic optimization, and overall health enhancement through personalized treatment protocols."
+        },
+        "experience": {
+          "biotherapy": "With years of professional experience and certified training, our practitioners deliver superior biotherapy compared to less experienced providers using proven methodologies and safe practices."
+        },
+        "personalized": {
+          "biotherapy": "Our personalized approach to biotherapy ensures each client receives customized treatment plans tailored to their specific health conditions, goals, and individual cellular needs."
+        },
+        "process": {
+          "biotherapy": "Biotherapy treatment begins with comprehensive health assessment, followed by customized protocols including cellular regeneration techniques, immune system support, detoxification, and metabolic optimization."
+        }
+      },
+      "features": {
+        "cellularRegeneration": {
+          "title": "Cellular Regeneration",
+          "description": "Advanced techniques to stimulate cellular repair and regeneration processes"
+        },
+        "immuneSupport": {
+          "title": "Immune System Support",
+          "description": "Strengthening and balancing your body's natural defense mechanisms"
+        },
+        "detoxification": {
+          "title": "Detoxification",
+          "description": "Comprehensive detox protocols to eliminate toxins and restore vitality"
+        },
+        "metabolicOptimization": {
+          "title": "Metabolic Optimization",
+          "description": "Enhancement of metabolic function for improved energy and health"
+        }
+      },
+      "benefits": {
+        "title": "Key Benefits of Biotherapy:"
+      },
+      "sections": {
+        "whatIs": "What is Biotherapy and How Does it Work?",
+        "whyChoose": "Why Choose Professional Biotherapy Services?",
+        "whatToExpected": "What to Expect During Your Biotherapy Session?"
+      },
+      "trustSignals": {
+        "certified": "Certified Professional",
+        "stories": "500+ Success Stories"
+      },
+      "buttons": {
+        "getInTouch": "Get in touch",
+        "viewStories": "View Success Stories"
+      }
+    },
+    "snippets": {
+      "title": "Quick Answer: What is Wellness Service?",
+      "quickAnswer": "Professional wellness services that combine bioenergy therapy, biotherapy, and life coaching to support your complete health journey through personalized, holistic approaches tailored to your unique needs.",
+      "keyBenefits": {
+        "title": "Key Benefits of Wellness Service:",
+        "items": [
+          "Stress reduction and emotional balance",
+          "Improved energy levels and vitality",
+          "Enhanced self-awareness and clarity",
+          "Personal growth and transformation",
+          "Holistic approach to wellness",
+          "Professional, certified care"
+        ]
+      }
+    },
+    "pageTitle": "Professional Wellness Services",
+    "pageSubtitle": "Comprehensive wellness solutions for mind, body, and spirit",
+    "description": "Discover our range of professional wellness services designed to support your journey to optimal health and personal transformation.",
+    "mainServices": {
+      "lifeCoaching": {
+        "title": "Life Coaching",
+        "description": "Professional life coaching for personal development, goal achievement, and life transformation through personalized guidance and proven strategies.",
+        "benefits": ["Goal Achievement", "Personal Growth", "Life Balance", "Confidence Building"],
+        "duration": "60-90 minutes",
+        "features": {
+          "goalSetting": {
+            "title": "Goal Setting & Achievement",
+            "description": "Clear goal-setting frameworks and actionable strategies to achieve your dreams"
+          },
+          "personalDevelopment": {
+            "title": "Personal Development",
+            "description": "Comprehensive personal growth programs tailored to your unique needs"
+          },
+          "mindsetTransformation": {
+            "title": "Mindset Transformation",
+            "description": "Overcome limiting beliefs and develop a success-oriented mindset"
+          },
+          "lifeBalance": {
+            "title": "Life Balance",
+            "description": "Create harmony between work, relationships, health, and personal fulfillment"
+          }
+        },
+        "process": "Life coaching begins with goal clarification and vision setting, followed by identifying obstacles, creating action plans, implementing strategies, and ongoing accountability to ensure success.",
+        "results": "Life coaching sessions typically last 60-90 minutes, with most clients achieving significant breakthroughs within 6-12 sessions over 3-6 months."
+      },
+      "bioenergy": {
+        "title": "Bioenergy Therapy",
+        "description": "Advanced bioenergy healing therapy that works with your body's energy field to restore balance, enhance vitality, and promote holistic wellness.",
+        "benefits": ["Energy Balance", "Stress Relief", "Vitality Boost", "Emotional Healing"],
+        "duration": "60-90 minutes",
+        "features": {
+          "energyAssessment": {
+            "title": "Energy Assessment",
+            "description": "Comprehensive evaluation of your energy field to identify blockages and imbalances"
+          },
+          "chakraBalancing": {
+            "title": "Chakra Balancing",
+            "description": "Alignment and balancing of your seven main energy centers for optimal flow"
+          },
+          "auraCleansing": {
+            "title": "Aura Cleansing",
+            "description": "Removal of negative energy and strengthening of your protective energy field"
+          },
+          "energyHealing": {
+            "title": "Energy Healing",
+            "description": "Direct transmission of healing energy to restore physical and emotional wellbeing"
+          }
+        },
+        "process": "Bioenergy therapy begins with an energy assessment to identify blockages, followed by targeted healing techniques including chakra balancing, aura cleansing, and direct energy transmission to restore optimal energy flow.",
+        "results": "Bioenergy therapy sessions typically last 60-90 minutes, with most clients experiencing noticeable improvements within 2-3 sessions, though individual results may vary."
+      },
+      "biotherapy": {
+        "title": "Biotherapy Treatment",
+        "description": "Cutting-edge biotherapy treatment that optimizes cellular function, strengthens immune system, and enhances natural healing capacity.",
+        "benefits": ["Cellular Health", "Immune Support", "Recovery", "Wellness Optimization"],
+        "duration": "75-120 minutes",
+        "features": {
+          "cellularRegeneration": {
+            "title": "Cellular Regeneration",
+            "description": "Advanced techniques to stimulate cellular repair and regeneration processes"
+          },
+          "immuneSupport": {
+            "title": "Immune System Support",
+            "description": "Strengthening and balancing your body's natural defense mechanisms"
+          },
+          "detoxification": {
+            "title": "Detoxification",
+            "description": "Comprehensive detox protocols to eliminate toxins and restore vitality"
+          },
+          "metabolicOptimization": {
+            "title": "Metabolic Optimization",
+            "description": "Enhancement of metabolic function for improved energy and health"
+          }
+        },
+        "process": "Biotherapy treatment begins with comprehensive health assessment, followed by customized protocols including cellular regeneration techniques, immune system support, detoxification, and metabolic optimization.",
+        "results": "Biotherapy sessions typically last 75-120 minutes, with most clients experiencing significant improvements within 4-6 sessions, though treatment duration varies based on individual needs."
+      }
+    },
+    "comparison": {
+      "title": "Which Service is Right for You?",
+      "headers": {
+        "service": "Service",
+        "bestFor": "Best For",
+        "focusArea": "Focus Area",
+        "timeline": "Timeline"
+      },
+      "lifeCoaching": {
+        "bestFor": "Goal achievement, life transitions",
+        "focusArea": "Personal development, mindset",
+        "timeline": "4-8 weeks"
+      },
+      "bioenergy": {
+        "bestFor": "Energy imbalances, stress relief",
+        "focusArea": "Energy healing, emotional balance",
+        "timeline": "2-4 weeks"
+      },
+      "biotherapy": {
+        "bestFor": "Health optimization, recovery",
+        "focusArea": "Cellular health, immune support",
+        "timeline": "4-6 weeks"
+      }
+    },
+    "whyChoose": {
+      "title": "Why Choose Our Professional Wellness Services?",
+      "description": "Experience the difference that certified expertise and personalized care can make in your wellness journey.",
+      "reasons": {
+        "certified": {
+          "title": "Certified Professionals",
+          "description": "All practitioners are certified with extensive training and ongoing education."
+        },
+        "personalized": {
+          "title": "Personalized Approach",
+          "description": "Every treatment plan is customized to your unique needs and goals."
+        },
+        "proven": {
+          "title": "Proven Results",
+          "description": "Track record of success with measurable improvements in client wellbeing."
+        },
+        "support": {
+          "title": "Ongoing Support",
+          "description": "Continuous guidance and support throughout your wellness journey."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Transform Your Life?",
+      "description": "Take the first step towards your wellness journey today. Contact us for a personalized consultation.",
+      "primaryButton": "Get in Touch",
+      "secondaryButton": "Learn More"
+    },
+    "bioenergyPage": {
+      "heroDescription": "Advanced bioenergy healing therapy that works with your body's energy field to restore balance, enhance vitality, and promote holistic wellness.",
+      "trustSignals": {
+        "certified": "Certified Professional",
+        "stories": "500+ Success Stories", 
+        "personalized": "Personalized Approach"
+      },
+      "testimonials": {
+        "title": "Client Success Stories",
+        "testimonial1": {
+          "text": "The bioenergy therapy sessions completely transformed my energy levels. I feel more balanced and vibrant than I have in years.",
+          "author": "Maria K.",
+          "location": "Istanbul Client"
+        },
+        "testimonial2": {
+          "text": "After struggling with chronic fatigue, bioenergy healing gave me my life back. The results were immediate and lasting.",
+          "author": "Ahmed R.",
+          "location": "Ankara Client"
+        }
+      },
+      "guide": {
+        "title": "Complete Guide to Bioenergy Therapy",
+        "whatIs": {
+          "title": "What is Bioenergy Therapy and How Does it Work?",
+          "description": "Bioenergy therapy is a scientifically-grounded healing modality that works with the body's bioelectric field to restore optimal health and wellness. This non-invasive therapy recognizes that all living beings have an electromagnetic energy field that can become disrupted due to stress, illness, trauma, or environmental factors.",
+          "sessionDescription": "During a bioenergy therapy session, certified practitioners use specialized techniques to detect energy imbalances and blockages within your biofield. Through gentle, hands-on or hands-near-body methods, they help restore proper energy flow, allowing your body's natural healing mechanisms to function optimally.",
+          "scientificTitle": "Scientific Foundation:",
+          "scientificPoints": [
+            "Based on bioelectromagnetic field research",
+            "Supported by studies in energy medicine",
+            "Recognized by integrative medicine practitioners", 
+            "Complementary to conventional medical treatments"
+          ]
+        },
+        "conditions": {
+          "title": "What Conditions Can Bioenergy Therapy Help?",
+          "description": "Bioenergy therapy has shown effectiveness in addressing a wide range of physical, emotional, and energetic imbalances. Many clients experience significant improvements in their overall wellbeing and specific health concerns.",
+          "physical": {
+            "title": "Physical Conditions:",
+            "items": [
+              "Chronic pain and inflammation",
+              "Fatigue and low energy",
+              "Sleep disorders",
+              "Digestive issues", 
+              "Headaches and migraines",
+              "Recovery from illness or surgery"
+            ]
+          },
+          "emotional": {
+            "title": "Emotional & Mental:",
+            "items": [
+              "Stress and anxiety",
+              "Depression and mood disorders",
+              "Emotional trauma",
+              "Mental clarity and focus",
+              "Relationship difficulties",
+              "Life transitions"
+            ]
+          }
+        },
+        "techniques": {
+          "title": "Advanced Bioenergy Therapy Techniques We Use",
+          "scanning": {
+            "title": "Energy Scanning",
+            "description": "Comprehensive assessment of your energy field to identify areas of congestion, depletion, or imbalance using advanced bioenergy detection techniques."
+          },
+          "balancing": {
+            "title": "Energy Balancing", 
+            "description": "Restoration of proper energy flow through targeted techniques that address specific blockages and enhance overall energetic harmony."
+          },
+          "transmission": {
+            "title": "Energy Transmission",
+            "description": "Direct channeling of healing energy to support your body's natural healing processes and enhance vitality at the cellular level."
+          }
+        }
+      },
+      "faq": {
+        "sessions": {
+          "question": "How many bioenergy therapy sessions do I need?",
+          "answer": "The number of sessions varies depending on your individual needs and goals. Most clients notice improvements after 2-3 sessions, with significant results typically achieved within 6-8 sessions. Your practitioner will create a personalized treatment plan during your initial consultation."
+        },
+        "safety": {
+          "question": "Is bioenergy therapy safe?",
+          "answer": "Yes, bioenergy therapy is completely safe and non-invasive. It works with your body's natural energy systems and has no harmful side effects. It can be safely used alongside conventional medical treatments as a complementary therapy."
+        },
+        "firstSession": {
+          "question": "What should I expect during my first bioenergy session?",
+          "answer": "Your first session includes a detailed consultation about your health history and goals, followed by an energy assessment. The actual therapy involves gentle, hands-on or near-body techniques while you remain fully clothed and relaxed. Many clients feel immediate relaxation and energy shifts."
+        }
+      }
+    },
+    "geoServicePage": {
+      "hero": {
+        "bestService": "Best {serviceName} {locationText} 2025",
+        "professionalService": "Professional {serviceName} Services"
+      },
+      "trustSignals": {
+        "certified": "Certified Professional",
+        "stories": "500+ Success Stories",
+        "serving": "Serving {city} Since 2020"
+      },
+      "buttons": {
+        "getInTouch": "Get in touch",
+        "viewStories": "View Success Stories"
+      },
+      "sections": {
+        "whatIs": "What is {serviceName} and How Does it Work?",
+        "whyChoose": "Why Choose Professional {serviceName} Services?",
+        "whatToExpected": "What to Expect During Your {serviceName} Session?",
+        "clientStories": "Client Success Stories",
+        "clientStoriesLocation": "Client Success Stories from {city}",
+        "relatedServices": "Related Services"
+      },
+      "benefits": {
+        "title": "Key Benefits of {serviceName}:",
+        "items": [
+          "Stress reduction and emotional balance",
+          "Improved energy levels and vitality", 
+          "Enhanced self-awareness and clarity",
+          "Personal growth and life transformation",
+          "Holistic approach to wellness"
+        ]
+      },
+      "services": {
+        "bioenergy": "Bioenergy Therapy{locationText}",
+        "biotherapy": "Biotherapy{locationText}",
+        "lifeCoaching": "Life Coaching{locationText}"
+      }
+    },
+    "featuresSection": {
+      "badge": "Our Services",
+      "title": "Holistic Health Solutions",
+      "description": "Expert services that ensure balance of body, mind and spirit.",
+      "services": {
+        "biotherapy": {
+          "title": "Biotherapy",
+          "description": "Activate your body's natural healing power with modern biotherapy techniques"
+        },
+        "bioenergy": {
+          "title": "Bioenergy",
+          "description": "Improve your physical and spiritual health by balancing your energy flow"
+        },
+        "lifeCoaching": {
+          "title": "Life Coaching",
+          "description": "Get professional guidance and support to achieve your personal goals"
+        },
+        "allServices": {
+          "title": "All our services",
+          "description": "Contact us to learn about all our services."
+        }
+      },
+      "readMore": "Read More"
+    },
+    "bioenergyPage": {
+      "faq": {
+        "sessions": {
+          "question": "How many bioenergy therapy sessions will I need?",
+          "answer": "The number of sessions varies based on your individual needs and goals. Most clients notice improvements after 2-3 sessions, with significant results typically achieved within 6-8 sessions. Your practitioner will create a personalized treatment plan during your initial consultation."
+        },
+        "safety": {
+          "question": "Is bioenergy therapy safe?",
+          "answer": "Yes, bioenergy therapy is completely safe and non-invasive. It works with your body's natural energy systems and has no harmful side effects. It can be safely used as a complementary therapy alongside traditional medical treatments."
+        },
+        "firstSession": {
+          "question": "What can I expect during my first bioenergy session?",
+          "answer": "Your first session includes a detailed consultation about your health history and goals, followed by an energy assessment. The actual therapy involves gentle, hands-on or near-body techniques while you remain fully clothed and comfortable. Many clients feel immediate relaxation and energy shifts."
+        }
+      }
+    },
+    "lifeCoachingPage": {
+      "faq": {
+        "sessions": {
+          "question": "How many life coaching sessions will I need?",
+          "answer": "The number of sessions varies based on your goals and commitment level. Most clients see significant progress within 6-12 sessions over 3-6 months. We'll create a personalized plan during your initial consultation."
+        },
+        "goals": {
+          "question": "How do you help me achieve my goals?",
+          "answer": "We use proven coaching methodologies including goal-setting frameworks, accountability systems, obstacle identification, and action planning. You'll receive personalized strategies and ongoing support to ensure success."
+        },
+        "difference": {
+          "question": "What makes life coaching different from therapy?",
+          "answer": "Life coaching is future-focused and action-oriented, helping you reach specific goals and create positive changes. While therapy often addresses past issues, coaching focuses on moving forward and unlocking your potential."
+        },
+        "results": {
+          "question": "When will I see results from life coaching?",
+          "answer": "Many clients experience increased clarity and motivation after the first session. Significant behavioral changes and goal progress typically occur within 4-8 weeks of consistent coaching and implementation."
+        }
+      }
+    },
+    "geoServicePage": {
+      "content": {
+        "definition": {
+          "biotherapy": "Biotherapy is a professional holistic therapy that combines traditional healing techniques with modern wellness practices to promote physical, emotional, and spiritual well-being.",
+          "bioenergy": "Bioenergy therapy is an advanced healing modality that works with your body's energy field to restore balance, enhance vitality, and promote holistic wellness.",
+          "lifeCoaching": "Life coaching is a professional service that provides personalized guidance and proven strategies for personal development, goal achievement, and life transformation.",
+          "life-coaching": "Life coaching is a professional service that provides personalized guidance and proven strategies for personal development, goal achievement, and life transformation."
+        },
+        "benefits": {
+          "biotherapy": "Biotherapy offers numerous benefits including stress reduction, improved energy levels, emotional balance, enhanced self-awareness, and overall life transformation through personalized therapeutic approaches.",
+          "bioenergy": "Bioenergy therapy provides many benefits including energy balancing, stress relief, vitality enhancement, emotional healing, and overall health optimization.",
+          "lifeCoaching": "Life coaching offers numerous benefits including goal clarification, personal growth, confidence building, life balance, and sustainable transformation.",
+          "life-coaching": "Life coaching offers numerous benefits including goal clarification, personal growth, confidence building, life balance, and sustainable transformation."
+        },
+        "experience": {
+          "biotherapy": "With years of professional experience and certified training, our practitioners deliver superior Biotherapy compared to less experienced providers.",
+          "bioenergy": "With our certified specialists and proven techniques, we provide superior results and safe practices in bioenergy therapy.",
+          "lifeCoaching": "Our expert coaches achieve superior results in life coaching through proven methodologies and personalized approaches.",
+          "life-coaching": "Our expert coaches achieve superior results in life coaching through proven methodologies and personalized approaches."
+        },
+        "personalized": {
+          "biotherapy": "Our personalized approach to Biotherapy ensures each client receives customized treatment plans tailored to their specific needs and goals.",
+          "bioenergy": "Our personalized bioenergy approach offers treatment plans customized to each individual's unique energy profile and healing goals.",
+          "lifeCoaching": "Our personalized life coaching approach develops specific strategies focused on each client's individual goals, challenges, and potential.",
+          "life-coaching": "Our personalized life coaching approach develops specific strategies focused on each client's individual goals, challenges, and potential."
+        },
+        "process": {
+          "biotherapy": "Biotherapy treatment begins with comprehensive health assessment, followed by customized protocols including cellular regeneration techniques, immune system support, detoxification, and metabolic optimization.",
+          "bioenergy": "The bioenergy therapy process begins with an energy assessment to identify blockages, followed by targeted healing techniques including chakra balancing, aura cleansing, and direct energy transmission to restore optimal energy flow.",
+          "lifeCoaching": "The life coaching process begins with goal clarification and vision setting, followed by identifying obstacles, creating action plans, implementing strategies, and ongoing accountability to ensure success.",
+          "life-coaching": "The life coaching process begins with goal clarification and vision setting, followed by identifying obstacles, creating action plans, implementing strategies, and ongoing accountability to ensure success."
+        }
+      },
+      "features": {
+        "cellularRegeneration": {
+          "title": "Cellular Regeneration",
+          "description": "Advanced techniques to stimulate cellular repair and regeneration processes"
+        },
+        "immuneSupport": {
+          "title": "Immune System Support", 
+          "description": "Strengthening and balancing your body's natural defense mechanisms"
+        },
+        "detoxification": {
+          "title": "Detoxification",
+          "description": "Comprehensive detox protocols to eliminate toxins and restore vitality"
+        },
+        "metabolicOptimization": {
+          "title": "Metabolic Optimization",
+          "description": "Enhancement of metabolic function for improved energy and health"
+        }
+      },
+      "hero": {
+        "bestService": "Best {serviceName} {locationText}",
+        "professionalService": "Professional {serviceName}"
+      },
+      "trustSignals": {
+        "certified": "Certified Professional",
+        "stories": "500+ Success Stories",
+        "serving": "Serving {city} Area"
+      },
+      "buttons": {
+        "getInTouch": "Get in Touch",
+        "viewStories": "View Success Stories"
+      },
+      "sections": {
+        "whatIs": "What is {serviceName} and How Does it Work?",
+        "whyChoose": "Why Choose Professional {serviceName} Services?",
+        "whatToExpected": "What to Expect During Your {serviceName} Session?",
+        "clientStories": "Client Success Stories",
+        "clientStoriesLocation": "Client Success Stories from {city}",
+        "relatedServices": "Related Services"
+      },
+      "benefits": {
+        "title": "{serviceName} Key Benefits",
+        "items": [
+          "Stress reduction and emotional balance",
+          "Improved energy levels and vitality",
+          "Enhanced self-awareness and clarity",
+          "Personal growth and life transformation",
+          "Holistic approach to wellness"
+        ]
+      },
+      "process": {
+        "title": "{serviceName} Process",
+        "subtitle": "Your step-by-step treatment journey",
+        "steps": [
+          {
+            "number": "1",
+            "title": "Initial Consultation",
+            "description": "Schedule a comprehensive consultation to discuss your wellness goals, health history, and specific needs with our certified practitioner."
+          },
+          {
+            "number": "2", 
+            "title": "Personalized Assessment",
+            "description": "Receive a thorough assessment to identify areas for improvement and develop a customized treatment plan tailored to your unique situation."
+          },
+          {
+            "number": "3",
+            "title": "Treatment Sessions",
+            "description": "Participate in regular treatment sessions using proven techniques designed to address your specific wellness goals and promote healing."
+          },
+          {
+            "number": "4",
+            "title": "Progress Monitoring",
+            "description": "Track your progress through regular check-ins and adjustments to your treatment plan to ensure optimal results and continued improvement."
+          },
+          {
+            "number": "5",
+            "title": "Ongoing Support",
+            "description": "Receive continued support and guidance to maintain your progress and integrate wellness practices into your daily life for lasting transformation."
+          }
+        ]
+      },
+      "testimonials": {
+        "title": "Client Experiences",
+        "subtitle": "Discover success stories"
+      },
+      "cta": {
+        "title": "Get Started Today",
+        "description": "Contact us to begin your wellness journey right away",
+        "button": "Free Consultation"
+      },
+      "features": {
+        "title": "Features",
+        "subtitle": "Professional service features"
+      },
+      "services": {
+        "bioenergy": "Bioenergy Therapy{locationText}",
+        "biotherapy": "Biotherapy{locationText}",
+        "lifeCoaching": "Life Coaching{locationText}"
+      }
+    }
+  },
+  "bioenergyPage": {
+    "snippets": {
+      "quickAnswer": "Bioenergy therapy is a holistic healing practice that works with the body's natural energy field to restore balance, enhance vitality, and promote physical, emotional, and spiritual wellness through certified energy healing techniques."
+    },
+    "faq": {
+      "sessions": {
+        "question": "How many bioenergy therapy sessions do I need?",
+        "answer": "The number of sessions varies depending on your individual needs and goals. Most clients notice improvements after 2-3 sessions, with significant results typically achieved within 6-8 sessions. Your practitioner will create a personalized treatment plan during your initial consultation."
+      },
+      "safety": {
+        "question": "Is bioenergy therapy safe?",
+        "answer": "Yes, bioenergy therapy is completely safe and non-invasive. It works with your body's natural energy systems and has no harmful side effects. It can be safely used alongside conventional medical treatments as a complementary therapy."
+      },
+      "firstSession": {
+        "question": "What should I expect during my first bioenergy session?",
+        "answer": "Your first session includes a detailed consultation about your health history and goals, followed by an energy assessment. The actual therapy involves gentle, hands-on or near-body techniques while you remain fully clothed and relaxed. Many clients feel immediate relaxation and energy shifts."
+      }
+    },
+    "detailedSections": {
+      "whatIs": {
+        "title": "What is Bioenergy Therapy and How Does it Work?",
+        "description": "Bioenergy therapy is a scientifically-grounded healing modality that works with the body's bioelectric field to restore optimal health and wellness. This non-invasive therapy recognizes that all living beings have an electromagnetic energy field that can become disrupted due to stress, illness, trauma, or environmental factors.",
+        "sessionDescription": "During a bioenergy therapy session, certified practitioners use specialized techniques to detect energy imbalances and blockages within your biofield. Through gentle, hands-on or hands-near-body methods, they help restore proper energy flow, allowing your body's natural healing mechanisms to function optimally.",
+        "scientificFoundation": {
+          "title": "Scientific Foundation:",
+          "items": [
+            "Based on bioelectromagnetic field research",
+            "Supported by studies in energy medicine",
+            "Recognized by integrative medicine practitioners",
+            "Complementary to conventional medical treatments"
+          ]
+        }
+      },
+      "conditions": {
+        "title": "What Conditions Can Bioenergy Therapy Help?",
+        "description": "Bioenergy therapy has shown effectiveness in addressing a wide range of physical, emotional, and energetic imbalances. Many clients experience significant improvements in their overall wellbeing and specific health concerns.",
+        "physical": {
+          "title": "Physical Conditions:",
+          "items": [
+            "Chronic pain and inflammation",
+            "Fatigue and low energy",
+            "Sleep disorders",
+            "Digestive issues",
+            "Headaches and migraines",
+            "Recovery from illness or surgery"
+          ]
+        },
+        "emotional": {
+          "title": "Emotional & Mental:",
+          "items": [
+            "Stress and anxiety",
+            "Depression and mood disorders",
+            "Emotional trauma",
+            "Mental clarity and focus",
+            "Relationship difficulties",
+            "Life transitions"
+          ]
+        }
+      }
+    }
+  },
+  "biotherapyPage": {
+    "testimonials": {
+      "0": {
+        "text": "The biotherapy treatment helped me recover from chronic illness when nothing else worked. The approach is truly revolutionary.",
+        "author": "Elena S.",
+        "location": "Istanbul Client"
+      },
+      "1": {
+        "text": "After months of biotherapy sessions, my energy levels and overall health have dramatically improved. Highly recommend this treatment.",
+        "author": "Mehmet A.",
+        "location": "Ankara Client"
+      }
+    },
+    "snippets": {
+      "quickAnswer": "Biotherapy is an advanced healing modality that uses cutting-edge techniques to optimize cellular function, strengthen the immune system, and restore the body's natural healing capacity through personalized treatment protocols.",
+      "process": "Biotherapy treatment begins with comprehensive health assessment, followed by customized protocols including cellular regeneration techniques, immune system support, detoxification, and metabolic optimization.",
+      "duration": "Biotherapy sessions typically last 75-120 minutes, with most clients experiencing significant improvements within 4-6 sessions, though treatment duration varies based on individual needs."
+    },
+    "faq": {
+      "results": {
+        "question": "How long does biotherapy treatment take to show results?",
+        "answer": "Many clients notice improvements within the first few sessions, with significant results typically seen within 4-6 weeks of consistent treatment. However, the timeline varies based on individual health conditions and treatment goals."
+      },
+      "safety": {
+        "question": "Is biotherapy treatment safe for everyone?",
+        "answer": "Biotherapy is generally safe for most people, but a thorough health assessment is conducted before treatment begins. Your practitioner will determine if biotherapy is appropriate for your specific condition and health status."
+      },
+      "difference": {
+        "question": "What makes biotherapy different from conventional treatments?",
+        "answer": "Biotherapy focuses on optimizing cellular function and enhancing the body's natural healing capacity rather than just treating symptoms. It uses advanced, non-invasive techniques to address root causes of health imbalances."
+      },
+      "combination": {
+        "question": "Can biotherapy be combined with other treatments?",
+        "answer": "Yes, biotherapy is designed to complement and enhance other treatment modalities. It can be safely integrated with conventional medical treatments, nutritional protocols, and other holistic therapies."
+      }
+    }
+  },
+  "lifeCoachingPage": {
+    "faq": {
+      "sessions": {
+        "question": "How many life coaching sessions do I need?",
+        "answer": "The number of sessions varies based on your goals and commitment level. Most clients see significant progress within 6-12 sessions over 3-6 months. We'll create a personalized plan during your initial consultation."
+      },
+      "goals": {
+        "question": "How do you help me achieve my goals?",
+        "answer": "We use proven coaching methodologies including goal setting frameworks, accountability systems, obstacle identification, and action planning. You'll receive personalized strategies and ongoing support to ensure success."
+      },
+      "difference": {
+        "question": "What makes life coaching different from therapy?",
+        "answer": "Life coaching is future-focused and action-oriented, helping you achieve specific goals and create positive changes. While therapy often addresses past issues, coaching concentrates on moving forward and unlocking your potential."
+      },
+      "results": {
+        "question": "When will I see results from life coaching?",
+        "answer": "Many clients experience increased clarity and motivation after the first session. Significant behavioral changes and goal progress typically occur within 4-8 weeks of consistent coaching and implementation."
+      }
+    }
+  },
+  "termsOfService": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated:",
+    "sections": {
+      "acceptance": {
+        "title": "Acceptance of Terms",
+        "content": "By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service."
+      },
+      "services": {
+        "title": "Services Offered",
+        "intro": "We offer the following services:",
+        "items": [
+          {
+            "title": "Biotherapy Services:",
+            "description": "Energy healing and therapeutic sessions"
+          },
+          {
+            "title": "Bioenergy Healing:",
+            "description": "Holistic energy work and chakra balancing"
+          },
+          {
+            "title": "Digital Books:",
+            "description": "E-books on wellness, spirituality, and personal development"
+          },
+          {
+            "title": "Poetry Collections:",
+            "description": "Digital and physical poetry books"
+          },
+          {
+            "title": "Certificates:",
+            "description": "Completion certificates for courses and sessions"
+          },
+          {
+            "title": "Consultations:",
+            "description": "Personal guidance and coaching sessions"
+          }
+        ]
+      },
+      "medicalDisclaimer": {
+        "title": "Medical Disclaimer",
+        "noticeTitle": "Important Health Notice:",
+        "content": "Our biotherapy and bioenergy services are complementary wellness practices intended to support your overall well-being. These services are NOT medical treatments and should not replace conventional medical care. We do not diagnose, treat, cure, or prevent any disease. Always consult with qualified healthcare professionals for medical concerns, diagnoses, or treatments."
+      },
+      "digitalProducts": {
+        "title": "Digital Product Sales",
+        "booksPoetry": {
+          "title": "Books and Poetry",
+          "items": [
+            "All digital books and poems are delivered electronically",
+            "You receive a personal, non-transferable license to use the content",
+            "Sharing, copying, or distributing our content without permission is prohibited",
+            "Physical books, when available, are shipped according to our shipping policy"
+          ]
+        },
+        "refundPolicy": {
+          "title": "Refund Policy",
+          "items": [
+            "Digital products: 7-day refund period from purchase date",
+            "Physical products: 14-day return period in original condition",
+            "Services: Refunds considered on a case-by-case basis",
+            "Refund requests must be submitted through our contact form"
+          ]
+        }
+      },
+      "sessions": {
+        "title": "Service Sessions and Appointments",
+        "booking": {
+          "title": "Booking and Scheduling",
+          "items": [
+            "Sessions must be booked in advance through our website",
+            "Payment is required at the time of booking",
+            "Session times are confirmed via email",
+            "Online sessions are conducted via secure video platforms"
+          ]
+        },
+        "cancellation": {
+          "title": "Cancellation Policy",
+          "items": [
+            "Cancellations must be made at least 24 hours in advance",
+            "Late cancellations may result in partial or no refund",
+            "No-shows are charged the full session fee",
+            "We reserve the right to reschedule due to unforeseen circumstances"
+          ]
+        }
+      },
+      "intellectualProperty": {
+        "title": "Intellectual Property",
+        "intro": "All content on this website, including but not limited to text, graphics, logos, images, audio clips, digital downloads, and software, is our property or licensed to us and is protected by copyright and other intellectual property laws.",
+        "items": [
+          "You may not reproduce, distribute, or create derivative works",
+          "Personal use only - no commercial use without written permission",
+          "Certificates and credentials remain our intellectual property"
+        ]
+      },
+      "userConduct": {
+        "title": "User Conduct",
+        "intro": "You agree not to:",
+        "items": [
+          "Use our services for any unlawful purpose",
+          "Share login credentials or accounts",
+          "Attempt to gain unauthorized access to our systems",
+          "Upload or transmit harmful content",
+          "Interfere with other users' experience",
+          "Misrepresent your identity or credentials"
+        ]
+      },
+      "payment": {
+        "title": "Payment Terms",
+        "items": [
+          "All prices are displayed in the currency specified at checkout",
+          "Payment is processed securely through trusted payment providers",
+          "We accept major credit cards and digital payment methods",
+          "Prices may change without notice, but confirmed orders honor the agreed price",
+          "Failed payments may result in service suspension"
+        ]
+      },
+      "privacy": {
+        "title": "Privacy and Data Protection",
+        "content": "Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and protect your information. By using our services, you consent to the collection and use of information in accordance with our Privacy Policy."
+      },
+      "liability": {
+        "title": "Limitation of Liability",
+        "content": "To the fullest extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from your use of our services."
+      },
+      "termination": {
+        "title": "Termination",
+        "content": "We may terminate or suspend your access to our services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms of Service."
+      },
+      "changesTerms": {
+        "title": "Changes to Terms",
+        "content": "We reserve the right to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days notice prior to any new terms taking effect."
+      },
+      "contactInfo": {
+        "title": "Contact Information",
+        "content": "If you have any questions about these Terms of Service, please contact us through our contact page. We are committed to addressing your concerns and ensuring a positive experience with our services."
+      },
+      "credentials": {
+        "title": "Professional Credentials:",
+        "content": "Our services are provided by certified practitioners with appropriate training and credentials in biotherapy and bioenergy healing. Certificates and qualifications are available upon request."
+      }
+    }
+  },
+  "certificatesAndDiplomasPage": {
+    "title": "Certificates and Diplomas",
+    "loading": "Loading certificates and diplomas data...",
+    "error": "An error occurred while loading certificates and diplomas data.",
+    "noCertificates": "No certificates available yet.",
+    "noImage": "No Image",
+    "viewDetails": "View Details",
+    "previous": "Previous",
+    "searchCertificates": "Certificates and diplomas...",
+    "filterCertificates": "Certificates and diplomas...",
+    "filterCertificatesDescription": "Certificates and diplomas...",
+    "filter": "Filter",
+    "quickActions": "Quick Actions",
+    "recentCertificates": "Recent Certificates",
+    "featuredCertificates": "Featured Certificates",
+    "viewAllCertificates": "View All Certificates",
+    "language": "Language",
+    "selectLanguage": "Select Language",
+    "applyFilters": "Apply Filters",
+    "clearFilters": "Clear Filters",
+    "cancel": "Cancel",
+    "next": "Next",
+    "subtitle": "The documented steps of my educational, diploma, and certification journey",
+    "description": "The documented steps of my educational, diploma, and certification journey will be added in this section.",
+    "content": {
+      "intro": "Professional certifications and educational achievements that validate expertise in healing and wellness practices."
+    }
+  },
+  "awardsAndAchievementsPage": {
+    "title": "Awards and Achievements",
+    "loading": "Loading awards and achievements data...",
+    "error": "An error occurred while loading awards and achievements data.",
+    "noAwards": "No awards available yet.",
+    "noImage": "No Image",
+    "viewDetails": "View Details",
+    "previous": "Previous",
+    "next": "Next",
+    "search": "Awards and achievements...",
+    "noResults": "No results found.",
+    "awards": "Awards",
+    "quickActions": "Quick Actions",
+    "recentAwards": "Recent Awards",
+    "searchAwards": "Awards and achievements...",
+    "filterAwards": "Awards and achievements...",
+    "filterAwardsDescription": "Awards and achievements...",
+    "recentCertificates": "Recent Certificates",
+    "featuredCertificates": "Featured Certificates",
+    "viewAllCertificates": "View All Certificates",
+    "language": "Language",
+    "searchCertificates": "Certificates and diplomas...",
+    "filterCertificates": "Certificates and diplomas...",
+    "filterCertificatesDescription": "Certificates and diplomas...",
+    "filter": "Filter",
+    "applyFilters": "Apply Filters",
+    "clearFilters": "Clear Filters",
+    "cancel": "Cancel",
+    "selectLanguage": "Select Language",
+    "featuredAwards": "Featured Awards",
+    "viewAllAwards": "View All Awards",
+    "subtitle": "The awards and achievements I have earned in my career journey", 
+    "description": "The awards and achievements I have earned in my career journey will be showcased here.",
+    "content": {
+      "intro": "Professional recognition and achievements in the field of holistic healing and wellness."
+    }
+  },
+  "poemsPage": {
+    "title": "Poems",
+    "subtitle": "Literary works and poetry",
+    "loading": "Loading poems data...",
+    "error": "An error occurred while loading poems data.",
+    "noPoems": "No poems available yet.",
+    "noImage": "No Image",
+    "viewDetails": "View Details",
+    "previous": "Previous",
+    "next": "Next",
+
+    "description": "A collection of inspirational poems and literary works reflecting the journey of healing and personal growth.",
+    "content": {
+      "intro": "Poetry and literary expressions that capture the essence of healing, transformation, and spiritual growth."
+    }
+  },
+  "booksPage": {
+    "title": "Books",
+    "subtitle": "Pages full of wisdom, stories that nourish the soul",
+    "description": "Pages full of wisdom, stories that nourish the soul are found here.",
+    "loading": "Loading book data...",
+    "error": "An error occurred while loading book data.",
+    "noBooks": "No books available yet.",
+    "noImage": "No Image",
+    "viewDetails": "View Details",
+    "searchBooks": "Books...",
+    "filterBooks": "Books...",
+    "filterBooksDescription": "Books...",
+    "filter": "Filter",
+    "applyFilters": "Apply Filters",
+    "clearFilters": "Clear Filters",
+    "cancel": "Cancel",
+    "language": "Language",
+    "selectLanguage": "Select Language",
+    "quickActions": "Quick Actions",
+    "recentBooks": "Recent Books",
+    "featuredBooks": "Featured Books",
+    "freeBooks": "Free Books",
+    "viewAllBooks": "View All Books",
+    "minPrice": "Min. Price",
+    "maxPrice": "Max. Price",
+    "previous": "Previous",
+    "next": "Next",
+    "content": {
+      "intro": "Literary contributions to the field of holistic healing and personal transformation."
+    }
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Frequently asked questions",
+    "items": {
+      "1": {
+        "q": "What types of therapy do you offer?",
+        "a": "We offer a comprehensive range of therapeutic services including individual therapy, couples counseling, family therapy, cognitive behavioral therapy (CBT), dialectical behavior therapy (DBT), and specialized treatments for anxiety, depression, trauma, and other mental health conditions."
+      },
+      "2": {
+        "q": "Do I need a referral to book an appointment?",
+        "a": "No referral is required to book an appointment with us. You can directly contact our office to schedule your consultation. However, if you plan to use insurance, we recommend checking with your provider about referral requirements."
+      },
+      "3": {
+        "q": "Is my information kept confidential?",
+        "a": "Absolutely. We maintain strict confidentiality standards in accordance with HIPAA regulations and professional ethical guidelines. Your personal information and therapy sessions are completely private and secure."
+      },
+      "4": {
+        "q": "What should I expect during my first visit?",
+        "a": "Your first session will involve a comprehensive assessment where we'll discuss your concerns, goals, and medical history. This helps us understand your needs and develop a personalized treatment plan. The session typically lasts 60-90 minutes."
+      },
+      "5": {
+        "q": "Do you offer virtual therapy sessions?",
+        "a": "Yes, we offer secure telehealth sessions for your convenience. Our virtual therapy platform is HIPAA-compliant and provides the same quality of care as in-person sessions, allowing you to receive support from the comfort of your home."
+      },
+      "6": {
+        "q": "How long following up time?",
+        "a": "Follow-up appointments are typically scheduled weekly or bi-weekly, depending on your needs and treatment plan. The duration of therapy varies for each individual, ranging from a few months to longer-term support based on your goals and progress."
+      }
+    }
+  },
+  "blog": {
+    "pageTitle": "Blog",
+    "pageDescription": "Insights, tutorials, and thoughts on modern software development",
+    "search": {
+      "placeholder": "Search blog posts...",
+      "button": "Search",
+      "commandPlaceholder": "Search blog...",
+      "noResults": "No results found.",
+      "loadingResults": "Loading results..."
+    },
+    "filter": {
+      "title": "Filter Blogs", 
+      "description": "Filter blogs by language and search for specific content.",
+      "language": "Language",
+      "languageOptions": {
+        "all": "All Languages",
+        "tr": "Türkçe",
+        "en": "English", 
+        "ru": "Русский",
+        "az": "Azərbaycan"
+      },
+      "applyFilters": "Apply Filters",
+      "clearFilters": "Clear Filters",
+      "cancel": "Cancel"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "viewAll": "View all posts"
+    },
+    "loading": "Loading blog data...",
+    "error": "An error occurred while loading blog data.",
+    "noBlogs": "No blog posts found yet.",
+    "author": "Elza Darya",
+    "noImage": "No Image"
+  },
+  "dynamicFAQ": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Common questions about {serviceName}{locationText}",
+    "stillHaveQuestions": "Still have questions?",
+    "cantFindAnswer": "Can't find the answer you're looking for? We'd love to help you personally.",
+    "contactDirectly": "Contact Us Directly",
+    "noResults": "No questions found matching '{searchTerm}'",
+    "clearSearch": "Clear search",
+    "searchPlaceholder": "Search FAQs...",
+    "searchButton": "Search"
+  },
+  "recentBlogsSection": {
+    "title": "Recent Blog Posts",
+    "subtitle": "Latest Content on Bioenergy and Health",
+    "readMore": "Read More",
+    "author": {
+      "bioenergyTherapist": "Bioenergy Therapist",
+      "lifeCoach": "Life Coach",
+      "biotherapyExpert": "Biotherapy Expert"
+    },
+    "blog": "Blog"
+  }
+}
+
