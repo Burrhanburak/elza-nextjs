@@ -42,9 +42,9 @@ const defaultItems: CarouselItem[] = [
     id: 'default-2', 
     title: 'Yaşam Koçluğu',
     description: 'Hedeflerinizi netleştirin ve kişisel başarıya ulaşın.',
-    image: '/zovpersonal.webp',
+    image: '/green-elza.svg',
     alt: 'Yaşam Koçluğu',
-    icon: '/zovpersonal.webp',
+    icon: '/green-elza.svg',
     icon2: <ExternalLink />
   },
   {
@@ -128,7 +128,7 @@ export default function ModernCarousel({
                 : '',
               alt: poem.title,
               slug: poem.slug,
-              icon: '/zovpersonal.webp',
+              icon: '/green-elza.svg',
               icon2: <ExternalLink  />,
               type: 'poem'
             }));

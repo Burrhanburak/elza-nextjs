@@ -11,15 +11,15 @@ const translations = {
     name: 'Ad Soyad',
     email: 'E-posta',
     userType: 'Kullanıcı Tipi',
-    appointmentDate: 'Randevu Tarihi',
     languageSupport: 'Dil Desteği',
     message: '💬 Mesaj',
-    footerText: 'Bu mesaj ZovPersonal.com iletişim formu aracılığıyla gönderildi.',
-    jobSeeker: 'İş Arayan',
-    employer: 'İş Veren',
+    footerText: 'Bu mesaj elzadarya.com iletişim formu aracılığıyla gönderildi.',
+   bioenergy: 'Biyoenerji Terapisi',
+   biotherapy: 'Bioterapi', 
     notSpecified: 'Belirtilmemiş',
     turkish: 'Türkçe',
-    german: 'Almanca',
+    russian: 'Rusça',
+    azerbaijani: 'Azərbaycanca',
     english: 'İngilizce'
   },
   en: {
@@ -28,118 +28,46 @@ const translations = {
     name: 'Name',
     email: 'Email',
     userType: 'User Type',
-    appointmentDate: 'Appointment Date',
     languageSupport: 'Language Support',
     message: '💬 Message',
-    footerText: 'This message was sent via ZovPersonal.com contact form.',
-    jobSeeker: 'Job Seeker',
-    employer: 'Employer',
+    footerText: 'This message was sent via elzadarya.com contact form.',
+    bioenergy: 'Bioenergy Therapy',
+    biotherapy: 'Biotherapy',
     notSpecified: 'Not Specified',
     turkish: 'Turkish',
-    german: 'German',
+    russian: 'Russian',
+    azerbaijani: 'Azerbaijani',
     english: 'English'
   },
-  de: {
-    newMessage: '🆕 Neue Kontaktformular-Nachricht',
-    contactInfo: '👤 Kontaktinformationen',
-    name: 'Name',
-    email: 'E-Mail',
-    userType: 'Benutzertyp',
-    appointmentDate: 'Termindat',
-    languageSupport: 'Sprachunterstützung',
-    message: '💬 Nachricht',
-    footerText: 'Diese Nachricht wurde über das Kontaktformular von ZovPersonal.com gesendet.',
-    jobSeeker: 'Arbeitssuchender',
-    employer: 'Arbeitgeber',
-    notSpecified: 'Nicht angegeben',
-    turkish: 'Türkisch',
-    german: 'Deutsch',
-    english: 'Englisch'
+  ru: {
+      newMessage: '🆕 Новое сообщение из формы контакта',
+    contactInfo: '👤 Контактная информация',
+    name: 'Имя',
+    email: 'Электронная почта',
+    userType: 'Тип пользователя',
+    languageSupport: 'Поддержка языка',
+    message: '💬 Сообщение',
+    footerText: 'Это сообщение было отправлено через форму контакта elzadarya.com.',
+    bioenergy: 'Биоэнергетическая терапия',
+    biotherapy: 'Биотерапия',
+    notSpecified: 'Не указано',
+    turkish: 'Турецкий',
+    russian: 'Русский',
+    azerbaijani: 'Азербайджанский',
+    english: 'Английский'
   },
-  nl: {
-    newMessage: '🆕 Nieuw Contactformulier Bericht',
-    contactInfo: '👤 Contactinformatie',
-    name: 'Naam',
-    email: 'E-mail',
-    userType: 'Gebruikerstype',
-    appointmentDate: 'Afspraakdatum',
-    languageSupport: 'Taalondersteuning',
-    message: '💬 Bericht',
-    footerText: 'Dit bericht is verzonden via het contactformulier van ZovPersonal.com.',
-    jobSeeker: 'Werkzoekende',
-    employer: 'Werkgever',
-    notSpecified: 'Niet gespecificeerd',
-    turkish: 'Turks',
-    german: 'Duits',
-    english: 'Engels'
-  },
-  bg: {
-    newMessage: '🆕 Ново съобщение от контактната форма',
-    contactInfo: '👤 Контактна информация',
-    name: 'Име',
-    email: 'Имейл',
-    userType: 'Тип потребител',
-    appointmentDate: 'Дата за среща',
-    languageSupport: 'Езикова поддръжка',
-    message: '💬 Съобщение',
-    footerText: 'Това съобщение е изпратено чрез контактната форма на ZovPersonal.com.',
-    jobSeeker: 'Търсещ работа',
-    employer: 'Работодател',
-    notSpecified: 'Неопределено',
-    turkish: 'Турски',
-    german: 'Немски',
-    english: 'Английски'
-  },
-  hr: {
-    newMessage: '🆕 Nova poruka s kontaktnog obrasca',
-    contactInfo: '👤 Kontaktne informacije',
-    name: 'Ime',
-    email: 'Email',
-    userType: 'Tip korisnika',
-    appointmentDate: 'Datum termina',
-    languageSupport: 'Jezična podrška',
-    message: '💬 Poruka',
-    footerText: 'Ova poruka je poslana putem kontaktnog obrasca ZovPersonal.com.',
-    jobSeeker: 'Tražitelj posla',
-    employer: 'Poslodavac',
-    notSpecified: 'Nije specificirano',
-    turkish: 'Turski',
-    german: 'Njemački',
-    english: 'Engleski'
-  },
-  ro: {
-    newMessage: '🆕 Nou mesaj din formularul de contact',
-    contactInfo: '👤 Informații de contact',
-    name: 'Nume',
-    email: 'Email',
-    userType: 'Tip utilizator',
-    appointmentDate: 'Data programării',
-    languageSupport: 'Suport lingvistic',
+  az: {
+    newMessage: '🆕 Yeni İletişim Formu Mesajı',
+      contactInfo: '👤 İletişim Bilgileri',
+    name: 'Ad Soyad',
+    email: 'E-poçt ünvanı',
+    userType: 'İstifadəçi Tipi',
+    languageSupport: 'Dil Desteği',
     message: '💬 Mesaj',
-    footerText: 'Acest mesaj a fost trimis prin formularul de contact ZovPersonal.com.',
-    jobSeeker: 'Căutător de locuri de muncă',
-    employer: 'Angajator',
-    notSpecified: 'Nespecificat',
-    turkish: 'Turcă',
-    german: 'Germană',
-    english: 'Engleză'
-  },
-  sr: {
-    newMessage: '🆕 Novi kontakt formular poruka',
-    contactInfo: '👤 Kontakt informacije',
-    name: 'Ime',
-    email: 'Email',
-    userType: 'Tip korisnika',
-    appointmentDate: 'Datum termina',
-    languageSupport: 'Jezička podrška',
-    message: '💬 Poruka',
-    footerText: 'Ova poruka je poslana putem kontaktnog obrasca ZovPersonal.com.',
-    jobSeeker: 'Tražitelj posla',
-    employer: 'Poslodavac',
-    notSpecified: 'Nije specificirano',
-    turkish: 'Turski',
-    german: 'Nemački',
-    english: 'Engleski'
+    footerText: 'Bu mesaj elzadarya.com iletişim formu aracılığıyla gönderildi.',
+    bioenergy: 'Bioenerji Terapiyası',
+    biotherapy: 'Bioterapi',
+    notSpecified: 'Belirtilmemiş',
   }
 };
 
@@ -169,15 +97,16 @@ export async function POST(request: NextRequest) {
     const t = translations[locale as keyof typeof translations] || translations.en;
 
     // Format user type for display
-    const userTypeText = userType === 'job_seeker' ? 
-                         (t as any).jobSeeker : 
-                         userType === 'employer' ? 
-                         (t as any).employer : 
+    const userTypeText = userType === 'bioenergy' ? 
+                         (t as any).bioenergy : 
+                         userType === 'biotherapy' ? 
+                         (t as any).biotherapy : 
                          (t as any).notSpecified;
 
     // Format language support  
     const languageText = languageSupport === 'turkish' ? (t as any).turkish :
-                         languageSupport === 'german' ? (t as any).german :
+                         languageSupport === 'russian' ? (t as any).russian :
+                         languageSupport === 'azerbaijani' ? (t as any).azerbaijani :
                          languageSupport === 'english' ? (t as any).english :
                          (t as any).notSpecified;
 
@@ -215,9 +144,9 @@ export async function POST(request: NextRequest) {
 
     // Send email using Resend
     const result = await resend.emails.send({
-      from: 'ZovPersonal <info@zovpersonal.com>', // Bu domain'i Resend'de verify etmen gerekiyor
-      to: ['info@zovpersonal.com'],
-      replyTo: email, // User'ın mailini reply-to olarak ekle
+      from: 'elzadarya <info@elzadarya.com>', // Bu domain'i Resend'de verify etmen gerekiyor
+      to: ['info@elzadarya.com'],
+      replyTo: email, // User'ın mailini reply-to olarak ekle,
       subject: `📨 ${t.newMessage}: ${name} - ${userTypeText}`,
       html: emailContent,
     });
