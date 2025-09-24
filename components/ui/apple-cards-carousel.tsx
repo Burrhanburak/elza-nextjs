@@ -337,7 +337,8 @@ export const BlurImage = ({
   return (
     <Image
       className={cn(
-        "h-full w-full transition duration-300",
+        "h-full w-full transition duration-700",
+        isLoading ? "blur-sm scale-105" : "blur-0 scale-100",
         className,
       )}
       onLoad={() => setLoading(false)}
@@ -345,6 +346,11 @@ export const BlurImage = ({
       width={width}
       height={height}
       alt={alt ? alt : "Background of a beautiful view"}
+      priority={true}
+      quality={85}
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      placeholder="blur"
+      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkbHB0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyLli221QCmmQQeHO4bSJAIAA7Bd7WkNFEOD2mIZYmPUvE5JfeCwHQkZKcqnP8AGLnGZCFBQqA6pCNGUbKJPcD3iMLYFqLxJ6ZyGvZO/jQV7ksaOqSgRQrHb8mWmhH8yqM5hqXUZK/EAAAF/9k="
       {...rest}
     />
   );

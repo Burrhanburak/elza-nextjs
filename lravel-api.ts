@@ -1,7 +1,5 @@
-// Laravel API Base URL
-const API_BASE_URL = typeof window === 'undefined' 
-  ? process.env.INTERNAL_API_URL || 'https://elza-darya.test/api' // Server-side
-  : process.env.NEXT_PUBLIC_API_URL || 'https://elza-darya.test/api'; // Client-side
+// Next.js API Base URL (using our new API routes)
+const API_BASE_URL = '/api';
 
 // API Response Types
 interface ApiResponse<T> {
@@ -190,6 +188,7 @@ export const productApi = {
 // Legacy API support
 export const blogApi = {
   // Get all blogs with pagination and filters
+  // Now handled by Next.js API route: /api/blogs
   async getBlogs(params?: {
     page?: number;
     per_page?: number;
@@ -205,14 +204,14 @@ export const blogApi = {
 
     const url = `${API_BASE_URL}/blogs${searchParams.toString() ? `?${searchParams.toString()}` : ''}`;
     
-    console.log('API Request URL:', url);
-    console.log('API Base URL:', API_BASE_URL);
+    // console.log('API Request URL:', url);
+    // console.log('API Base URL:', API_BASE_URL);
     
     try {
       const response = await fetch(url);
       
-      console.log('API Response Status:', response.status);
-      console.log('API Response Headers:', response.headers);
+      // console.log('API Response Status:', response.status);
+      // console.log('API Response Headers:', response.headers);
       
       if (!response.ok) {
         const errorText = await response.text();
@@ -221,7 +220,7 @@ export const blogApi = {
       }
       
       const data = await response.json();
-      console.log('API Response Data:', data);
+      // console.log('API Response Data:', data);
       return data;
     } catch (error) {
       console.error('API Request Error:', error);
