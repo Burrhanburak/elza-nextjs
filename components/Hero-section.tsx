@@ -106,7 +106,7 @@ const HeroSection = ({ locale = 'en' }: HeroSectionProps) => {
             {/* CTA Button */}
             <div>
               <a 
-                href="#contact-section"
+                href="/contact"
                 className="bg-[#206d4e]  shadow-xl rounded-[80px] p-1 inline-flex items-center gap-4 hover:bg-[#206d4e] transition-colors duration-300 mb-2"
               >
                 <div className="bg-white rounded-full p-4 flex items-center justify-center w-12 h-13">

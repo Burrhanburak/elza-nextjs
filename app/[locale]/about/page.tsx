@@ -219,7 +219,7 @@ const AboutPage = async ({ params }: Props) => {
               {t('biography.pageTitle')}
             </h2>
            
-            <Link href="/about/biography" className="text-[#006241]/80 p-2 w-fit bg-[#006241]/10 rounded-lg flex items-center gap-2">Read More 
+            <Link href="/services/biography" className="text-[#006241]/80 p-2 w-fit bg-[#006241]/10 rounded-lg flex items-center gap-2">Read More 
             <ArrowUpRight className="w-4 h-4" />
             </Link>
           </div>
