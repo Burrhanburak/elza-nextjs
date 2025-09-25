@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import { CommandDialog, CommandInput, CommandList, CommandEmpty, CommandGroup, CommandItem, CommandSeparator } from './ui/command'
 import { poemApi, Poem } from '../lravel-api'

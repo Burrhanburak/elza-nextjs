@@ -1,101 +1,68 @@
-'use client'
-
-import React, { useState, useEffect } from 'react'
-import { awardApi, Award } from '../../../../lravel-api'
-import { useParams, useSearchParams } from 'next/navigation'
+import React from 'react'
+import { Award } from '../../../../lravel-api'
 import { AwardCommandMenu } from '@/components/award-command-menu'
 import AwardFilterDrawer from '@/components/AwardFilterDrawer'
+import { getTranslations } from 'next-intl/server'
 import Link from 'next/link'
-import { useTranslations } from 'next-intl'
 
+interface PageProps {
+  params: Promise<{ locale: string }>
+  searchParams: Promise<{ page?: string; language?: string; search?: string }>
+}
 
-
-const AwardsPage = () => {
-  const params = useParams()
-  const searchParams = useSearchParams()
-  const locale = params.locale as string
-  const t = useTranslations('awardsAndAchievementsPage')
-  const [awards, setAwards] = useState<Award[]>([])
-  const [pagination, setPagination] = useState<{
-    current_page: number;
-    last_page: number;
-    per_page: number;
-    total: number;
-  } | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-
-  const currentPage = searchParams.get('page') ? parseInt(searchParams.get('page')!) : 1
-  const currentLanguage = searchParams.get('language') || locale
-  const currentSearch = searchParams.get('search') || ''
-
-  useEffect(() => {
-    const fetchAwards = async () => {
-      setLoading(true)
-      setError(null)
-      
-      try {
-        const response = await awardApi.getAwards({
-          page: currentPage,
-          per_page: 12,
-          language: currentLanguage,
-          search: currentSearch,
-        })
-
-        setAwards(response.data)
-        setPagination(response.pagination || null)
-      } catch (err) {
-        console.error('Ödül verileri yüklenirken hata:', err)
-        setError(err instanceof Error ? err.message : 'Bilinmeyen hata')
-      } finally {
-        setLoading(false)
-      }
+async function getAwards(params: { page: number; per_page: number; language: string; search: string }) {
+  const queryParams = new URLSearchParams({
+    page: params.page.toString(),
+    per_page: params.per_page.toString(),
+    language: params.language,
+    search: params.search
+  })
+  
+  const response = await fetch(`https://elza-darya.test/api/awards?${queryParams}`, {
+    next: { revalidate: 3600 },
+    headers: {
+      'Content-Type': 'application/json',
     }
-
-    fetchAwards()
-  }, [currentPage, currentLanguage, currentSearch])
-
-  if (loading) {
-    return (
-      <section className="py-32 container mx-auto px-4">
-        <div className="container mx-auto px-4">
-          <div className="text-center p-10">
-            <h1 className="text-4xl font-bold mb-4">{t('title')}</h1>
-            <p className="text-gray-500">{t('loading')}</p>
-          </div>
-        </div>
-      </section>
-    )
+  })
+  
+  if (!response.ok) {
+    throw new Error('Failed to fetch awards')
   }
+  
+  return response.json()
+}
 
-  if (error) {
+export default async function AwardsPage({ params, searchParams }: PageProps) {
+  const { locale } = await params
+  const resolvedSearchParams = await searchParams
+  const currentPage = resolvedSearchParams.page ? parseInt(resolvedSearchParams.page) : 1
+  const currentLanguage = resolvedSearchParams.language || locale
+  const currentSearch = resolvedSearchParams.search || ''
+  const t = await getTranslations('awardsAndAchievementsPage')
+
+  try {
+    const response = await getAwards({
+      page: currentPage,
+      per_page: 12,
+      language: currentLanguage,
+      search: currentSearch,
+    })
+
+    const awards: Award[] = response.data
+    const pagination = response.pagination
+
     return (
-      <section className="py-32 container mx-auto px-4">
-        <div className="container mx-auto px-4 ">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold mb-4">{t('title')}</h1>
-            <p className="text-red-500">{t('error')}</p>
-            <p className="text-sm text-gray-500 mt-2">
-              Dil: {locale} | Hata: {error}
-            </p>
-          </div>
-        </div>
-      </section>
-    )
-  }
-
-  return (
     <section className="py-32 container mx-auto px-4 mb-">
       <div className="container mx-auto px-4 ">
         <nav aria-label="breadcrumb" data-slot="breadcrumb">
           <ol data-slot="breadcrumb-list" className="text-muted-foreground flex mb-5 flex-wrap items-center gap-1.5 text-sm break-words sm:gap-2.5">
             <li data-slot="breadcrumb-item" className="inline-flex items-center gap-1.5">
-              <Link data-slot="breadcrumb-link" className="hover:text-foreground transition-colors" href="/">
+              <a data-slot="breadcrumb-link" className="hover:text-foreground transition-colors" href="/">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-house h-4 w-4" aria-hidden="true">
                   <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
                   <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                 </svg>
-              </Link>
+              </a>
             </li>
             <li data-slot="breadcrumb-separator" role="presentation" aria-hidden="true" className="[&>svg]:size-3.5">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-right" aria-hidden="true">
@@ -104,7 +71,7 @@ const AwardsPage = () => {
             </li>
             <li data-slot="breadcrumb-item" className="inline-flex items-center gap-1.5">
               <Link data-slot="breadcrumb-link" className="hover:text-foreground transition-colors" href={`/${locale}/about`}>
-                {t('title')}
+                Hakkımda
               </Link>
             </li>
             <li data-slot="breadcrumb-separator" role="presentation" aria-hidden="true" className="[&>svg]:size-3.5">
@@ -201,16 +168,16 @@ const AwardsPage = () => {
         {pagination && pagination.last_page > 1 && (
           <div className="hidden md:flex justify-center gap-2 mt-8">
             {pagination.current_page > 1 && (
-              <Link
+              <a
                 href={`?page=${pagination.current_page - 1}${currentLanguage ? `&language=${currentLanguage}` : ''}${currentSearch ? `&search=${currentSearch}` : ''}`}
                 className="px-4 py-2 border border-gray-300 rounded hover:bg-gray-50"
               >
                 {t('previous')}
-              </Link>
+              </a>
             )}
             
             {Array.from({ length: pagination.last_page }, (_, i) => i + 1).map((page) => (
-              <Link
+              <a
                 key={page}
                 href={`?page=${page}${currentLanguage ? `&language=${currentLanguage}` : ''}${currentSearch ? `&search=${currentSearch}` : ''}`}
                 className={`px-4 py-2 border rounded ${
@@ -220,22 +187,32 @@ const AwardsPage = () => {
                 }`}
               >
                 {page}
-              </Link>
+              </a>
             ))}
             
             {pagination.current_page < pagination.last_page && (
-              <Link
+              <a
                 href={`?page=${pagination.current_page + 1}${currentLanguage ? `&language=${currentLanguage}` : ''}${currentSearch ? `&search=${currentSearch}` : ''}`}
                 className="px-4 py-2 border border-gray-300 rounded hover:bg-gray-50"
               >
                 {t('next')}
-              </Link>
+              </a>
             )}
           </div>
         )}
       </div>
     </section>
   )
+  } catch (error) {
+    return (
+      <section className="py-32 container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold mb-4">Awards</h1>
+            <p className="text-red-500">Ödül verileri yüklenirken bir hata oluştu.</p>
+          </div>
+        </div>
+      </section>
+    )
+  }
 }
-
-export default AwardsPage

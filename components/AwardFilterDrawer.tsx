@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from "@/components/ui/button";
 import {
   Drawer,
@@ -20,7 +22,7 @@ import {
 } from "@/components/ui/select";
 import { Funnel } from 'lucide-react';
 import { useState } from "react";
-import { useRouter, useParams, useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams, useParams } from "next/navigation";
 import { useTranslations } from 'next-intl';
 
 interface AwardFilterDrawerProps {

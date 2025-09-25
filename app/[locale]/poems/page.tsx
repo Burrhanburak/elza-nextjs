@@ -1,161 +1,87 @@
-'use client'
-
-import React, { useState, useEffect } from 'react'
-import { poemApi, Poem } from '../../../lravel-api'
-import { useParams, useSearchParams } from 'next/navigation'
+import React from 'react'
+import { Poem } from '../../../lravel-api'
 import { PoemCommandMenu } from '@/components/poem-command-menu'
 import PoemFilterDrawer from '@/components/PoemFilterDrawer'
 import Link from 'next/link'
 import PaddleCheckoutButton from '@/components/PaddleCheckoutButton'
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 import { Home } from 'lucide-react'
-import Head from 'next/head'
 
+interface PageProps {
+  params: Promise<{ locale: string }>
+  searchParams: Promise<{ page?: string; language?: string; search?: string }>
+}
 
-const PoemsPage = () => {
-  const params = useParams()
-  const searchParams = useSearchParams()
-  const locale = params.locale as string
+async function getPoems(params: { page: number; per_page: number; language: string; search: string }) {
+  const queryParams = new URLSearchParams({
+    page: params.page.toString(),
+    per_page: params.per_page.toString(),
+    language: params.language,
+    search: params.search
+  })
   
-  const [poems, setPoems] = useState<Poem[]>([])
-  const [pagination, setPagination] = useState<any>(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-
-  const currentPage = searchParams.get('page') ? parseInt(searchParams.get('page')!) : 1
-  const currentLanguage = searchParams.get('language') || locale
-  const currentSearch = searchParams.get('search') || ''
-  const t = useTranslations('poemsPage')
-
-  // Generate metadata for poems page
-  const metaTitles = {
-    en: "Elza Darya Poems - Published Works on Personal Development & Wellness",
-    tr: "Elza Darya Şiirleri - Kişisel Gelişim ve Sağlık Üzerine Yayınlanmış Eserler",
-    ru: "Стихи Эльзы Дарьи - Опубликованные Работы по Личностному Развитию и Велнес",
-    az: "Elza Darya Şiirleri - Şəxsi İnkişaf və Sağlamlıq üzrə Nəşr olunmuş Əsərlər"
-  };
-
-  const metaDescriptions = {
-    en: "Explore Elza Darya's collection of published poems on personal development, wellness, and life transformation. Digital and physical poems available for purchase.",
-    tr: "Elza Darya'nın kişisel gelişim, sağlık ve yaşam dönüşümü üzerine yayınlanmış şiirler koleksiyonunu keşfedin. Dijital ve fiziksel şiirler satın alınabilir.",
-    ru: "Исследуйте коллекцию опубликованных стихов Эльзы Дарьи по личностному развитию, здоровью и трансформации жизни. Доступны цифровые и физические стихи.",
-    az: "Elza Daryanın şəxsi inkişaf, sağlamlıq və həyat transformasiyası üzrə nəşr olunmuş şiirler kolleksiyasını kəşf edin. Rəqəmsal və fiziki şiirler əldə edilə bilər."
-  };
-
-
-
-
-  // JSON-LD Schema for Poems Collection
-  const poemsPageSchema = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Elza Darya Poems Collection",
-    "url": `https://elazadarya.com/${locale}/poems`,
-    "description": "Collection of published poems by life coach and author Elza Darya",
-    "author": {
-      "@type": "Person",
-      "name": "Elza Darya",
-      "jobTitle": "Author & Life Coach"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Elza Darya"
-    },
-    "mainEntity": {
-      "@type": "ItemList",
-      "name": "Published Poems",
-      "description": "Poems on personal development, wellness, and life transformation"
+  const response = await fetch(`https://elza-darya.test/api/poems?${queryParams}`, {
+    next: { revalidate: 3600 },
+    headers: {
+      'Content-Type': 'application/json',
     }
-  };
+  })
+  
+  if (!response.ok) {
+    throw new Error('Failed to fetch poems')
+  }
+  
+  return response.json()
+}
 
-  useEffect(() => {
-    const fetchPoems = async () => {
-      setLoading(true)
-      setError(null)
-      
-      try {
-        const response = await poemApi.getPoems({
-          page: currentPage,
-          per_page: 12,
-          language: currentLanguage,
-          search: currentSearch,
-        })
+export default async function PoemsPage({ params, searchParams }: PageProps) {
+  const { locale } = await params
+  const resolvedSearchParams = await searchParams
+  const currentPage = resolvedSearchParams.page ? parseInt(resolvedSearchParams.page) : 1
+  const currentLanguage = resolvedSearchParams.language || locale
+  const currentSearch = resolvedSearchParams.search || ''
+  const t = await getTranslations('poemsPage')
 
-        setPoems(response.data)
-        setPagination(response.pagination)
-      } catch (err) {
-        console.error('Poem verileri yüklenirken hata:', err)
-        setError(err instanceof Error ? err.message : 'Bilinmeyen hata')
-      } finally {
-        setLoading(false)
+  try {
+    const response = await getPoems({
+      page: currentPage,
+      per_page: 12,
+      language: currentLanguage,
+      search: currentSearch,
+    })
+
+    const poems: Poem[] = response.data
+    const pagination = response.pagination
+
+    // JSON-LD Schema for Poems Collection
+    const poemsPageSchema = {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Elza Darya Poems Collection",
+      "url": `https://elazadarya.com/${locale}/poems`,
+      "description": "Collection of published poems by life coach and author Elza Darya",
+      "author": {
+        "@type": "Person",
+        "name": "Elza Darya",
+        "jobTitle": "Author & Life Coach"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Elza Darya"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "Published Poems",
+        "description": "Poems on personal development, wellness, and life transformation"
       }
-    }
+    };
 
-    fetchPoems()
-  }, [currentPage, currentLanguage, currentSearch])
-
-  if (loading) {
     return (
       <>
-        <Head>
-          <title>{metaTitles[locale as keyof typeof metaTitles] || metaTitles.en}</title>
-          <meta name="description" content={metaDescriptions[locale as keyof typeof metaDescriptions] || metaDescriptions.en} />
-        </Head>
-        <section className="py-32 container mx-auto px-4">
-          <div className="container mx-auto px-4">
-            <div className="text-center">
-              <h1 className="text-4xl font-bold mb-4">{t('title')}</h1>
-              <p className="text-gray-500">{t('loading')}</p>
-            </div>
-          </div>
-        </section>
-      </>
-    )
-  }
-
-  if (error) {
-    return (
-      <section className="py-32 container mx-auto px-4">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold mb-4">{t('title')}</h1>
-            <p className="text-red-500">{t('error')}</p>
-            <p className="text-sm text-gray-500 mt-2">
-              Dil: {locale} | Hata: {error}
-            </p>
-          </div>
-        </div>
-      </section>
-    )
-  }
-
-  return (
-    <>
-      <Head>
-        <title>{metaTitles[locale as keyof typeof metaTitles] || metaTitles.en}</title>
-        <meta name="description" content={metaDescriptions[locale as keyof typeof metaDescriptions] || metaDescriptions.en} />
-        <meta name="keywords" content="elza darya poems, personal development poems, wellness poems, life transformation poems, bioenergy poems, life coaching poems" />
-        <link rel="canonical" href={`https://elazadarya.com/${locale}/poems`} />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content={metaTitles[locale as keyof typeof metaTitles] || metaTitles.en} />
-        <meta property="og:description" content={metaDescriptions[locale as keyof typeof metaDescriptions] || metaDescriptions.en} />
-        <meta property="og:url" content={`https://elazadarya.com/${locale}/poems`} />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="/ogm.png" />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={metaTitles[locale as keyof typeof metaTitles] || metaTitles.en} />
-        <meta name="twitter:description" content={metaDescriptions[locale as keyof typeof metaDescriptions] || metaDescriptions.en} />
-        <meta name="twitter:image" content="/ogm.png" />
-        
-        {/* JSON-LD Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(poemsPageSchema) }}
         />
-      </Head>
       
       <section className="py-32 container mx-auto px-4">
         <div className="container mx-auto px-4">
@@ -319,6 +245,16 @@ const PoemsPage = () => {
     </section>
     </>
   )
+  } catch (error) {
+    return (
+      <section className="py-32 container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold mb-4">Poems</h1>
+            <p className="text-red-500">Şiir verileri yüklenirken bir hata oluştu.</p>
+          </div>
+        </div>
+      </section>
+    )
+  }
 }
-
-export default PoemsPage

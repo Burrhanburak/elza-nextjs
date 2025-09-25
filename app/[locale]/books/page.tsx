@@ -1,114 +1,87 @@
-'use client'
-
-import React, { useState, useEffect } from 'react'
-import { bookApi, Book } from '../../../lravel-api'
-import { useParams, useSearchParams } from 'next/navigation'
+import React from 'react'
+import { Book } from '../../../lravel-api'
 import { BookCommandMenu } from '@/components/book-command-menu'
 import BookFilterDrawer from '@/components/BookFilterDrawer'
 import PaddleCheckoutButton from '@/components/PaddleCheckoutButton'
 import Link from 'next/link'
 import { Loader } from 'lucide-react'
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 
-const BooksPage = () => {
-  const params = useParams()
-  const searchParams = useSearchParams()
-  const locale = params.locale as string
-  const t = useTranslations('booksPage')
+interface PageProps {
+  params: Promise<{ locale: string }>
+  searchParams: Promise<{ page?: string; language?: string; search?: string }>
+}
+
+async function getBooks(params: { page: number; per_page: number; language: string; search: string }) {
+  const queryParams = new URLSearchParams({
+    page: params.page.toString(),
+    per_page: params.per_page.toString(),
+    language: params.language,
+    search: params.search
+  })
   
-  const [books, setBooks] = useState<Book[]>([])
-  const [pagination, setPagination] = useState<any>(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-
-  const currentPage = searchParams.get('page') ? parseInt(searchParams.get('page')!) : 1
-  const currentLanguage = searchParams.get('language') || locale
-  const currentSearch = searchParams.get('search') || ''
-
-  // JSON-LD Schema for Books Collection
-  const booksPageSchema = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Elza Darya Books Collection",
-    "url": `https://elazadarya.com/${locale}/books`,
-    "description": "Collection of published books by life coach and author Elza Darya",
-    "author": {
-      "@type": "Person",
-      "name": "Elza Darya",
-      "jobTitle": "Author & Life Coach"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Elza Darya"
-    },
-    "mainEntity": {
-      "@type": "ItemList",
-      "name": "Published Books",
-      "description": "Books on personal development, wellness, and life transformation"
+  const response = await fetch(`https://elza-darya.test/api/books?${queryParams}`, {
+    next: { revalidate: 3600 },
+    headers: {
+      'Content-Type': 'application/json',
     }
-  };
+  })
+  
+  if (!response.ok) {
+    throw new Error('Failed to fetch books')
+  }
+  
+  return response.json()
+}
 
-  useEffect(() => {
-    const fetchBooks = async () => {
-      setLoading(true)
-      setError(null)
-      
-      try {
-        const response = await bookApi.getBooks({
-          page: currentPage,
-          per_page: 12,
-          language: currentLanguage,
-          search: currentSearch,
-        })
+export default async function BooksPage({ params, searchParams }: PageProps) {
+  const { locale } = await params
+  const resolvedSearchParams = await searchParams
+  const currentPage = resolvedSearchParams.page ? parseInt(resolvedSearchParams.page) : 1
+  const currentLanguage = resolvedSearchParams.language || locale
+  const currentSearch = resolvedSearchParams.search || ''
+  const t = await getTranslations('booksPage')
 
-        setBooks(response.data)
-        setPagination(response.pagination)
-      } catch (err) {
-        console.error('Kitap verileri yüklenirken hata:', err)
-        setError(err instanceof Error ? err.message : 'Bilinmeyen hata')
-      } finally {
-        setLoading(false)
+  try {
+    const response = await getBooks({
+      page: currentPage,
+      per_page: 12,
+      language: currentLanguage,
+      search: currentSearch,
+    })
+
+    const books: Book[] = response.data
+    const pagination = response.pagination
+
+    // JSON-LD Schema for Books Collection
+    const booksPageSchema = {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Elza Darya Books Collection",
+      "url": `https://elazadarya.com/${locale}/books`,
+      "description": "Collection of published books by life coach and author Elza Darya",
+      "author": {
+        "@type": "Person",
+        "name": "Elza Darya",
+        "jobTitle": "Author & Life Coach"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Elza Darya"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "Published Books",
+        "description": "Books on personal development, wellness, and life transformation"
       }
-    }
+    };
 
-    fetchBooks()
-  }, [currentPage, currentLanguage, currentSearch])
-
-  if (loading) {
     return (
-      <section className="py-32 container mx-auto px-4">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold mb-4">{t('title')}</h1>
-            <p className="text-gray-500">{t('loading')}</p>
-          </div>
-        </div>
-      </section>
-    )
-  }
-
-  if (error) {
-    return (
-      <section className="py-32 container mx-auto px-4">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold mb-4">{t('title')}</h1>
-            <p className="text-red-500">{t('error')}</p>
-            <p className="text-sm text-gray-500 mt-2">
-              Dil: {locale} | Hata: {error}
-            </p>
-          </div>
-        </div>
-      </section>
-    )
-  }
-
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(booksPageSchema) }}
-      />
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(booksPageSchema) }}
+        />
       
       <section className="py-32 container mx-auto px-4">
         <div className="container mx-auto px-4">
@@ -278,8 +251,18 @@ const BooksPage = () => {
         )}
       </div>
     </section>
-    </>
+  </>
   )
+  } catch (error) {
+    return (
+      <section className="py-32 container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold mb-4">Books</h1>
+            <p className="text-red-500">Kitap verileri yüklenirken bir hata oluştu.</p>
+          </div>
+        </div>
+      </section>
+    )
+  }
 }
-
-export default BooksPage

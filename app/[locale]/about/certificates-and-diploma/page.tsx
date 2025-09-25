@@ -1,83 +1,59 @@
-'use client'
-
-import React, { useState, useEffect } from 'react'
-import { certificateApi, Certificate } from '../../../../lravel-api'
-import { useParams, useSearchParams } from 'next/navigation'
+import React from 'react'
+import { Certificate } from '../../../../lravel-api'
 import { CertificateCommandMenu } from '@/components/certificate-command-menu'
 import CertificateFilterDrawer from '@/components/CertificateFilterDrawer'
-import { useTranslations } from 'next-intl'
-const CertificatesPage = () => {
-  const params = useParams()
-  const searchParams = useSearchParams()
-  const locale = params.locale as string
-  const t = useTranslations('certificatesAndDiplomasPage')
-  const [certificates, setCertificates] = useState<Certificate[]>([])
-  const [pagination, setPagination] = useState<any>(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
+import { getTranslations } from 'next-intl/server'
+import Link from 'next/link'
 
-  const currentPage = searchParams.get('page') ? parseInt(searchParams.get('page')!) : 1
-  const currentLanguage = searchParams.get('language') || locale
-  const currentSearch = searchParams.get('search') || ''
+interface PageProps {
+  params: Promise<{ locale: string }>
+  searchParams: Promise<{ page?: string; language?: string; search?: string }>
+}
 
-  useEffect(() => {
-    const fetchCertificates = async () => {
-      setLoading(true)
-      setError(null)
-      
-      try {
-        const response = await certificateApi.getCertificates({
-          page: currentPage,
-          per_page: 12,
-          language: currentLanguage,
-          search: currentSearch,
-        })
-
-        setCertificates(response.data)
-        setPagination(response.pagination)
-      } catch (err) {
-        console.error('Sertifika verileri yüklenirken hata:', err)
-        setError(err instanceof Error ? err.message : 'Bilinmeyen hata')
-      } finally {
-        setLoading(false)
-      }
+async function getCertificates(params: { page: number; per_page: number; language: string; search: string }) {
+  const queryParams = new URLSearchParams({
+    page: params.page.toString(),
+    per_page: params.per_page.toString(),
+    language: params.language,
+    search: params.search
+  })
+  
+  const response = await fetch(`https://elza-darya.test/api/certificates?${queryParams}`, {
+    next: { revalidate: 3600 },
+    headers: {
+      'Content-Type': 'application/json',
     }
-
-    fetchCertificates()
-  }, [currentPage, currentLanguage, currentSearch])
-
-  if (loading) {
-    return (
-      <section className="py-32 container mx-auto px-4">
-        <div className="container mx-auto px-4">
-          <div className="text-center p-10">
-            <h1 className="text-4xl font-bold mb-4">{t('title')}</h1>
-            <p className="text-gray-500">{t('loading')}</p>
-          </div>
-        </div>
-      </section>
-    )
+  })
+  
+  if (!response.ok) {
+    throw new Error('Failed to fetch certificates')
   }
+  
+  return response.json()
+}
 
-  if (error) {
+export default async function CertificatesPage({ params, searchParams }: PageProps) {
+  const { locale } = await params
+  const resolvedSearchParams = await searchParams
+  const currentPage = resolvedSearchParams.page ? parseInt(resolvedSearchParams.page) : 1
+  const currentLanguage = resolvedSearchParams.language || locale
+  const currentSearch = resolvedSearchParams.search || ''
+  const t = await getTranslations('certificatesAndDiplomasPage')
+
+  try {
+    const response = await getCertificates({
+      page: currentPage,
+      per_page: 12,
+      language: currentLanguage,
+      search: currentSearch,
+    })
+
+    const certificates: Certificate[] = response.data
+    const pagination = response.pagination
+
     return (
-      <section className="py-32 container mx-auto px-4">
+      <section className="py-32 container mx-auto px-4 mb-">
         <div className="container mx-auto px-4 ">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold mb-4">{t('title')}</h1>
-            <p className="text-red-500">{t('error')}</p>
-            <p className="text-sm text-gray-500 mt-2">
-              Dil: {locale} | Hata: {error}
-            </p>
-          </div>
-        </div>
-      </section>
-    )
-  }
-
-  return (
-    <section className="py-32 container mx-auto px-4 mb-">
-      <div className="container mx-auto px-4 ">
         <nav aria-label="breadcrumb" data-slot="breadcrumb">
           <ol data-slot="breadcrumb-list" className="text-muted-foreground flex mb-5 flex-wrap items-center gap-1.5 text-sm break-words sm:gap-2.5">
             <li data-slot="breadcrumb-item" className="inline-flex items-center gap-1.5">
@@ -94,9 +70,9 @@ const CertificatesPage = () => {
               </svg>
             </li>
             <li data-slot="breadcrumb-item" className="inline-flex items-center gap-1.5">
-              <a data-slot="breadcrumb-link" className="hover:text-foreground transition-colors" href={`/${locale}/about`}>
+              <Link data-slot="breadcrumb-link" className="hover:text-foreground transition-colors" href={`/${locale}/about`}>
                 Hakkımda
-              </a>
+              </Link>
             </li>
             <li data-slot="breadcrumb-separator" role="presentation" aria-hidden="true" className="[&>svg]:size-3.5">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-right" aria-hidden="true">
@@ -140,7 +116,7 @@ const CertificatesPage = () => {
                 .trim()
               
               return (
-              <a key={certificate.id} href={`/${locale}/about/certificates-and-diploma/${certificateSlug}`} className="group flex flex-col">
+              <Link key={certificate.id} href={`/${locale}/about/certificates-and-diploma/${certificateSlug}`} className="group flex flex-col">
                 <div className="mb-4 flex overflow-clip rounded-xl md:mb-5">
                   <div className="transition-opacity duration-300 group-hover:opacity-80">
                   {certificate.file_url ? (
@@ -179,7 +155,7 @@ const CertificatesPage = () => {
                 <div className="text-muted-foreground line-clamp-2 text-sm md:text-base">
                   {certificate.description}
                 </div>
-              </a>
+              </Link>
               )
             })}
           </div>
@@ -228,6 +204,16 @@ const CertificatesPage = () => {
       </div>
     </section>
   )
+  } catch (error) {
+    return (
+      <section className="py-32 container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold mb-4">Certificates</h1>
+            <p className="text-red-500">Sertifika verileri yüklenirken bir hata oluştu.</p>
+          </div>
+        </div>
+      </section>
+    )
+  }
 }
-
-export default CertificatesPage

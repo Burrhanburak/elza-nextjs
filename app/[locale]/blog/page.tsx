@@ -1,150 +1,57 @@
-'use client'
-
-import React, { useState, useEffect } from 'react'
-import { blogApi, Blog, Category } from '../../../lravel-api'
-import { useParams, useSearchParams } from 'next/navigation'
+import React from 'react'
+import { Blog, Category } from '../../../lravel-api'
 import { BlogCommandMenu } from '@/components/blog-command-menu'
 import BlogFilterDrawer from '@/components/BlogFilterDrawer'
 import Link from 'next/link'
-import Head from 'next/head'
 import { Home } from 'lucide-react'
+import { Metadata } from 'next'
 
+interface PageProps {
+  params: Promise<{ locale: string }>
+  searchParams: Promise<{ page?: string; language?: string; search?: string }>
+}
 
-const BlogPage = () => {
-  const params = useParams()
-  const searchParams = useSearchParams()
-  const locale = params.locale as string
+async function getBlogs(params: { page: number; per_page: number; language: string; search: string }) {
+  const queryParams = new URLSearchParams({
+    page: params.page.toString(),
+    per_page: params.per_page.toString(),
+    language: params.language,
+    search: params.search
+  })
   
-  const [blogs, setBlogs] = useState<Blog[]>([])
-  const [pagination, setPagination] = useState<any>(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-
-  const currentPage = searchParams.get('page') ? parseInt(searchParams.get('page')!) : 1
-  const currentLanguage = searchParams.get('language') || locale
-  const currentSearch = searchParams.get('search') || ''
-
-  // Generate metadata for blog page
-  const metaTitles = {
-    en: "Elza Darya Blog - Wellness & Personal Development Insights",
-    tr: "Elza Darya Blog - Sağlık ve Kişisel Gelişim İçerikleri",
-    ru: "Блог Эльзы Дарьи - Идеи о Здоровье и Личном Развитии",
-    az: "Elza Darya Bloqu - Sağlamlıq və Şəxsi İnkişaf Məqalələri"
-  };
-
-  const metaDescriptions = {
-    en: "Read Elza Darya's latest articles on wellness, personal development, bioenergy therapy, and life transformation. Expert insights for holistic living.",
-    tr: "Elza Darya'nın sağlık, kişisel gelişim, biyoenerji terapisi ve yaşam dönüşümü üzerine en son makalelerini okuyun. Holistik yaşam için uzman görüşleri.",
-    ru: "Читайте последние статьи Эльзы Дарьи о здоровье, личном развитии, биоэнергетической терапии и трансформации жизни. Экспертные идеи для холистической жизни.",
-    az: "Elza Daryanın sağlamlıq, şəxsi inkişaf, bioenergetik terapiya və həyat transformasiyası haqqında ən son məqalələrini oxuyun. Holistik həyat üçün ekspert fikirləri."
-  };
-
-  // JSON-LD Schema for Blog Page
-  const blogSchema = {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "Elza Darya Blog",
-    "url": `https://elazadarya.com/${locale}/blog`,
-    "description": "Professional insights on wellness, personal development, and holistic healing by certified life coach and bioenergy therapist Elza Darya",
-    "author": {
-      "@type": "Person",
-      "name": "Elza Darya",
-      "jobTitle": "Professional Life Coach & Bioenergy Therapist"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Elza Darya",
-      "logo": "https://elazadarya.com/elza-logo.svg"
-    },
-    "inLanguage": locale,
-    "blogPost": []
-  };
-
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      setLoading(true)
-      setError(null)
-      
-      try {
-        const response = await blogApi.getBlogs({
-          page: currentPage,
-          per_page: 12,
-          language: currentLanguage,
-          search: currentSearch,
-        })
-
-        console.log('API Response:', response)
-        console.log('Blogs count:', response.data.length)
-        console.log('Current language:', currentLanguage)
-        setBlogs(response.data)
-        setPagination(response.pagination)
-      } catch (err) {
-        console.error('Blog verileri yüklenirken hata:', err)
-        setError(err instanceof Error ? err.message : 'Bilinmeyen hata')
-      } finally {
-        setLoading(false)
-      }
+  const response = await fetch(`https://elza-darya.test/api/blogs?${queryParams}`, {
+    next: { revalidate: 3600 },
+    headers: {
+      'Content-Type': 'application/json',
     }
-
-    fetchBlogs()
-  }, [currentPage, currentLanguage, currentSearch])
-
-  if (loading) {
-    return (
-      <section className="py-32 container mx-auto px-4">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold mb-4">Blog</h1>
-            <p className="text-gray-500">Blog verileri yükleniyor...</p>
-          </div>
-        </div>
-      </section>
-    )
+  })
+  
+  if (!response.ok) {
+    throw new Error('Failed to fetch blogs')
   }
+  
+  return response.json()
+}
 
-  if (error) {
+export default async function BlogPage({ params, searchParams }: PageProps) {
+  const { locale } = await params
+  const resolvedSearchParams = await searchParams
+  const currentPage = resolvedSearchParams.page ? parseInt(resolvedSearchParams.page) : 1
+  const currentLanguage = resolvedSearchParams.language || locale
+  const currentSearch = resolvedSearchParams.search || ''
+
+  try {
+    const response = await getBlogs({
+      page: currentPage,
+      per_page: 12,
+      language: currentLanguage,
+      search: currentSearch,
+    })
+
+    const blogs: Blog[] = response.data
+    const pagination = response.pagination
+
     return (
-      <section className="py-32 container mx-auto px-4">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold mb-4">Blog</h1>
-            <p className="text-red-500">Blog verileri yüklenirken bir hata oluştu.</p>
-            <p className="text-sm text-gray-500 mt-2">
-              Dil: {locale} | Hata: {error}
-            </p>
-          </div>
-        </div>
-      </section>
-    )
-  }
-
-  return (
-    <>
-      <Head>
-        <title>{metaTitles[locale as keyof typeof metaTitles] || metaTitles.en}</title>
-        <meta name="description" content={metaDescriptions[locale as keyof typeof metaDescriptions] || metaDescriptions.en} />
-        <meta name="keywords" content="elza darya blog, wellness articles, personal development blog, bioenergy therapy insights, life transformation tips" />
-        <link rel="canonical" href={`https://elazadarya.com/${locale}/blog`} />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content={metaTitles[locale as keyof typeof metaTitles] || metaTitles.en} />
-        <meta property="og:description" content={metaDescriptions[locale as keyof typeof metaDescriptions] || metaDescriptions.en} />
-        <meta property="og:url" content={`https://elazadarya.com/${locale}/blog`} />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="/ogm.png" />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={metaTitles[locale as keyof typeof metaTitles] || metaTitles.en} />
-        <meta name="twitter:description" content={metaDescriptions[locale as keyof typeof metaDescriptions] || metaDescriptions.en} />
-        <meta name="twitter:image" content="/ogm.png" />
-        
-        {/* JSON-LD Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
-        />
-      </Head>
       
       <section className="py-32 container mx-auto px-4">
         <div className="container mx-auto px-4">
@@ -222,44 +129,40 @@ const BlogPage = () => {
         {blogs.length > 0 ? (
           <div className="grid gap-x-4 gap-y-8 md:grid-cols-2 lg:gap-x-6 lg:gap-y-12 2xl:grid-cols-3">
             {blogs.map((blog) => (
-              <a key={blog.id} href={`/${locale}/blog/${blog.slug}`} className="group flex flex-col">
-                <div className="mb-4 flex overflow-clip rounded-xl md:mb-5">
-                  <div className="transition-opacity duration-300 group-hover:opacity-80">
-                    {blog.cover_image ? (
-                      <img
-                        src={blog.cover_image.startsWith('http') ? blog.cover_image : `https://bioenerjist-books.s3.amazonaws.com/${blog.cover_image}`}
-                        alt={blog.title}
-                        className="aspect-3/2 h-full w-full object-cover object-center"
-                        onError={(e) => {
-                          const target = e.currentTarget as HTMLImageElement;
-                          target.style.display = 'none';
-                          const fallback = target.parentElement?.querySelector('.fallback-image') as HTMLElement;
-                          if (fallback) fallback.style.display = 'flex';
-                        }}
-                      />
-                    ) : (
-                      <img src="/images/block/placeholder-dark-1.svg" alt={blog.title} className="aspect-3/2 h-full w-full object-cover object-center" />
-                    )}
-                    <div className={`fallback-image aspect-3/2 h-full w-full bg-gray-200 flex items-center justify-center ${blog.cover_image ? 'hidden' : 'flex'}`}>
-                      <span className="text-gray-400">Resim Yok</span>
+              <div key={blog.id} className="group flex flex-col">
+                <Link href={`/${locale}/blog/${blog.slug}`} className="group flex flex-col">
+                  <div className="mb-4 flex overflow-clip rounded-xl md:mb-5">
+                    <div className="transition-opacity duration-300 group-hover:opacity-80">
+                      {blog.cover_image ? (
+                        <img
+                          src={blog.cover_image.startsWith('http') ? blog.cover_image : `https://bioenerjist-books.s3.amazonaws.com/${blog.cover_image}`}
+                          alt={blog.title}
+                          className="aspect-3/2 h-full w-full object-cover object-center"
+                        />
+                      ) : (
+                        <img src="/images/block/placeholder-dark-1.svg" alt={blog.title} className="aspect-3/2 h-full w-full object-cover object-center" />
+                      )}
+                      <div className={`fallback-image aspect-3/2 h-full w-full bg-gray-200 flex items-center justify-center ${blog.cover_image ? 'hidden' : 'flex'}`}>
+                        <span className="text-gray-400">Resim Yok</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="text-muted-foreground mb-4 flex items-center gap-2 text-xs">
-                  <span className="font-medium">Elza Darya</span>
-                  <span>•</span>
-                  <span>{new Date(blog.published_at).toLocaleDateString('tr-TR', { 
-                    day: 'numeric', 
-                    month: 'short', 
-                    year: 'numeric' 
-                  })}</span>
-                </div>
-                <h2 className="mb-2 line-clamp-3 break-words text-lg font-medium md:mb-3 md:text-2xl">
-                  {blog.title}
-                </h2>
-                <div className="text-muted-foreground line-clamp-2 text-sm md:text-base">
-                  {blog.content.replace(/<[^>]*>/g, '').substring(0, 150)}...
-                </div>
+                  <div className="text-muted-foreground mb-4 flex items-center gap-2 text-xs">
+                    <span className="font-medium">Elza Darya</span>
+                    <span>•</span>
+                    <span>{new Date(blog.published_at).toLocaleDateString('tr-TR', { 
+                      day: 'numeric', 
+                      month: 'short', 
+                      year: 'numeric' 
+                    })}</span>
+                  </div>
+                  <h2 className="mb-2 line-clamp-3 break-words text-lg font-medium md:mb-3 md:text-2xl">
+                    {blog.title}
+                  </h2>
+                  <div className="text-muted-foreground line-clamp-2 text-sm md:text-base">
+                    {blog.content.replace(/<[^>]*>/g, '').substring(0, 150)}...
+                  </div>
+                </Link>
                 {blog.categories && blog.categories.length > 0 && (
                   <div className="mt-3 flex flex-wrap gap-2">
                     {blog.categories.map((category) => (
@@ -276,7 +179,7 @@ const BlogPage = () => {
                     ))}
                   </div>
                 )}
-              </a>
+              </div>
             ))}
           </div>
         ) : (
@@ -302,7 +205,7 @@ const BlogPage = () => {
                 href={`?page=${pagination.current_page - 1}${currentLanguage ? `&language=${currentLanguage}` : ''}${currentSearch ? `&search=${currentSearch}` : ''}`}
                 className="px-4 py-2 border border-gray-300 rounded hover:bg-gray-50"
               >
-                 {t('previous')}
+                 Previous
               </a>
             )}
             
@@ -325,15 +228,25 @@ const BlogPage = () => {
                 href={`?page=${pagination.current_page + 1}${currentLanguage ? `&language=${currentLanguage}` : ''}${currentSearch ? `&search=${currentSearch}` : ''}`}
                 className="px-4 py-2 border border-gray-300 rounded hover:bg-gray-50"
               >
-                {t('next')}
+                Next
               </a>
             )}
           </div>
         )}
       </div>
     </section>
-    </>
   )
+  } catch (error) {
+    return (
+      <section className="py-32 container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold mb-4">Blog</h1>
+            <p className="text-red-500">Blog verileri yüklenirken bir hata oluştu.</p>
+          </div>
+        </div>
+      </section>
+    )
+  }
 }
 
-export default BlogPage
