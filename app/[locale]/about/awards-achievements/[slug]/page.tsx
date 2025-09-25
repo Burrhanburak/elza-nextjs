@@ -15,7 +15,10 @@ export default function AwardDetailPage() {
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    if (!slug || slug === 'undefined' || slug.trim() === '') {
+    console.log('🔍 Awards Detail Debug Info:', { slug, locale })
+    
+    if (!slug || slug === 'undefined' || slug === 'null' || slug.trim() === '') {
+      console.error('❌ Invalid award slug detected:', slug)
       return
     }
 

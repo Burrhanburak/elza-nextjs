@@ -18,7 +18,10 @@ const PoemDetailPage = () => {
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    if (!slug || slug === 'undefined' || slug.trim() === '') {
+    console.log('🔍 Poems Detail Debug Info:', { slug, locale })
+    
+    if (!slug || slug === 'undefined' || slug === 'null' || slug.trim() === '') {
+      console.error('❌ Invalid poem slug detected:', slug)
       notFound()
       return
     }

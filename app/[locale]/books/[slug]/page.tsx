@@ -18,7 +18,10 @@ const BookDetailPage = () => {
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    if (!slug || slug === 'undefined' || slug.trim() === '') {
+    console.log('🔍 Books Detail Debug Info:', { slug, locale })
+    
+    if (!slug || slug === 'undefined' || slug === 'null' || slug.trim() === '') {
+      console.error('❌ Invalid book slug detected:', slug)
       notFound()
       return
     }

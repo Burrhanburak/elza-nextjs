@@ -1,12 +1,11 @@
 'use client'
 
-import React,{ useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { blogApi, Blog } from '../../../../lravel-api'
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import Head from 'next/head'
 import type { Metadata, ResolvingMetadata } from 'next'
-
 
 interface BlogPageProps {
   params: {
@@ -15,15 +14,11 @@ interface BlogPageProps {
   };
 }
 
-
-
-
 export default function BlogDetailPage() {
   const params = useParams()
   const slug = params.slug as string
   const locale = params.locale as string
 
-  
   const [blog, setBlog] = useState<Blog | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -60,19 +55,26 @@ export default function BlogDetailPage() {
   };
 
   useEffect(() => {
-    if (!slug) return
+    console.log('🔍 Blog Detail Debug Info:', { slug, locale })
+    
+    if (!slug || slug === 'null' || slug === 'undefined' || slug.trim() === '') {
+      console.error('❌ Invalid blog slug detected:', slug)
+      setError(`Geçersiz blog slug: ${slug}`)
+      setLoading(false)
+      return
+    }
 
     const fetchBlog = async () => {
       setLoading(true)
       setError(null)
       
       try {
-        console.log('Fetching blog with slug:', slug)
+        console.log('✅ Fetching blog with slug:', slug)
         const response = await blogApi.getBlog(slug)
-        console.log('Blog response:', response)
+        console.log('✅ Blog response:', response)
         setBlog(response.data)
       } catch (err) {
-        console.error('Blog detayı yüklenirken hata:', err)
+        console.error('❌ Blog detayı yüklenirken hata:', err)
         setError(err instanceof Error ? err.message : 'Bilinmeyen hata')
       } finally {
         setLoading(false)

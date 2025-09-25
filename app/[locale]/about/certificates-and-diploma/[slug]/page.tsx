@@ -16,7 +16,10 @@ const CertificateDetailPage = () => {
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    if (!slug || slug === 'undefined' || slug.trim() === '') {
+    console.log('🔍 Certificates Detail Debug Info:', { slug, locale })
+    
+    if (!slug || slug === 'undefined' || slug === 'null' || slug.trim() === '') {
+      console.error('❌ Invalid certificate slug detected:', slug)
       notFound()
       return
     }
