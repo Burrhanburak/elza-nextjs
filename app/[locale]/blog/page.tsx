@@ -60,6 +60,8 @@ const BlogPage = () => {
           search: currentSearch,
         })
 
+        console.log('🔍 Blog Page response:', response)
+
         setBlogs(response.data)
         setPagination(response.pagination)
       } catch (err) {

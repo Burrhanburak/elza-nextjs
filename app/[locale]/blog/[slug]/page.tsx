@@ -313,6 +313,8 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
   try {
     const response = await blogApi.getBlog(slug)
     blog = response.data
+
+    console.log('🔍 BlogDetail response:', response)
   } catch (error) {
     console.error("❌ Blog fetch error:", error)
   }
