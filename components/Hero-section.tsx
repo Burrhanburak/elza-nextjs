@@ -118,7 +118,7 @@ const HeroSection = ({ locale = 'en' }: HeroSectionProps) => {
                     <path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/>
                   </svg>
                 </div>
-                <span className="text-white font-medium pr-6">Danışma Başvurusu</span>
+                <span className="text-white font-medium pr-6">{t('consultationApplication')}</span>
               </Link>
             </div>
           </div>

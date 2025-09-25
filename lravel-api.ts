@@ -1,5 +1,9 @@
 // Laravel API Configuration - Direct connection to Laravel backend
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://elza-darya.test/api';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || (
+  process.env.NODE_ENV === 'production' 
+    ? 'https://your-production-domain.com/api' 
+    : 'https://elza-darya.test/api'
+);
 
 // API Response Types
 interface ApiResponse<T> {
@@ -131,10 +135,32 @@ const createHeaders = (): HeadersInit => ({
 
 const handleResponse = async <T>(response: Response): Promise<T> => {
   if (!response.ok) {
-    const errorText = await response.text();
-    throw new Error(`HTTP ${response.status}: ${errorText}`);
+    let errorText = '';
+    try {
+      errorText = await response.text();
+    } catch (e) {
+      errorText = 'Could not read error response';
+    }
+    
+    console.error('❌ API Error Details:', {
+      status: response.status,
+      statusText: response.statusText,
+      url: response.url,
+      errorText,
+      headers: Object.fromEntries(response.headers.entries())
+    });
+    
+    throw new Error(`HTTP ${response.status} ${response.statusText}: ${errorText}`);
   }
-  return response.json();
+  
+  try {
+    const data = await response.json();
+    console.log('✅ API Success:', { url: response.url, dataKeys: Object.keys(data) });
+    return data;
+  } catch (e) {
+    console.error('❌ JSON Parse Error:', e);
+    throw new Error('Invalid JSON response from API');
+  }
 };
 
 // Base API Client
@@ -145,7 +171,7 @@ class ApiClient {
     this.baseUrl = baseUrl;
   }
 
-  async get<T>(endpoint: string, params?: Record<string, string | number>): Promise<T> {
+  async get<T>(endpoint: string, params?: Record<string, string | number>, revalidate: number = 300): Promise<T> {
     const url = new URL(`${this.baseUrl}${endpoint}`);
     
     if (params) {
@@ -156,13 +182,34 @@ class ApiClient {
       });
     }
 
-    const response = await fetch(url.toString(), {
-      method: 'GET',
-      next: { revalidate: 60 }, // 60 saniye cache
-      headers: createHeaders(),
+    console.log('🔗 API GET Request:', {
+      url: url.toString(),
+      baseUrl: this.baseUrl,
+      endpoint,
+      params,
+      NODE_ENV: process.env.NODE_ENV,
+      API_URL_ENV: process.env.NEXT_PUBLIC_API_URL
     });
 
-    return handleResponse<T>(response);
+    try {
+      const response = await fetch(url.toString(), {
+        method: 'GET',
+        next: { revalidate }, // Dynamic revalidation time
+        headers: createHeaders(),
+      });
+
+      console.log('📡 API Response:', {
+        status: response.status,
+        statusText: response.statusText,
+        url: response.url,
+        ok: response.ok
+      });
+
+      return handleResponse<T>(response);
+    } catch (error) {
+      console.error('❌ API GET Error:', error);
+      throw error;
+    }
   }
 
   async post<T>(endpoint: string, data?: unknown): Promise<T> {
@@ -180,6 +227,15 @@ class ApiClient {
 // API Client Instance
 const apiClient = new ApiClient(API_BASE_URL);
 
+// Log API configuration for debugging
+if (process.env.NODE_ENV === 'development') {
+  console.log('🔗 API Configuration:', {
+    baseUrl: API_BASE_URL,
+    environment: process.env.NODE_ENV,
+    hasApiUrl: !!process.env.NEXT_PUBLIC_API_URL
+  });
+}
+
 // Blog API
 export const blogApi = {
   async getBlogs(params?: {
@@ -188,18 +244,18 @@ export const blogApi = {
     language?: string;
     search?: string;
   }): Promise<ApiResponse<Blog[]>> {
-    return apiClient.get('/blogs', params);
+    return apiClient.get('/blogs', params, 300); // 5 minutes
   },
 
   async getBlog(slug: string): Promise<ApiResponse<Blog>> {
     if (!slug?.trim()) {
       throw new Error('Blog slug is required');
     }
-    return apiClient.get(`/blogs/${encodeURIComponent(slug)}`);
+    return apiClient.get(`/blogs/${encodeURIComponent(slug)}`, undefined, 600); // 10 minutes
   },
 
   async getFeaturedBlogs(): Promise<ApiResponse<Blog[]>> {
-    return apiClient.get('/blogs/featured');
+    return apiClient.get('/blogs/featured', undefined, 600); // 10 minutes
   }
 };
 
@@ -211,18 +267,18 @@ export const poemApi = {
     language?: string;
     search?: string;
   }): Promise<ApiResponse<Poem[]>> {
-    return apiClient.get('/poems', params);
+    return apiClient.get('/poems', params, 300); // 5 minutes
   },
 
   async getPoem(slug: string): Promise<ApiResponse<Poem>> {
     if (!slug?.trim()) {
       throw new Error('Poem slug is required');
     }
-    return apiClient.get(`/poems/${encodeURIComponent(slug)}`);
+    return apiClient.get(`/poems/${encodeURIComponent(slug)}`, undefined, 600); // 10 minutes
   },
 
   async getFeaturedPoems(): Promise<ApiResponse<Poem[]>> {
-    return apiClient.get('/poems/featured');
+    return apiClient.get('/poems/featured', undefined, 600); // 10 minutes
   }
 };
 
@@ -236,18 +292,18 @@ export const bookApi = {
     min_price?: number;
     max_price?: number;
   }): Promise<ApiResponse<Book[]>> {
-    return apiClient.get('/books', params);
+    return apiClient.get('/books', params, 300); // 5 minutes
   },
 
   async getBook(slug: string): Promise<ApiResponse<Book>> {
     if (!slug?.trim()) {
       throw new Error('Book slug is required');
     }
-    return apiClient.get(`/books/${encodeURIComponent(slug)}`);
+    return apiClient.get(`/books/${encodeURIComponent(slug)}`, undefined, 600); // 10 minutes
   },
 
   async getFeaturedBooks(): Promise<ApiResponse<Book[]>> {
-    return apiClient.get('/books/featured');
+    return apiClient.get('/books/featured', undefined, 600); // 10 minutes
   }
 };
 
@@ -259,18 +315,18 @@ export const certificateApi = {
     language?: string;
     search?: string;
   }): Promise<ApiResponse<Certificate[]>> {
-    return apiClient.get('/certificates', params);
+    return apiClient.get('/certificates', params, 600); // 10 minutes
   },
 
   async getCertificate(slug: string): Promise<ApiResponse<Certificate>> {
     if (!slug?.trim()) {
       throw new Error('Certificate slug is required');
     }
-    return apiClient.get(`/certificates/${encodeURIComponent(slug)}`);
+    return apiClient.get(`/certificates/${encodeURIComponent(slug)}`, undefined, 3600); // 1 hour
   },
 
   async getFeaturedCertificates(): Promise<ApiResponse<Certificate[]>> {
-    return apiClient.get('/certificates/featured');
+    return apiClient.get('/certificates/featured', undefined, 1800); // 30 minutes
   }
 };
 
@@ -282,18 +338,18 @@ export const awardApi = {
     language?: string;
     search?: string;
   }): Promise<ApiResponse<Award[]>> {
-    return apiClient.get('/awards', params);
+    return apiClient.get('/awards', params, 600); // 10 minutes
   },
 
   async getAward(slug: string): Promise<ApiResponse<Award>> {
     if (!slug?.trim()) {
       throw new Error('Award slug is required');
     }
-    return apiClient.get(`/awards/${encodeURIComponent(slug)}`);
+    return apiClient.get(`/awards/${encodeURIComponent(slug)}`, undefined, 3600); // 1 hour
   },
 
   async getFeaturedAwards(): Promise<ApiResponse<Award[]>> {
-    return apiClient.get('/awards/featured');
+    return apiClient.get('/awards/featured', undefined, 1800); // 30 minutes
   }
 };
 
@@ -305,18 +361,18 @@ export const categoryApi = {
     language?: string;
     search?: string;
   }): Promise<ApiResponse<Category[]>> {
-    return apiClient.get('/categories', params);
+    return apiClient.get('/categories', params, 1800); // 30 minutes
   },
 
   async getCategory(slug: string): Promise<ApiResponse<Category>> {
     if (!slug?.trim()) {
       throw new Error('Category slug is required');
     }
-    return apiClient.get(`/categories/${encodeURIComponent(slug)}`);
+    return apiClient.get(`/categories/${encodeURIComponent(slug)}`, undefined, 3600); // 1 hour
   },
 
   async getFeaturedCategories(): Promise<ApiResponse<Category[]>> {
-    return apiClient.get('/categories/featured');
+    return apiClient.get('/categories/featured', undefined, 1800); // 30 minutes
   }
 };
 

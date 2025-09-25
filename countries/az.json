@@ -137,8 +137,9 @@
     "tags": {
       "clarity": "Açıqlıq əldə edin",
       "stress": "Stresi idarə edin",
-      "awareness": "Şüurlüluk"
-    }
+      "awareness": "Şüurlülük"
+    },
+    "consultationApplication": "Məsləhət Müraciəti"
   },
   "services": [
     {
@@ -200,7 +201,7 @@
       },
       {
         "quote": "Uzun illərdir davam edən stresim və enerji blokajlarım Elza xanımın terapiyaları sayəsində həll olundu.",
-        "author": "Mehmet D.",
+        "author": "Aysex D.",
         "role": "Memar"
       },
       {

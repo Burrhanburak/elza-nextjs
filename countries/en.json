@@ -137,7 +137,8 @@
       "clarity": "Gain Clarity",
       "stress": "Manage Stress",
       "awareness": "Awareness"
-    }
+    },
+    "consultationApplication": "Consultation Application"
   },
   "services": [
     {
@@ -199,7 +200,7 @@
       },
       {
         "quote": "My long-standing stress and energy blockages were resolved thanks to Elza's therapies.",
-        "author": "Mehmet D.",
+        "author": "Ayse D.",
         "role": "Architect"
       },
       {
@@ -1314,7 +1315,7 @@
       },
       "1": {
         "text": "After months of biotherapy sessions, my energy levels and overall health have dramatically improved. Highly recommend this treatment.",
-        "author": "Mehmet A.",
+        "author": "Ayse A.",
         "location": "Ankara Client"
       }
     },

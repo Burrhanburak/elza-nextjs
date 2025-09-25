@@ -152,7 +152,7 @@ export default async function BiotherapyPage({ params }: Props) {
           },
           {
             text: 'After months of biotherapy sessions, my energy levels and overall health have dramatically improved. Highly recommend this treatment.',
-            author: 'Mehmet A.',
+            author: 'Ayse A.',
             location: 'Ankara Client',
             rating: 5,
           },

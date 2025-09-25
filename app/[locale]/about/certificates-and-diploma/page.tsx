@@ -1,57 +1,111 @@
-import React from 'react'
-import { Certificate } from '../../../../lravel-api'
+'use client'
+
+import React, { useState, useEffect } from 'react'
+import { Certificate, certificateApi } from '../../../../lravel-api'
+import { useParams, useSearchParams } from 'next/navigation'
 import { CertificateCommandMenu } from '@/components/certificate-command-menu'
 import CertificateFilterDrawer from '@/components/CertificateFilterDrawer'
-import { getTranslations } from 'next-intl/server'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 
-interface PageProps {
-  params: Promise<{ locale: string }>
-  searchParams: Promise<{ page?: string; language?: string; search?: string }>
-}
-
-async function getCertificates(params: { page: number; per_page: number; language: string; search: string }) {
-  const queryParams = new URLSearchParams({
-    page: params.page.toString(),
-    per_page: params.per_page.toString(),
-    language: params.language,
-    search: params.search
-  })
+const CertificatesPage = () => {
+  const params = useParams()
+  const searchParams = useSearchParams()
+  const locale = params.locale as string
+  const t = useTranslations('certificatesAndDiplomasPage')
   
-  const response = await fetch(`https://elza-darya.test/api/certificates?${queryParams}`, {
-    next: { revalidate: 3600 },
-    headers: {
-      'Content-Type': 'application/json',
+  const [certificates, setCertificates] = useState<Certificate[]>([])
+  const [pagination, setPagination] = useState<any>(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+
+  const currentPage = searchParams.get('page') ? parseInt(searchParams.get('page')!) : 1
+  const currentLanguage = searchParams.get('language') || locale
+  const currentSearch = searchParams.get('search') || ''
+
+  // JSON-LD Schema for Certificates Collection
+  const certificatesPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Elza Darya Certificates & Diplomas",
+    "url": `https://elazadarya.com/${locale}/about/certificates-and-diploma`,
+    "description": "Professional certificates and diplomas of life coach and author Elza Darya",
+    "author": {
+      "@type": "Person",
+      "name": "Elza Darya",
+      "jobTitle": "Author & Life Coach"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Elza Darya"
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "name": "Professional Certificates",
+      "description": "Certificates and diplomas in life coaching, therapy, and personal development"
     }
-  })
-  
-  if (!response.ok) {
-    throw new Error('Failed to fetch certificates')
-  }
-  
-  return response.json()
-}
+  };
 
-export default async function CertificatesPage({ params, searchParams }: PageProps) {
-  const { locale } = await params
-  const resolvedSearchParams = await searchParams
-  const currentPage = resolvedSearchParams.page ? parseInt(resolvedSearchParams.page) : 1
-  const currentLanguage = resolvedSearchParams.language || locale
-  const currentSearch = resolvedSearchParams.search || ''
-  const t = await getTranslations('certificatesAndDiplomasPage')
+  useEffect(() => {
+    const fetchCertificates = async () => {
+      setLoading(true)
+      setError(null)
+      
+      try {
+        const response = await certificateApi.getCertificates({
+          page: currentPage,
+          per_page: 12,
+          language: currentLanguage,
+          search: currentSearch,
+        })
 
-  try {
-    const response = await getCertificates({
-      page: currentPage,
-      per_page: 12,
-      language: currentLanguage,
-      search: currentSearch,
-    })
+        setCertificates(response.data)
+        setPagination(response.pagination)
+      } catch (err) {
+        console.error('❌ Certificates Page Error:', err);
+        setError(err instanceof Error ? err.message : 'Bilinmeyen hata')
+      } finally {
+        setLoading(false)
+      }
+    }
 
-    const certificates: Certificate[] = response.data
-    const pagination = response.pagination
+    fetchCertificates()
+  }, [currentPage, currentLanguage, currentSearch])
 
+  if (loading) {
     return (
+      <section className="py-32 container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold mb-4">Certificates</h1>
+            <p className="text-gray-500">Sertifika verileri yükleniyor...</p>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  if (error) {
+    return (
+      <section className="py-32 container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold mb-4">Certificates</h1>
+            <p className="text-red-500">Sertifika verileri yüklenirken bir hata oluştu.</p>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(certificatesPageSchema),
+        }}
+      />
       <section className="py-32 container mx-auto px-4 mb-">
         <div className="container mx-auto px-4 ">
         <nav aria-label="breadcrumb" data-slot="breadcrumb">
@@ -203,17 +257,8 @@ export default async function CertificatesPage({ params, searchParams }: PagePro
         )}
       </div>
     </section>
+    </>
   )
-  } catch (error) {
-    return (
-      <section className="py-32 container mx-auto px-4">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold mb-4">Certificates</h1>
-            <p className="text-red-500">Sertifika verileri yüklenirken bir hata oluştu.</p>
-          </div>
-        </div>
-      </section>
-    )
-  }
 }
+
+export default CertificatesPage

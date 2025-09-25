@@ -1,58 +1,112 @@
-import React from 'react'
-import { Award } from '../../../../lravel-api'
+'use client'
+
+import React, { useState, useEffect } from 'react'
+import { Award, awardApi } from '../../../../lravel-api'
+import { useParams, useSearchParams } from 'next/navigation'
 import { AwardCommandMenu } from '@/components/award-command-menu'
 import AwardFilterDrawer from '@/components/AwardFilterDrawer'
-import { getTranslations } from 'next-intl/server'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 
-interface PageProps {
-  params: Promise<{ locale: string }>
-  searchParams: Promise<{ page?: string; language?: string; search?: string }>
-}
-
-async function getAwards(params: { page: number; per_page: number; language: string; search: string }) {
-  const queryParams = new URLSearchParams({
-    page: params.page.toString(),
-    per_page: params.per_page.toString(),
-    language: params.language,
-    search: params.search
-  })
+const AwardsPage = () => {
+  const params = useParams()
+  const searchParams = useSearchParams()
+  const locale = params.locale as string
+  const t = useTranslations('awardsAndAchievementsPage')
   
-  const response = await fetch(`https://elza-darya.test/api/awards?${queryParams}`, {
-    next: { revalidate: 3600 },
-    headers: {
-      'Content-Type': 'application/json',
+  const [awards, setAwards] = useState<Award[]>([])
+  const [pagination, setPagination] = useState<any>(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+
+  const currentPage = searchParams.get('page') ? parseInt(searchParams.get('page')!) : 1
+  const currentLanguage = searchParams.get('language') || locale
+  const currentSearch = searchParams.get('search') || ''
+
+  // JSON-LD Schema for Awards Collection
+  const awardsPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Elza Darya Awards & Achievements",
+    "url": `https://elazadarya.com/${locale}/about/awards-achievements`,
+    "description": "Awards and achievements of life coach and author Elza Darya",
+    "author": {
+      "@type": "Person",
+      "name": "Elza Darya",
+      "jobTitle": "Author & Life Coach"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Elza Darya"
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "name": "Professional Awards",
+      "description": "Awards and recognitions in life coaching, writing, and personal development"
     }
-  })
-  
-  if (!response.ok) {
-    throw new Error('Failed to fetch awards')
-  }
-  
-  return response.json()
-}
+  };
 
-export default async function AwardsPage({ params, searchParams }: PageProps) {
-  const { locale } = await params
-  const resolvedSearchParams = await searchParams
-  const currentPage = resolvedSearchParams.page ? parseInt(resolvedSearchParams.page) : 1
-  const currentLanguage = resolvedSearchParams.language || locale
-  const currentSearch = resolvedSearchParams.search || ''
-  const t = await getTranslations('awardsAndAchievementsPage')
+  useEffect(() => {
+    const fetchAwards = async () => {
+      setLoading(true)
+      setError(null)
+      
+      try {
+        const response = await awardApi.getAwards({
+          page: currentPage,
+          per_page: 12,
+          language: currentLanguage,
+          search: currentSearch,
+        })
 
-  try {
-    const response = await getAwards({
-      page: currentPage,
-      per_page: 12,
-      language: currentLanguage,
-      search: currentSearch,
-    })
+        setAwards(response.data)
+        setPagination(response.pagination)
+      } catch (err) {
+        console.error('❌ Awards Page Error:', err);
+        setError(err instanceof Error ? err.message : 'Bilinmeyen hata')
+      } finally {
+        setLoading(false)
+      }
+    }
 
-    const awards: Award[] = response.data
-    const pagination = response.pagination
+    fetchAwards()
+  }, [currentPage, currentLanguage, currentSearch])
 
+  if (loading) {
     return (
-    <section className="py-32 container mx-auto px-4 mb-">
+      <section className="py-32 container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold mb-4">Awards</h1>
+            <p className="text-gray-500">Ödül verileri yüklülüyor...</p>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  if (error) {
+    return (
+      <section className="py-32 container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold mb-4">Awards</h1>
+            <p className="text-red-500">Ödül verileri yüklenirken bir hata oluştu.</p>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(awardsPageSchema),
+        }}
+      />
+      <section className="py-32 container mx-auto px-4 mb-">
       <div className="container mx-auto px-4 ">
         <nav aria-label="breadcrumb" data-slot="breadcrumb">
           <ol data-slot="breadcrumb-list" className="text-muted-foreground flex mb-5 flex-wrap items-center gap-1.5 text-sm break-words sm:gap-2.5">
@@ -202,17 +256,8 @@ export default async function AwardsPage({ params, searchParams }: PageProps) {
         )}
       </div>
     </section>
+    </>
   )
-  } catch (error) {
-    return (
-      <section className="py-32 container mx-auto px-4">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold mb-4">Awards</h1>
-            <p className="text-red-500">Ödül verileri yüklenirken bir hata oluştu.</p>
-          </div>
-        </div>
-      </section>
-    )
-  }
 }
+
+export default AwardsPage

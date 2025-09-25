@@ -136,7 +136,8 @@
       "clarity": "Netlik Kazanın",
       "stress": "Stresi Yönetin",
       "awareness": "Farkındalık"
-    }
+    },
+    "consultationApplication": "Danışma Başvurusu"
   },
   "services": [
     {
@@ -198,7 +199,7 @@
       },
       {
         "quote": "Uzun yıllardır süren stresim ve enerji blokajlarım Elza hanımın terapileri sayesinde çözüldü.",
-        "author": "Mehmet D.",
+        "author": "Ayse D.",
         "role": "Mimar"
       },
       {
@@ -1699,7 +1700,7 @@
       },
       "1": {
         "text": "Aylarca süren bioterapi seanslarından sonra enerji seviyelerim ve genel sağlığım önemli ölçüde iyileşti. Bu tedaviyi kesinlikle tavsiye ederim.",
-        "author": "Mehmet A.",
+        "author": "Ayse A.",
         "location": "Ankara Müşterisi"
       }
     },

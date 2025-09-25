@@ -1,88 +1,114 @@
-import React from 'react'
-import { Poem } from '../../../lravel-api'
+'use client'
+
+import React, { useState, useEffect } from 'react'
+import { Poem, poemApi } from '../../../lravel-api'
+import { useParams, useSearchParams } from 'next/navigation'
 import { PoemCommandMenu } from '@/components/poem-command-menu'
 import PoemFilterDrawer from '@/components/PoemFilterDrawer'
 import Link from 'next/link'
 import PaddleCheckoutButton from '@/components/PaddleCheckoutButton'
-import { getTranslations } from 'next-intl/server'
 import { Home } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
-interface PageProps {
-  params: Promise<{ locale: string }>
-  searchParams: Promise<{ page?: string; language?: string; search?: string }>
-}
 
-async function getPoems(params: { page: number; per_page: number; language: string; search: string }) {
-  const queryParams = new URLSearchParams({
-    page: params.page.toString(),
-    per_page: params.per_page.toString(),
-    language: params.language,
-    search: params.search
-  })
+const PoemsPage = () => {
+  const params = useParams()
+  const searchParams = useSearchParams()
+  const locale = params.locale as string
+  const t = useTranslations('poemsPage')
   
-  const response = await fetch(`https://elza-darya.test/api/poems?${queryParams}`, {
-    next: { revalidate: 3600 },
-    headers: {
-      'Content-Type': 'application/json',
+  const [poems, setPoems] = useState<Poem[]>([])
+  const [pagination, setPagination] = useState<any>(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+
+  const currentPage = searchParams.get('page') ? parseInt(searchParams.get('page')!) : 1
+  const currentLanguage = searchParams.get('language') || locale
+  const currentSearch = searchParams.get('search') || ''
+
+  // JSON-LD Schema for Poems Collection
+  const poemsPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Elza Darya Poems Collection",
+    "url": `https://elazadarya.com/${locale}/poems`,
+    "description": "Collection of poems by life coach and author Elza Darya",
+    "author": {
+      "@type": "Person",
+      "name": "Elza Darya",
+      "jobTitle": "Author & Life Coach"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Elza Darya"
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "name": "Published Poems",
+      "description": "Poems on personal development, wellness, and life inspiration"
     }
-  })
-  
-  if (!response.ok) {
-    throw new Error('Failed to fetch poems')
-  }
-  
-  return response.json()
-}
+  };
 
-export default async function PoemsPage({ params, searchParams }: PageProps) {
-  const { locale } = await params
-  const resolvedSearchParams = await searchParams
-  const currentPage = resolvedSearchParams.page ? parseInt(resolvedSearchParams.page) : 1
-  const currentLanguage = resolvedSearchParams.language || locale
-  const currentSearch = resolvedSearchParams.search || ''
-  const t = await getTranslations('poemsPage')
-
-  try {
-    const response = await getPoems({
-      page: currentPage,
-      per_page: 12,
-      language: currentLanguage,
-      search: currentSearch,
-    })
-
-    const poems: Poem[] = response.data
-    const pagination = response.pagination
-
-    // JSON-LD Schema for Poems Collection
-    const poemsPageSchema = {
-      "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      "name": "Elza Darya Poems Collection",
-      "url": `https://elazadarya.com/${locale}/poems`,
-      "description": "Collection of published poems by life coach and author Elza Darya",
-      "author": {
-        "@type": "Person",
-        "name": "Elza Darya",
-        "jobTitle": "Author & Life Coach"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Elza Darya"
-      },
-      "mainEntity": {
-        "@type": "ItemList",
-        "name": "Published Poems",
-        "description": "Poems on personal development, wellness, and life transformation"
-      }
-    };
-
-    return (
-      <>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(poemsPageSchema) }}
-        />
+  useEffect(() => {
+    const fetchPoems = async () => {
+      setLoading(true)
+      setError(null)
       
+      try {
+        const response = await poemApi.getPoems({
+          page: currentPage,
+          per_page: 12,
+          language: currentLanguage,
+          search: currentSearch,
+        })
+
+        setPoems(response.data)
+        setPagination(response.pagination)
+      } catch (err) {
+        console.error('❌ Poems Page Error:', err);
+        setError(err instanceof Error ? err.message : 'Bilinmeyen hata')
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchPoems()
+  }, [currentPage, currentLanguage, currentSearch])
+
+  if (loading) {
+    return (
+      <section className="py-32 container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold mb-4">Poems</h1>
+            <p className="text-gray-500">Şiir verileri yükleniyor...</p>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  if (error) {
+    return (
+      <section className="py-32 container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold mb-4">Poems</h1>
+            <p className="text-red-500">Şiir verileri yüklenirken bir hata oluştu.</p>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(poemsPageSchema),
+        }}
+      />
       <section className="py-32 container mx-auto px-4">
         <div className="container mx-auto px-4">
         <nav aria-label="breadcrumb" data-slot="breadcrumb">
@@ -245,16 +271,6 @@ export default async function PoemsPage({ params, searchParams }: PageProps) {
     </section>
     </>
   )
-  } catch (error) {
-    return (
-      <section className="py-32 container mx-auto px-4">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold mb-4">Poems</h1>
-            <p className="text-red-500">Şiir verileri yüklenirken bir hata oluştu.</p>
-          </div>
-        </div>
-      </section>
-    )
-  }
 }
+
+export default PoemsPage

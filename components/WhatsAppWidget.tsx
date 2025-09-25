@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { Send, X } from 'lucide-react';
-import { messages, getLocale, type Locale } from '@/lib/messages';  
+import { messages, type Locale } from '@/lib/messages';
+import { useLocale } from 'next-intl';  
 
 const phoneNumber = '+905344882777'; // WhatsApp numaran
 interface WhatsAppWidgetProps {
@@ -10,19 +11,17 @@ interface WhatsAppWidgetProps {
   }
   
   export default function WhatsAppWidget({ service }: WhatsAppWidgetProps) {
-    const serviceType = service;
-    const serviceMessage = serviceType === 'books' ? 'books' : serviceType === 'poems' ? 'poems' : serviceType === 'bioenergy' ? 'bioenergy' : 'biotherapist';
-    
   const [visible, setVisible] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const [showBadge, setShowBadge] = useState(true);
   const [message, setMessage] = useState('');
-  const [locale, setLocale] = useState<Locale>('en');
+  
+  const currentLocale = useLocale() as Locale;
 
   useEffect(() => {
-    const currentLocale = getLocale();
-    setLocale(currentLocale);
-    setMessage(messages[currentLocale].defaultMessage);
+    // Service'e özel mesaj kullan, yoksa default mesaj
+    const serviceMessage = messages[currentLocale].services[service] || messages[currentLocale].defaultMessage;
+    setMessage(serviceMessage);
 
     
     // 10 saniye sonra widget göster + ses çal
@@ -34,9 +33,9 @@ interface WhatsAppWidgetProps {
     }, 10000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [currentLocale, service]);
 
-  const t = messages[locale];
+  const t = messages[currentLocale];
 
   const playPing = () => {
     try {
